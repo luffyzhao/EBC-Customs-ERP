@@ -9,8 +9,8 @@ namespace LAuth\Http\Controllers\Authorities;
 
 
 use LAuth\Http\Controllers\Controller;
-use LAuth\Http\Requests\Api\Authorities\RoleRequest;
-use LAuth\Http\Searchs\Api\Authorities\RoleSearch;
+use LAuth\Http\Requests\Authorities\RoleRequest;
+use LAuth\Http\Searchs\Authorities\RoleSearch;
 use LAuth\Repositories\Menu;
 use LAuth\Repositories\Role;
 

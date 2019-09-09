@@ -7,8 +7,8 @@
 
 namespace LAuth\Http\Controllers\Authorities;
 
-use LAuth\Http\Requests\Api\Authorities\AuthoritiesRequest;
-use LAuth\Http\Searchs\Api\Authorities\AuthoritySearch;
+use LAuth\Http\Requests\Authorities\AuthoritiesRequest;
+use LAuth\Http\Searchs\Authorities\AuthoritySearch;
 use LAuth\Repositories\Authority;
 use LAuth\Http\Controllers\Controller;
 use LAuth\Repositories\Menu;

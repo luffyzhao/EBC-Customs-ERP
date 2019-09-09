@@ -8,7 +8,6 @@
 namespace LAuth\Http\Controllers;
 
 
-use LAuth\Http\Controllers\Controller;
 use LAuth\Http\Requests\Auth\LoginRequest;
 use LAuth\Http\Requests\Auth\ProfileUpdateRequest;
 use LAuth\Repositories\User;

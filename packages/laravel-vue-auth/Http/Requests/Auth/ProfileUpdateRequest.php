@@ -9,7 +9,6 @@
 namespace LAuth\Http\Requests\Auth;
 
 
-use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Validator;
 
