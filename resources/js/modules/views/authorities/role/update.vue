@@ -1,5 +1,5 @@
 <template>
-    <i-drawer title="部门添加" :width="720" :loading="loading">
+    <i-form :spin-show="loading">
         <Steps :current="current">
             <Step title="分配菜单"></Step>
             <Step title="分配权限"></Step>
@@ -40,21 +40,22 @@
             <Button type="primary" v-if="current === 0" @click="next('formUpdate')">下一步
                 <Icon type="ios-arrow-forward"></Icon>
             </Button>
+            <Button type="warning" icon="md-log-out" @click="$router.go(-1)">返回</Button>
         </div>
-    </i-drawer>
+    </i-form>
 </template>
 
 <script>
     import contentDrawer from '../../../mixins/content-drawer'
-    import IDrawer from "../../../components/content/drawer";
     import Role from './role';
+    import IForm from "../../../components/content/form";
 
     export default {
         name: "update",
-        components: {IDrawer},
+        components: {IForm},
         mixins: [contentDrawer, Role],
         mounted() {
-            this.$http.get(`authorities/role/${this.props.id}/edit`).then((res) => {
+            this.$http.get(`authorities/role/${this.$route.query.id}/edit`).then((res) => {
                 this.data = res.row
                 this.menus.data = res.menus
                 let data = [];
@@ -82,8 +83,8 @@
             submit(name) {
                 this.validate(name).then(() => {
                     this.loading = true;
-                    this.$http.put(`authorities/role/${this.props.id}`, this.data).then(() => {
-                        this.closeDrawer(false)
+                    this.$http.put(`authorities/role/${this.$route.query.id}`, this.data).then(() => {
+                        this.$Message.success('更新成功')
                     }).finally(() => {
                         this.loading = false;
                     });

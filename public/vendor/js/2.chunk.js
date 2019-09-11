@@ -168,6 +168,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_side_menu_side_menu_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/side-menu/side-menu.vue */ "./resources/js/modules/components/layout/components/side-menu/side-menu.vue");
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _libs_util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../libs/util */ "./resources/js/libs/util.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -219,6 +220,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -241,15 +248,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       this.$refs['sider'].toggleCollapse();
     },
     openTag: function openTag(tag) {
-      this.$router.push({
-        name: tag.name
-      });
+      this.$router.push(tag);
     },
-    closeTag: function closeTag($event, name) {
-      this.$store.dispatch('layout/remove', name);
-      this.$router.push({
-        name: this.active
-      });
+    closeTag: function closeTag($event, index) {
+      this.$store.dispatch('layout/remove', this.tagLists[index]);
+    },
+    existsRoute: function existsRoute(x, y) {
+      return Object(_libs_util__WEBPACK_IMPORTED_MODULE_2__["existsRoute"])(x, y);
     },
     remove: function remove(name) {
       if (name === 'all') {
@@ -257,10 +262,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       } else {
         this.$store.dispatch('layout/removeOther');
       }
-
-      this.$router.push({
-        name: this.active
-      });
     }
   }
 });
@@ -603,7 +604,7 @@ var render = function() {
             "Menu",
             {
               attrs: {
-                "active-name": _vm.active,
+                "active-name": _vm.active.name,
                 theme: "dark",
                 width: "auto"
               },
@@ -827,8 +828,8 @@ var render = function() {
                     attrs: {
                       type: "dot",
                       closable: "",
-                      color: tag.name === _vm.active ? "warning" : "",
-                      name: tag.name
+                      color: _vm.existsRoute(tag, _vm.active) ? "warning" : "",
+                      name: index
                     },
                     on: { "on-close": _vm.closeTag },
                     nativeOn: {
@@ -879,7 +880,9 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _c("Content", [_c("router-view")], 1),
+          _vm.$route.meta.cache
+            ? _c("Content", [_c("keep-alive", [_c("router-view")], 1)], 1)
+            : _c("Content", [_c("router-view")], 1),
           _vm._v(" "),
           _c("Footer")
         ],

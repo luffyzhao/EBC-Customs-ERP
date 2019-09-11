@@ -9,7 +9,7 @@
             </FormItem>
             <FormItem :label-width="1">
                 <Button type="primary" icon="ios-search" @click="getLists(1)" size="small">搜索</Button>
-                <Button type="success" icon="ios-add" @click="openComponent('Create')" size="small">添加</Button>
+                <Button type="success" icon="ios-add" @click="routerPush('authorities.authority.create')" size="small">添加</Button>
             </FormItem>
         </i-search>
 
@@ -24,8 +24,9 @@
                 <span>{{ row.description }}</span>
             </template>
             <template slot-scope="{ row, index }" slot="action">
-                <Button type="warning" size="small" @click="openComponent('Update', row)">编辑</Button>
+                <Button type="warning" size="small" @click="routerPush('authorities.authority.update', {id: row.id})">编辑</Button>
                 <Poptip
+                        transfer
                         confirm
                         title="你确定要删除这个权限吗？"
                         @on-ok="remove(row)">
@@ -33,9 +34,6 @@
                 </Poptip>
             </template>
         </i-table>
-
-        <component v-bind:is="component.is" :props="component.prop" @on-close="closeComponent"
-                   @on-refresh="getLists"></component>
     </i-content>
 </template>
 
@@ -44,13 +42,11 @@
     import ISearch from "../../../components/content/search";
     import ITable from "../../../components/content/table";
     import contentListPage from "../../../mixins/content-list-page";
-    import Create from './create';
-    import Update from './update';
 
     export default {
         name: "index",
         mixins: [contentListPage],
-        components: {ITable, ISearch, IContent, Create, Update},
+        components: {ITable, ISearch, IContent},
         data() {
             return {
                 table: {

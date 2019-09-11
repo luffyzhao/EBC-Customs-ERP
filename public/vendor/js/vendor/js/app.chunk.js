@@ -47839,20 +47839,12 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
 /*!***********************************!*\
   !*** ./resources/js/libs/util.js ***!
   \***********************************/
-/*! exports provided: getHomeRoute, getNewTagList, getNextRoute, routeEqual, routeHasExist, doCustomTimes, objEqual, localSave, localRead, listConvertTree, treeConvertList */
+/*! exports provided: existsRoute, listConvertTree, treeConvertList */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getHomeRoute", function() { return getHomeRoute; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getNewTagList", function() { return getNewTagList; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getNextRoute", function() { return getNextRoute; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routeEqual", function() { return routeEqual; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routeHasExist", function() { return routeHasExist; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "doCustomTimes", function() { return doCustomTimes; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "objEqual", function() { return objEqual; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "localSave", function() { return localSave; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "localRead", function() { return localRead; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "existsRoute", function() { return existsRoute; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "listConvertTree", function() { return listConvertTree; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "treeConvertList", function() { return treeConvertList; });
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
@@ -47863,139 +47855,15 @@ function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.
 
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
-/**
- * @param {Array} routers 路由列表数组
- * @description 用于找到路由列表中name为home的对象
- */
-var getHomeRoute = function getHomeRoute(routers) {
-  var homeName = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'home';
-  var i = -1;
-  var len = routers.length;
-  var homeRoute = {};
-
-  while (++i < len) {
-    var item = routers[i];
-
-    if (item.children && item.children.length) {
-      var res = getHomeRoute(item.children, homeName);
-      if (res.name) return res;
-    } else {
-      if (item.name === homeName) homeRoute = item;
-    }
-  }
-
-  return homeRoute;
+var deepCompare = function deepCompare(x, y) {
+  return JSON.stringify(x) === JSON.stringify(y);
 };
-/**
- * @param {*} list 现有标签导航列表
- * @param {*} newRoute 新添加的路由原信息对象
- * @description 如果该newRoute已经存在则不再添加
- */
 
-var getNewTagList = function getNewTagList(list, newRoute) {
-  var name = newRoute.name,
-      path = newRoute.path,
-      meta = newRoute.meta;
-
-  var newList = _toConsumableArray(list);
-
-  if (newList.findIndex(function (item) {
-    return item.name === name;
-  }) >= 0) return newList;else newList.push({
-    name: name,
-    path: path,
-    meta: meta
-  });
-  return newList;
-};
-/**
- * @param {Array} list 标签列表
- * @param {String} name 当前关闭的标签的name
- */
-
-var getNextRoute = function getNextRoute(list, route) {
-  var res = {};
-
-  if (list.length === 2) {
-    res = getHomeRoute(list);
-  } else {
-    var index = list.findIndex(function (item) {
-      return routeEqual(item, route);
-    });
-    if (index === list.length - 1) res = list[list.length - 2];else res = list[index + 1];
-  }
-
-  return res;
-};
-/**
- * @description 根据name/params/query判断两个路由对象是否相等
- * @param {*} route1 路由对象
- * @param {*} route2 路由对象
- */
-
-var routeEqual = function routeEqual(route1, route2) {
-  var params1 = route1.params || {};
-  var params2 = route2.params || {};
-  var query1 = route1.query || {};
-  var query2 = route2.query || {};
-  return route1.name === route2.name && objEqual(params1, params2) && objEqual(query1, query2);
-};
-/**
- * 判断打开的标签列表里是否已存在这个新添加的路由对象
- */
-
-var routeHasExist = function routeHasExist(tagNavList, routeItem) {
-  var len = tagNavList.length;
-  var res = false;
-  doCustomTimes(len, function (index) {
-    if (routeEqual(tagNavList[index], routeItem)) res = true;
-  });
-  return res;
-};
-/**
- * @param {Number} times 回调函数需要执行的次数
- * @param {Function} callback 回调函数
- */
-
-var doCustomTimes = function doCustomTimes(times, callback) {
-  var i = -1;
-
-  while (++i < times) {
-    callback(i);
-  }
-};
-/**
- * @param {*} obj1 对象
- * @param {*} obj2 对象
- * @description 判断两个对象是否相等，这两个对象的值只能是数字或字符串
- */
-
-var objEqual = function objEqual(obj1, obj2) {
-  var keysArr1 = Object.keys(obj1);
-  var keysArr2 = Object.keys(obj2);
-  if (keysArr1.length !== keysArr2.length) return false;else if (keysArr1.length === 0 && keysArr2.length === 0) return true;
-  /* eslint-disable-next-line */
-  else return !keysArr1.some(function (key) {
-      return obj1[key] != obj2[key];
-    });
-};
-/**
- * 读取 localStorage 数据
- * @param key
- * @param value
- */
-
-var localSave = function localSave(key, value) {
-  localStorage.setItem(key, JSON.stringify(value));
-};
-/**
- * 获取 localStorage 数据
- * @param key
- * @returns {string | string}
- */
-
-var localRead = function localRead(key) {
-  return JSON.parse(localStorage.getItem(key)) || '';
+var existsRoute = function existsRoute(item, _ref) {
+  var name = _ref.name,
+      query = _ref.query,
+      params = _ref.params;
+  return item.name === name && deepCompare(query, item.query) && deepCompare(params, item.params);
 };
 /**
  * 线型转树型
@@ -48216,6 +48084,13 @@ router.beforeEach(function (to, from, next) {
 router.afterEach(function (to, from) {
   _store_index__WEBPACK_IMPORTED_MODULE_4__["default"].dispatch('layout/open', to);
 });
+var originalPush = vue_router__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.push;
+
+vue_router__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.push = function push(location) {
+  return originalPush.call(this, location)["catch"](function (err) {
+    return err;
+  });
+};
 
 /***/ }),
 
@@ -48274,18 +48149,62 @@ var home = [{
     tags: true
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(6)]).then(__webpack_require__.bind(null, /*! ./../../views/authorities/user/index */ "./resources/js/modules/views/authorities/user/index.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(15), __webpack_require__.e(11)]).then(__webpack_require__.bind(null, /*! ./../../views/authorities/user/index */ "./resources/js/modules/views/authorities/user/index.vue"));
+  }
+}, {
+  path: 'Authorities/user/create',
+  name: 'authorities.user.create',
+  meta: {
+    title: '添加用户',
+    cache: false,
+    tags: false
+  },
+  component: function component() {
+    return Promise.all(/*! import() */[__webpack_require__.e(6), __webpack_require__.e(12)]).then(__webpack_require__.bind(null, /*! ./../../views/authorities/user/create */ "./resources/js/modules/views/authorities/user/create.vue"));
+  }
+}, {
+  path: 'Authorities/user/update',
+  name: 'authorities.user.update',
+  meta: {
+    title: '更新用户',
+    cache: false,
+    tags: false
+  },
+  component: function component() {
+    return Promise.all(/*! import() */[__webpack_require__.e(6), __webpack_require__.e(13)]).then(__webpack_require__.bind(null, /*! ./../../views/authorities/user/update */ "./resources/js/modules/views/authorities/user/update.vue"));
   }
 }, {
   path: 'Authorities/role',
   name: 'authorities.role',
   meta: {
-    title: '部门',
+    title: '部门管理',
     cache: true,
     tags: true
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(5)]).then(__webpack_require__.bind(null, /*! ./../../views/authorities/role/index */ "./resources/js/modules/views/authorities/role/index.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(6), __webpack_require__.e(15), __webpack_require__.e(5), __webpack_require__.e(14), __webpack_require__.e(16)]).then(__webpack_require__.bind(null, /*! ./../../views/authorities/role/index */ "./resources/js/modules/views/authorities/role/index.vue"));
+  }
+}, {
+  path: 'Authorities/role/create',
+  name: 'authorities.role.create',
+  meta: {
+    title: '添加部门',
+    cache: false,
+    tags: false
+  },
+  component: function component() {
+    return Promise.all(/*! import() */[__webpack_require__.e(6), __webpack_require__.e(5)]).then(__webpack_require__.bind(null, /*! ./../../views/authorities/role/create */ "./resources/js/modules/views/authorities/role/create.vue"));
+  }
+}, {
+  path: 'Authorities/role/update',
+  name: 'authorities.role.update',
+  meta: {
+    title: '添加部门',
+    cache: false,
+    tags: false
+  },
+  component: function component() {
+    return Promise.all(/*! import() */[__webpack_require__.e(6), __webpack_require__.e(14), __webpack_require__.e(17)]).then(__webpack_require__.bind(null, /*! ./../../views/authorities/role/update */ "./resources/js/modules/views/authorities/role/update.vue"));
   }
 }, {
   path: 'Authorities/menu',
@@ -48296,7 +48215,7 @@ var home = [{
     tags: true
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(3)]).then(__webpack_require__.bind(null, /*! ./../../views/authorities/menu/index */ "./resources/js/modules/views/authorities/menu/index.vue"));
+    return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./../../views/authorities/menu/index */ "./resources/js/modules/views/authorities/menu/index.vue"));
   }
 }, {
   path: 'Authorities/authority',
@@ -48307,7 +48226,29 @@ var home = [{
     tags: true
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(4)]).then(__webpack_require__.bind(null, /*! ./../../views/authorities/authority/index */ "./resources/js/modules/views/authorities/authority/index.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(15), __webpack_require__.e(18)]).then(__webpack_require__.bind(null, /*! ./../../views/authorities/authority/index */ "./resources/js/modules/views/authorities/authority/index.vue"));
+  }
+}, {
+  path: 'Authorities/authority/create',
+  name: 'authorities.authority.create',
+  meta: {
+    title: '添加权限',
+    cache: false,
+    tags: false
+  },
+  component: function component() {
+    return Promise.all(/*! import() */[__webpack_require__.e(6), __webpack_require__.e(4)]).then(__webpack_require__.bind(null, /*! ./../../views/authorities/authority/create */ "./resources/js/modules/views/authorities/authority/create.vue"));
+  }
+}, {
+  path: 'Authorities/authority/update',
+  name: 'authorities.authority.update',
+  meta: {
+    title: '更新权限',
+    cache: false,
+    tags: false
+  },
+  component: function component() {
+    return Promise.all(/*! import() */[__webpack_require__.e(6), __webpack_require__.e(3)]).then(__webpack_require__.bind(null, /*! ./../../views/authorities/authority/update */ "./resources/js/modules/views/authorities/authority/update.vue"));
   }
 }];
 
@@ -48462,16 +48403,20 @@ state.menus = _plugins_cache_index__WEBPACK_IMPORTED_MODULE_0__["$cache"].get('$
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _plugins_cache__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../plugins/cache */ "./resources/js/plugins/cache/index.js");
+/* harmony import */ var _libs_util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../libs/util */ "./resources/js/libs/util.js");
+/* harmony import */ var _router_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../router/index */ "./resources/js/modules/router/index.js");
+
+
 
 var state = {
   // 活动的标签导航
-  active: '',
+  active: {},
   // 全部的标签导航
   inactives: []
 };
 var layout = _plugins_cache__WEBPACK_IMPORTED_MODULE_0__["$cache"].get('$store/layout') || {};
 state.inactives = layout.inactives || [];
-state.active = layout.active || '';
+state.active = layout.active || {};
 /* harmony default export */ __webpack_exports__["default"] = ({
   namespaced: true,
   state: state,
@@ -48493,19 +48438,20 @@ state.active = layout.active || '';
   mutations: {
     /**
      * 添加标签导航
-     * @param {新标签} newRoute 
+     * @param router
      */
-    newTag: function newTag(state, _ref) {
-      var name = _ref.name,
-          path = _ref.path,
-          meta = _ref.meta;
-
-      if (meta.tags === true && state.inactives.findIndex(function (item) {
-        return item.name === name;
+    newTag: function newTag(state, router) {
+      if (router.meta.tags === true && state.inactives.findIndex(function (item) {
+        return Object(_libs_util__WEBPACK_IMPORTED_MODULE_1__["existsRoute"])(item, router);
       }) === -1) {
+        var query = router.query,
+            name = router.name,
+            params = router.params,
+            meta = router.meta;
         state.inactives.push({
+          query: query,
           name: name,
-          path: path,
+          params: params,
           meta: meta
         });
       }
@@ -48513,58 +48459,65 @@ state.active = layout.active || '';
 
     /**
      * 删除某个标签导航
-     * @param {state} state 
-     * @param {路由name} name 
+     * @param  state
+     * @param  params
      */
-    removeTag: function removeTag(state, name) {
+    removeTag: function removeTag(state, params) {
       var index = -1;
 
       if ((index = state.inactives.findIndex(function (item) {
-        return item.name === name;
+        return Object(_libs_util__WEBPACK_IMPORTED_MODULE_1__["existsRoute"])(item, params);
       })) !== -1) {
         if (index !== 0) {
           state.inactives.splice(index, 1);
 
-          if (name === state.active) {
+          if (Object(_libs_util__WEBPACK_IMPORTED_MODULE_1__["existsRoute"])(state.active, params)) {
             if (index === state.inactives.length) {
               index = index - 1;
             }
 
-            state.active = state.inactives[index].name;
+            state.active = state.inactives[index];
           }
         }
       }
+
+      _router_index__WEBPACK_IMPORTED_MODULE_2__["router"].push(state.active);
     },
 
     /**
      * 删除全部标签导航
-     * @param {*} state 
+     * @param {*} state
      */
     removeAll: function removeAll(state) {
       state.inactives.splice(1, state.inactives.length - 1);
-      state.active = state.inactives[0].name;
+      state.active = state.inactives[0];
+      _router_index__WEBPACK_IMPORTED_MODULE_2__["router"].push(state.active);
     },
 
     /**
      * 删除其他导航标签
-     * @param {} state 
+     * @param state
      */
     removeOther: function removeOther(state) {
-      state.inactives = state.inactives.filter(function (_ref2, key) {
-        var name = _ref2.name;
-        return key === 0 || name === state.active;
+      state.inactives = state.inactives.filter(function (router, key) {
+        return key === 0 || Object(_libs_util__WEBPACK_IMPORTED_MODULE_1__["existsRoute"])(state.active, router);
       });
+      _router_index__WEBPACK_IMPORTED_MODULE_2__["router"].push(state.active);
     },
 
     /**
      * 设置当前活动的标签导航
-     * @param {*} state 
+     * @param {*} state
      */
-    setActive: function setActive(state, _ref3) {
-      var name = _ref3.name,
-          path = _ref3.path,
-          meta = _ref3.meta;
-      state.active = name;
+    setActive: function setActive(state, _ref) {
+      var name = _ref.name,
+          query = _ref.query,
+          params = _ref.params;
+      state.active = {
+        name: name,
+        query: query,
+        params: params
+      };
     },
 
     /**
@@ -48576,12 +48529,12 @@ state.active = layout.active || '';
 
     /**
      * 初始设置
-     * @param {*} state 
+     * @param {*} state
      */
     init: function init(state) {
       var $state = _plugins_cache__WEBPACK_IMPORTED_MODULE_0__["$cache"].get('$store/layout');
 
-      if ($state.active !== '' && $state.inactives.length > 0) {
+      if ($state.active !== {} && $state.inactives.length > 0) {
         for (var key in $state) {
           if ($state.hasOwnProperty(key)) {
             var element = $state[key];
@@ -48594,11 +48547,11 @@ state.active = layout.active || '';
   actions: {
     /**
      * 打开页面
-     * @param {*} param0 
-     * @param {路由} tag 
+     * @param {*} param0
+     * @param {路由} tag
      */
-    open: function open(_ref4, tag) {
-      var commit = _ref4.commit;
+    open: function open(_ref2, tag) {
+      var commit = _ref2.commit;
       commit('newTag', tag);
       commit('setActive', tag);
       commit('setLocal');
@@ -48606,46 +48559,46 @@ state.active = layout.active || '';
 
     /**
      * 删除页面
-     * @param {*} param0 
-     * @param {*} name 
+     * @param {*} param0
+     * @param {*} name
      */
-    remove: function remove(_ref5, name) {
-      var commit = _ref5.commit;
+    remove: function remove(_ref3, name) {
+      var commit = _ref3.commit;
       commit('removeTag', name);
       commit('setLocal');
     },
 
     /**
      * 删除所有
-     * @param {*} param0 
+     * @param {*} param0
      */
-    removeAll: function removeAll(_ref6) {
-      var commit = _ref6.commit;
+    removeAll: function removeAll(_ref4) {
+      var commit = _ref4.commit;
       commit('removeAll');
       commit('setLocal');
     },
 
     /**
      * 删除其他
-     * @param {*} param0 
+     * @param {*} param0
      */
-    removeOther: function removeOther(_ref7) {
-      var commit = _ref7.commit;
+    removeOther: function removeOther(_ref5) {
+      var commit = _ref5.commit;
       commit('removeOther');
       commit('setLocal');
     },
 
     /**
      * 初始设置
-     * @param {*} param0 
+     * @param {*} param0
      */
-    init: function init(_ref8, home) {
-      var commit = _ref8.commit,
-          state = _ref8.state,
-          dispatch = _ref8.dispatch;
+    init: function init(_ref6, home) {
+      var commit = _ref6.commit,
+          state = _ref6.state,
+          dispatch = _ref6.dispatch;
       commit('init');
 
-      if (state.active === '') {
+      if (state.active === {}) {
         dispatch('open', home);
       }
     }

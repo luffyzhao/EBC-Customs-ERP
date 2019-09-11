@@ -1,5 +1,5 @@
 <template>
-    <i-drawer title="用户添加" :width="620" :loading="loading">
+    <i-form title="用户添加" :width="620" :spin-show="loading">
         <Form :model="data" :label-width="100" :rules="ruleValidate" ref="formUpdate">
             <FormItem label="姓名" prop="name">
                 <Input placeholder="请输入姓名" v-model="data.name"></Input>
@@ -64,21 +64,22 @@
         </Form>
         <div slot="footer">
             <Button type="primary" icon="ios-add" @click="submit('formUpdate')">提交</Button>
+            <Button type="warning" icon="md-log-out" @click="$router.go(-1)">返回</Button>
         </div>
-    </i-drawer>
+    </i-form>
 </template>
 
 <script>
     import contentDrawer from '../../../mixins/content-drawer'
-    import IDrawer from "../../../components/content/drawer";
     import User from './user'
+    import IForm from "../../../components/content/form";
 
     export default {
         name: "create",
-        components: {IDrawer},
+        components: {IForm},
         mixins: [contentDrawer, User],
         mounted() {
-            this.$http(`authorities/user/${this.props.id}/edit`).then((res) => {
+            this.$http(`authorities/user/${this.$route.query.id}/edit`).then((res) => {
                 this.data = res.row
                 this.roles.data = res.roles;
                 this.loading = false
@@ -88,8 +89,8 @@
             submit(name) {
                 this.loading = true;
                 this.validate(name).then(() => {
-                    this.$http.put(`authorities/user/${this.props.id}`, this.data).then(() => {
-                        this.closeDrawer(false)
+                    this.$http.put(`authorities/user/${this.$route.query.id}`, this.data).then(() => {
+                        this.$Message.success('更新成功')
                     }).finally(() => {
                         this.loading = false;
                     });

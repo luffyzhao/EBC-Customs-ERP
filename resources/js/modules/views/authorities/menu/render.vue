@@ -9,6 +9,7 @@
                         @click="append(data, 'update')"></Button>
                 <Button type="dashed" size="small" icon="ios-add" @click="append(data)"></Button>
                 <Poptip
+                        transfer
                         confirm
                         title="你确定要删除这个类目吗？"
                         @on-ok="remove(data)">

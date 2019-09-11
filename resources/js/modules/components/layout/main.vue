@@ -19,8 +19,8 @@
             <div class="layout-router">
                 <div class="layout-router-scroll">
                     <Tag type="dot" closable 
-                        v-for="(tag, index) in tagLists" :key="index" :color="tag.name === active ? 'warning' : ''"
-                        :name="tag.name"
+                        v-for="(tag, index) in tagLists" :key="index" :color="existsRoute(tag, active) ? 'warning' : ''"
+                        :name="index"
                         @click.native="openTag(tag)"
                         @on-close="closeTag"
                     >{{tag.meta.title}}</Tag>
@@ -35,7 +35,12 @@
                     </Dropdown>
                 </div>
             </div>
-            <Content>
+            <Content v-if="$route.meta.cache">
+                <keep-alive>
+                    <router-view ></router-view>
+                </keep-alive>
+            </Content>
+            <Content v-else>
                 <router-view></router-view>
             </Content>
             <Footer></Footer>
@@ -46,6 +51,7 @@
 <script>
     import SideMenu from './components/side-menu/side-menu.vue'
     import { mapGetters } from 'vuex'
+    import {existsRoute} from "../../../libs/util";
 
     export default {
         name: "i-main",
@@ -67,25 +73,20 @@
                 this.$refs['sider'].toggleCollapse();
             },
             openTag(tag){
-                this.$router.push({
-                    name: tag.name
-                })
+                this.$router.push(tag)
             },
-            closeTag($event, name){
-                this.$store.dispatch('layout/remove', name)
-                this.$router.push({
-                    name: this.active
-                })
+            closeTag($event, index){
+                this.$store.dispatch('layout/remove', this.tagLists[index]);
+            },
+            existsRoute(x, y){
+                return existsRoute(x, y);
             },
             remove(name){
                 if(name === 'all'){
                     this.$store.dispatch('layout/removeAll');
                 }else{
                     this.$store.dispatch('layout/removeOther');
-                } 
-                this.$router.push({
-                    name: this.active
-                })               
+                }
             }
         }
     }

@@ -6,7 +6,7 @@
             </FormItem>
             <FormItem :label-width="1">
                 <Button type="primary" icon="ios-search" @click="getLists()" size="small">搜索</Button>
-                <Button type="success" icon="ios-add" @click="openComponent('Create')" size="small">添加</Button>
+                <Button type="success" icon="ios-add" @click="routerPush('authorities.role.create')" size="small">添加</Button>
             </FormItem>
         </i-search>
 
@@ -18,7 +18,7 @@
                     <span>{{ row.description }}</span>
                 </template>
                 <template slot-scope="{ row, index }" slot="action">
-                    <Button type="warning" size="small" @click="openComponent('Update', row)">编辑</Button>
+                    <Button type="warning" size="small" @click="routerPush('authorities.role.update', {id: row.id})">编辑</Button>
                     <Poptip
                             confirm
                             title="你确定要删除这个部门吗？"
@@ -27,9 +27,6 @@
                     </Poptip>
                 </template>
         </i-table>
-
-        <component v-bind:is="component.is" :props="component.prop" @on-close="closeComponent"
-                   @on-refresh="getLists(1)"></component>
     </i-content>
 </template>
 

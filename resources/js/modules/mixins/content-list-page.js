@@ -36,6 +36,12 @@ export default {
             this.component.is = '';
             this.component.prop = null;
         },
+        routerPush(name, query = {}) {
+            this.$router.push({
+                name,
+                query
+            });
+        },
         getLists(){}
     }
 }

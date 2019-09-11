@@ -1,5 +1,5 @@
 <template>
-    <i-drawer title="权限添加" :width="720" :loading="loading">
+    <i-form :spin-show="loading">
         <Form ref="formCreate" :model="data" :label-width="100" :rules="ruleValidate">
             <FormItem label="权限名称" prop="name">
                 <Input v-model="data.name"></Input>
@@ -20,18 +20,19 @@
         </Form>
         <div slot="footer">
             <Button type="primary" icon="ios-add" @click="submit('formCreate')">提交</Button>
+            <Button type="warning" icon="md-log-out" @click="$router.go(-1)">返回</Button>
         </div>
-    </i-drawer>
+    </i-form>
 </template>
 
 <script>
     import contentDrawer from '../../../mixins/content-drawer'
-    import IDrawer from "../../../components/content/drawer";
     import Authority from './authority'
+    import IForm from "../../../components/content/form";
 
     export default {
         name: "create",
-        components: {IDrawer},
+        components: {IForm},
         mixins: [contentDrawer, Authority],
         computed: {
             checkedMenus() {
@@ -48,7 +49,7 @@
                     this.$http.post(`authorities/authority`,
                         Object.assign({}, this.data, {menus: this.checkedMenus})
                     ).then(() => {
-                        this.closeDrawer(false)
+                        this.$store.dispatch('layout/remove', this.$route);
                     }).finally(() => {
                         this.loading = false;
                     });

@@ -1,5 +1,5 @@
 <template>
-    <i-drawer title="部门添加" :width="720" :loading="loading">
+    <i-form :spin-show="loading">
         <Steps :current="current">
             <Step title="分配菜单"></Step>
             <Step title="分配权限"></Step>
@@ -40,18 +40,20 @@
             <Button type="primary" v-if="current === 0" @click="next('formCreate')">下一步
                 <Icon type="ios-arrow-forward"></Icon>
             </Button>
+            <Button type="warning" icon="md-log-out" @click="$router.go(-1)">返回</Button>
         </div>
-    </i-drawer>
+    </i-form>
 </template>
 
 <script>
     import contentDrawer from '../../../mixins/content-drawer'
     import IDrawer from "../../../components/content/drawer";
     import Role from './role';
+    import IForm from "../../../components/content/form";
 
     export default {
         name: "create",
-        components: {IDrawer},
+        components: {IForm, IDrawer},
         mixins: [contentDrawer, Role],
         mounted() {
             this.$http.get(`authorities/role/create`).then((res) => {
@@ -71,7 +73,7 @@
                 this.validate(name).then(() => {
                     this.loading = true;
                     this.$http.post(`authorities/role`, this.data).then(() => {
-                        this.closeDrawer(false)
+                        this.$store.dispatch('layout/remove', this.$route);
                     }).finally(() => {
                         this.loading = false;
                     });

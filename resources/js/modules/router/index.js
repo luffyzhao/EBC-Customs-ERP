@@ -19,6 +19,8 @@ export const router = new VueRouter({
     ]
 });
 
+
+
 router.beforeEach((to, from, next) => {
     let isLogin = store.getters['auth/login'];
     if(to.name === 'login' && Boolean(isLogin)){
@@ -33,4 +35,9 @@ router.beforeEach((to, from, next) => {
 
 router.afterEach((to, from) => {
     store.dispatch('layout/open', to);
-})
+});
+
+const originalPush = VueRouter.prototype.push
+VueRouter.prototype.push = function push(location) {
+    return originalPush.call(this, location).catch(err => err)
+};
