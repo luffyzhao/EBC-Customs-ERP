@@ -27,9 +27,9 @@ class AuthController extends Controller
         $token = auth('api')->attempt($request->only([
             'email', 'password'
         ]));
-
-        if (!$token) {
-            throw new AuthenticationException('Unauthorized');
+        $user = auth('api')->user();
+        if (!$token || !$user->allowLogin()) {
+            throw new AuthenticationException('用户不存在，或者用户被禁用');
         }
 
         $menus = auth('api')->user()->role->cachedMenus();

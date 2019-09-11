@@ -1,9 +1,6 @@
 <template>
-    <i-content :spinShow="loading">
-        <Card>
-            <Tree :data="data" :render="renderContent"></Tree>
-        </Card>
-
+    <i-content :spinShow="loading" class="menu-content-wrapper">
+        <Tree :data="data" :render="renderContent" class="tree"></Tree>
         <component v-bind:is="component.is" :props="component.prop" @on-close="closeComponent" @on-refresh="getLists"></component>
     </i-content>
 </template>
@@ -75,5 +72,11 @@
 </script>
 
 <style scoped>
-
+.tree{
+    width: 100%;
+    padding: 18px;
+}
+.menu-content-wrapper{
+    background-color: #fff;
+}
 </style>

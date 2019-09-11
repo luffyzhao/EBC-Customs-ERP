@@ -31,7 +31,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     width: {
       type: Number,
-      "default": 520
+      "default": 720
     },
     loading: {
       type: Boolean,
@@ -63,12 +63,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "i-content",
   props: {
     spinShow: {
       type: Boolean,
-      "default": false
+      "default": true
     }
   }
 });
@@ -87,7 +89,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".content-wrapper[data-v-7cc52909] {\n  padding: 18px;\n  overflow: auto;\n}\n.content-wrapper > .ivu-card[data-v-7cc52909] {\n  margin-bottom: 10px;\n}\n", ""]);
+exports.push([module.i, ".content-wrapper[data-v-7cc52909] {\n  display: flex;\n  flex-flow: column;\n  overflow: hidden;\n}\n.content-wrapper .wrapper[data-v-7cc52909] {\n  height: 100%;\n  overflow: hidden;\n  display: flex;\n  flex-flow: column;\n}\n.content-wrapper > .ivu-card[data-v-7cc52909] {\n  margin-bottom: 10px;\n}\n", ""]);
 
 // exports
 
@@ -236,13 +238,13 @@ var render = function() {
     "div",
     { staticClass: "content-wrapper" },
     [
-      _vm._t("default"),
+      _c("div", { staticClass: "wrapper" }, [_vm._t("default")], 2),
       _vm._v(" "),
       _vm.spinShow
         ? _c("Spin", { attrs: { size: "large", fix: "" } })
         : _vm._e()
     ],
-    2
+    1
   )
 }
 var staticRenderFns = []

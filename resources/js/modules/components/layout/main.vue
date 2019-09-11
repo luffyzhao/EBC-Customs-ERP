@@ -38,7 +38,7 @@
             <Content>
                 <router-view></router-view>
             </Content>
-            <Footer><slot name="footer"></slot></Footer>
+            <Footer></Footer>
         </Layout>
     </Layout>
 </template>
@@ -173,6 +173,10 @@
             white-space: nowrap;
             transition: left 0.3s ease;
         }
+    }
+
+    .ivu-layout-footer{
+        padding: 20px;
     }
 }
 </style>

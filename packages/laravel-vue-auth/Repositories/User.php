@@ -14,16 +14,16 @@ use LTools\Repositories\RepositoryAbstract;
 class User extends RepositoryAbstract
 {
     /**
-     * @var \App\Models\User|Model
+     * @var \LAuth\Models\User|Model
      */
     protected $model;
 
     /**
      * RepositoryAbstract constructor.
      *
-     * @param \App\Models\User $model
+     * @param \LAuth\Models\User $model
      */
-    public function __construct(\App\Models\User $model)
+    public function __construct(\LAuth\Models\User $model)
     {
         $this->model = $model;
     }

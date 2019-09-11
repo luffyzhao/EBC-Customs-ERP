@@ -1,17 +1,16 @@
 <template>
     <i-content :spin-show="loading">
         <i-search v-model="search">
-            <FormItem label="部门名称" :label-width="100">
-                <Input v-model="search.name" placeholder="部门名称"></Input>
+            <FormItem label="部门名称">
+                <Input v-model="search.name" placeholder="部门名称" size="small"></Input>
             </FormItem>
             <FormItem :label-width="1">
-                <Button type="primary" icon="ios-search" @click="getLists()">搜索</Button>
-                <Button type="success" icon="ios-add" @click="openComponent('Create')">添加</Button>
+                <Button type="primary" icon="ios-search" @click="getLists()" size="small">搜索</Button>
+                <Button type="success" icon="ios-add" @click="openComponent('Create')" size="small">添加</Button>
             </FormItem>
         </i-search>
 
-        <i-table :current="page.current" :total="page.total" @on-page-change="pageChange">
-            <Table :columns="table.columns" :data="table.data">
+        <i-table :current="page.current" :table="table" :total="page.total" @on-page-change="pageChange">
                 <template slot-scope="{ row, index }" slot="name">
                     <span>{{ row.name }}</span>
                 </template>
@@ -27,7 +26,6 @@
                         <Button type="error" size="small">删除</Button>
                     </Poptip>
                 </template>
-            </Table>
         </i-table>
 
         <component v-bind:is="component.is" :props="component.prop" @on-close="closeComponent"

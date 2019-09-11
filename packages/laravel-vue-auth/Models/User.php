@@ -43,4 +43,13 @@ class User extends Authenticatable
     {
         $this->attributes['password'] = bcrypt($value);
     }
+
+    /**
+     * 允许登录
+     * @return bool
+     * @author luffyzhao@vip.126.com
+     */
+    public function allowLogin(){
+        return $this->getAttribute('status') === 'on';
+    }
 }

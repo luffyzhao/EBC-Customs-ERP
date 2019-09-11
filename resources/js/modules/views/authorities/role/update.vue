@@ -55,7 +55,7 @@
         mixins: [contentDrawer, Role],
         mounted() {
             this.$http.get(`authorities/role/${this.props.id}/edit`).then((res) => {
-                this.data = res.data
+                this.data = res.row
                 this.menus.data = res.menus
                 let data = [];
                 JSON.parse(JSON.stringify(this.menus.data)).forEach((item) => {

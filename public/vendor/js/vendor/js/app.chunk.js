@@ -40763,7 +40763,7 @@ exports.default = {
     },
     render: function render(h, ctx) {
         (0, _newArrowCheck3.default)(undefined, undefined);
-
+console.log(ctx.injections.tableRoot)
         return h('div', ctx.injections.tableRoot.$scopedSlots[ctx.props.column.slot]({
             row: ctx.props.row,
             column: ctx.props.column,
@@ -48037,7 +48037,7 @@ var listConvertTree = function listConvertTree(list) {
     }
   }
 
-  return root.children;
+  return root.children || [];
 };
 /**
  * 树型转线型
@@ -48193,7 +48193,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
     path: '/admin',
     name: 'admin',
     component: function component() {
-      return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ../components/layout/main */ "./resources/js/modules/components/layout/main.vue"));
+      return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../components/layout/main */ "./resources/js/modules/components/layout/main.vue"));
     },
     children: _toConsumableArray(_modules_home__WEBPACK_IMPORTED_MODULE_1__["home"])
   }].concat(_toConsumableArray(_modules_common__WEBPACK_IMPORTED_MODULE_2__["common"]), _toConsumableArray(_modules_layout__WEBPACK_IMPORTED_MODULE_3__["loyout"]))
@@ -48252,7 +48252,7 @@ var home = [{
     tags: true
   },
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 8).then(__webpack_require__.bind(null, /*! ./../../views/index/index */ "./resources/js/modules/views/index/index.vue"));
+    return __webpack_require__.e(/*! import() */ 9).then(__webpack_require__.bind(null, /*! ./../../views/index/index */ "./resources/js/modules/views/index/index.vue"));
   }
 }, {
   path: 'profile',
@@ -48263,7 +48263,7 @@ var home = [{
     tags: true
   },
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 7).then(__webpack_require__.bind(null, /*! ./../../views/profile/index */ "./resources/js/modules/views/profile/index.vue"));
+    return __webpack_require__.e(/*! import() */ 8).then(__webpack_require__.bind(null, /*! ./../../views/profile/index */ "./resources/js/modules/views/profile/index.vue"));
   }
 }, {
   path: 'Authorities/user',
@@ -48274,7 +48274,7 @@ var home = [{
     tags: true
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(3)]).then(__webpack_require__.bind(null, /*! ./../../views/authorities/user/index */ "./resources/js/modules/views/authorities/user/index.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(6)]).then(__webpack_require__.bind(null, /*! ./../../views/authorities/user/index */ "./resources/js/modules/views/authorities/user/index.vue"));
   }
 }, {
   path: 'Authorities/role',
@@ -48285,7 +48285,7 @@ var home = [{
     tags: true
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(2)]).then(__webpack_require__.bind(null, /*! ./../../views/authorities/role/index */ "./resources/js/modules/views/authorities/role/index.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(5)]).then(__webpack_require__.bind(null, /*! ./../../views/authorities/role/index */ "./resources/js/modules/views/authorities/role/index.vue"));
   }
 }, {
   path: 'Authorities/menu',
@@ -48296,7 +48296,7 @@ var home = [{
     tags: true
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(5)]).then(__webpack_require__.bind(null, /*! ./../../views/authorities/menu/index */ "./resources/js/modules/views/authorities/menu/index.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(3)]).then(__webpack_require__.bind(null, /*! ./../../views/authorities/menu/index */ "./resources/js/modules/views/authorities/menu/index.vue"));
   }
 }, {
   path: 'Authorities/authority',
@@ -48307,7 +48307,7 @@ var home = [{
     tags: true
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ./../../views/authorities/authority/index */ "./resources/js/modules/views/authorities/authority/index.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(4)]).then(__webpack_require__.bind(null, /*! ./../../views/authorities/authority/index */ "./resources/js/modules/views/authorities/authority/index.vue"));
   }
 }];
 
@@ -48331,7 +48331,7 @@ var loyout = [{
     cache: false
   },
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 6).then(__webpack_require__.bind(null, /*! ../../views/layout/login.vue */ "./resources/js/modules/views/layout/login.vue"));
+    return __webpack_require__.e(/*! import() */ 7).then(__webpack_require__.bind(null, /*! ../../views/layout/login.vue */ "./resources/js/modules/views/layout/login.vue"));
   }
 }, {
   path: '*',
@@ -48341,7 +48341,7 @@ var loyout = [{
     cache: true
   },
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 9).then(__webpack_require__.bind(null, /*! ../../components/layout/error.vue */ "./resources/js/modules/components/layout/error.vue"));
+    return __webpack_require__.e(/*! import() */ 10).then(__webpack_require__.bind(null, /*! ../../components/layout/error.vue */ "./resources/js/modules/components/layout/error.vue"));
   }
 }];
 
@@ -48729,7 +48729,7 @@ instance.interceptors.response.use(function (response) {
   if (!error.response) {
     iview__WEBPACK_IMPORTED_MODULE_3__["Message"].error('网络加载失败！');
   } else if (error.response.status === 401) {
-    iview__WEBPACK_IMPORTED_MODULE_3__["Message"].error('登录失效,请重新登录！');
+    iview__WEBPACK_IMPORTED_MODULE_3__["Message"].error(error.response.data.message);
     _modules_store_index__WEBPACK_IMPORTED_MODULE_2__["default"].dispatch('auth/afterLogout');
   } else if (error.response.status === 403) {
     iview__WEBPACK_IMPORTED_MODULE_3__["Message"].error(error.response.data.message);

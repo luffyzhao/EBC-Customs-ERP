@@ -1,53 +1,54 @@
 <template>
     <i-content :spin-show="loading">
         <i-search v-model="search">
-            <FormItem label="姓名" :label-width="100">
-                <Input v-model="search.name" placeholder="姓名"></Input>
+            <FormItem label="姓名">
+                <Input v-model="search.name" placeholder="姓名" size="small"></Input>
             </FormItem>
             <FormItem :label-width="1">
-                <Button type="primary" icon="ios-search" @click="getLists">搜索</Button>
-                <Button type="success" icon="ios-add" @click="openComponent('Create')">添加</Button>
+                <Button type="primary" icon="ios-search" @click="getLists" size="small">搜索</Button>
+                <Button type="success" icon="ios-add" @click="openComponent('Create')" size="small">添加</Button>
             </FormItem>
         </i-search>
-        <i-table :current="page.current" :total="page.total" @on-page-change="pageChange">
-            <Table :columns="table.columns" :data="table.data">
-                <template slot-scope="{ row, index }" slot="name">
-                    <span>{{ row.name }}</span>
-                </template>
-                <template slot-scope="{ row, index }" slot="email">
-                    <span>{{ row.email }}</span>
-                </template>
-                <template slot-scope="{ row, index }" slot="phone">
-                    <span>{{ row.phone }}</span>
-                </template>
-                <template slot-scope="{ row, index }" slot="role">
-                    <span>{{ row.role.name }}</span>
-                </template>
-                <template slot-scope="{ row, index }" slot="sex">
-                    <span>{{ row.sex }}</span>
-                </template>
-                <template slot-scope="{ row, index }" slot="birthday">
-                    <span>{{ row.birthday }}</span>
-                </template>
-                <template slot-scope="{ row, index }" slot="entryday">
-                    <span>{{ row.entryday }}</span>
-                </template>
-                <template slot-scope="{ row, index }" slot="status">
-                    <Poptip
-                            confirm
-                            title="你确定要更改这个用户的状态吗？"
-                            @on-ok="status(row)">
-                        <Button :type="row.status === 'off' ? 'error' : 'success'" size="small">{{row.status === 'off' ?
-                            '关闭' : '开启'}}
-                        </Button>
-                    </Poptip>
-                </template>
-                <template slot-scope="{ row, index }" slot="action">
-                    <Button type="warning" size="small" @click="openComponent('Update', row)">编辑</Button>
-                </template>
-            </Table>
+        <i-table :current="page.current" :total="page.total" :table="table" @on-page-change="pageChange">
+            <template slot-scope="{ row, index }" slot="name">
+                <span>{{ row.name }}</span>
+            </template>
+            <template slot-scope="{ row, index }" slot="email">
+                <span>{{ row.email }}</span>
+            </template>
+            <template slot-scope="{ row, index }" slot="phone">
+                <span>{{ row.phone }}</span>
+            </template>
+            <template slot-scope="{ row, index }" slot="role">
+                <span>{{ row.role.name }}</span>
+            </template>
+            <template slot-scope="{ row, index }" slot="sex">
+                <span>{{ row.sex }}</span>
+            </template>
+            <template slot-scope="{ row, index }" slot="birthday">
+                <span>{{ row.birthday }}</span>
+            </template>
+            <template slot-scope="{ row, index }" slot="entryday">
+                <span>{{ row.entryday }}</span>
+            </template>
+            <template slot-scope="{ row, index }" slot="status">
+                <Poptip
+                        transfer
+                        confirm
+                        title="你确定要更改这个用户的状态吗？"
+                        @on-ok="status(row)">
+                    <Button :type="row.status === 'off' ? 'error' : 'success'" size="small">{{row.status === 'off' ?
+                        '关闭' : '开启'}}
+                    </Button>
+                </Poptip>
+            </template>
+            <template slot-scope="{ row, index }" slot="action">
+                <Button type="warning" size="small" @click="openComponent('Update', row)">编辑</Button>
+            </template>
         </i-table>
-        <component v-bind:is="component.is" :props="component.prop" @on-close="closeComponent" @on-refresh="getLists(1)"></component>
+
+        <component v-bind:is="component.is" :props="component.prop" @on-close="closeComponent"
+                   @on-refresh="getLists(1)"></component>
     </i-content>
 </template>
 

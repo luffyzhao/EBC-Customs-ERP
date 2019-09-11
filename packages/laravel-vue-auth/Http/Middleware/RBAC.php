@@ -11,6 +11,7 @@ namespace LAuth\Http\Middleware;
 
 use Closure;
 use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Auth\AuthenticationException;
 use Illuminate\Auth\Middleware\Authenticate;
 
 class RBAC extends Authenticate
@@ -28,9 +29,19 @@ class RBAC extends Authenticate
      */
     public function handle($request, Closure $next, ...$guards)
     {
-        $this->authenticate($request, $guards);
+        try{
+            $this->authenticate($request, $guards);
+        }catch (AuthenticationException $exception){
+            throw new AuthorizationException('登录失效,请重新登录');
+        }
 
-        if ($request->route()->getName() !== null && $user = $this->auth->guard()->user()) {
+        $user = $this->auth->guard()->user();
+
+        if(!$user->allowLogin()){
+            throw new AuthorizationException('用户被禁用,请联系管理员');
+        }
+
+        if ($request->route()->getName() !== null && $user) {
             if (!($user->role && $user->role->hasPermission($request->route()->getName()))) {
                 throw new AuthorizationException('没有相关权限，请联系管理员添加');
             }

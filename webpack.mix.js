@@ -12,6 +12,7 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/vendor/js');
+mix.copyDirectory('resources/sass/app.css', 'public/vendor/css');
 mix.copyDirectory('node_modules/iview/dist/styles/', 'public/vendor/css');
 mix.copyDirectory('resources/images', 'public/vendor/images');
 mix.copyDirectory('resources/js/libs/ueditor', 'public/vendor/ueditor');

@@ -1,6 +1,8 @@
 <template>
     <div class="content-wrapper">
-        <slot></slot>
+        <div class="wrapper">
+            <slot></slot>
+        </div>
         <Spin size="large" fix v-if="spinShow"></Spin>
     </div>
 </template>
@@ -11,7 +13,7 @@
         props: {
             spinShow: {
                 type: Boolean,
-                default: false
+                default: true
             }
         }
     }
@@ -19,9 +21,15 @@
 
 <style scoped lang="less">
     .content-wrapper {
-        padding: 18px;
-        overflow: auto;
-
+        display: flex;
+        flex-flow: column;
+        overflow: hidden;
+        .wrapper{
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-flow: column;
+        }
         & > .ivu-card {
             margin-bottom: 10px;
         }

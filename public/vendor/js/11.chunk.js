@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[5],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[11],{
 
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/modules/views/authorities/role/create.vue?vue&type=script&lang=js&":
 /*!*************************************************************************************************************************************************************************************!*\
@@ -190,6 +190,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -326,7 +328,7 @@ __webpack_require__.r(__webpack_exports__);
     var _this = this;
 
     this.$http.get("authorities/role/".concat(this.props.id, "/edit")).then(function (res) {
-      _this.data = res.row;
+      _this.data = res.data;
       _this.menus.data = res.menus;
       var data = [];
       JSON.parse(JSON.stringify(_this.menus.data)).forEach(function (item) {
@@ -846,71 +848,81 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c("i-table", {
-        attrs: {
-          current: _vm.page.current,
-          table: _vm.table,
-          total: _vm.page.total
+      _c(
+        "i-table",
+        {
+          attrs: { current: _vm.page.current, total: _vm.page.total },
+          on: { "on-page-change": _vm.pageChange }
         },
-        on: { "on-page-change": _vm.pageChange },
-        scopedSlots: _vm._u([
-          {
-            key: "name",
-            fn: function(ref) {
-              var row = ref.row
-              var index = ref.index
-              return [_c("span", [_vm._v(_vm._s(row.name))])]
-            }
-          },
-          {
-            key: "description",
-            fn: function(ref) {
-              var row = ref.row
-              var index = ref.index
-              return [_c("span", [_vm._v(_vm._s(row.description))])]
-            }
-          },
-          {
-            key: "action",
-            fn: function(ref) {
-              var row = ref.row
-              var index = ref.index
-              return [
-                _c(
-                  "Button",
-                  {
-                    attrs: { type: "warning", size: "small" },
-                    on: {
-                      click: function($event) {
-                        return _vm.openComponent("Update", row)
-                      }
-                    }
-                  },
-                  [_vm._v("编辑")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "Poptip",
-                  {
-                    attrs: { confirm: "", title: "你确定要删除这个部门吗？" },
-                    on: {
-                      "on-ok": function($event) {
-                        return _vm.remove(row)
-                      }
-                    }
-                  },
-                  [
-                    _c("Button", { attrs: { type: "error", size: "small" } }, [
-                      _vm._v("删除")
-                    ])
-                  ],
-                  1
-                )
-              ]
-            }
-          }
-        ])
-      }),
+        [
+          _c("Table", {
+            attrs: { columns: _vm.table.columns, data: _vm.table.data },
+            scopedSlots: _vm._u([
+              {
+                key: "name",
+                fn: function(ref) {
+                  var row = ref.row
+                  var index = ref.index
+                  return [_c("span", [_vm._v(_vm._s(row.name))])]
+                }
+              },
+              {
+                key: "description",
+                fn: function(ref) {
+                  var row = ref.row
+                  var index = ref.index
+                  return [_c("span", [_vm._v(_vm._s(row.description))])]
+                }
+              },
+              {
+                key: "action",
+                fn: function(ref) {
+                  var row = ref.row
+                  var index = ref.index
+                  return [
+                    _c(
+                      "Button",
+                      {
+                        attrs: { type: "warning", size: "small" },
+                        on: {
+                          click: function($event) {
+                            return _vm.openComponent("Update", row)
+                          }
+                        }
+                      },
+                      [_vm._v("编辑")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "Poptip",
+                      {
+                        attrs: {
+                          confirm: "",
+                          title: "你确定要删除这个部门吗？"
+                        },
+                        on: {
+                          "on-ok": function($event) {
+                            return _vm.remove(row)
+                          }
+                        }
+                      },
+                      [
+                        _c(
+                          "Button",
+                          { attrs: { type: "error", size: "small" } },
+                          [_vm._v("删除")]
+                        )
+                      ],
+                      1
+                    )
+                  ]
+                }
+              }
+            ])
+          })
+        ],
+        1
+      ),
       _vm._v(" "),
       _c(_vm.component.is, {
         tag: "component",

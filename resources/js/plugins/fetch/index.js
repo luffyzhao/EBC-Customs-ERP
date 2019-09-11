@@ -33,7 +33,7 @@ instance.interceptors.response.use((response) => {
     if(!error.response){
         Message.error('网络加载失败！');
     }else if(error.response.status === 401){
-        Message.error('登录失效,请重新登录！');
+        Message.error(error.response.data.message);
         $store.dispatch('auth/afterLogout');
     }else if(error.response.status === 403){
         Message.error(error.response.data.message);

@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[6],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[12],{
 
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/modules/views/authorities/user/create.vue?vue&type=script&lang=js&":
 /*!*************************************************************************************************************************************************************************************!*\
@@ -133,7 +133,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mixins_content_list_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../mixins/content-list-page */ "./resources/js/modules/mixins/content-list-page.js");
 /* harmony import */ var _create__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./create */ "./resources/js/modules/views/authorities/user/create.vue");
 /* harmony import */ var _update__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./update */ "./resources/js/modules/views/authorities/user/update.vue");
-//
 //
 //
 //
@@ -367,7 +366,7 @@ __webpack_require__.r(__webpack_exports__);
     var _this = this;
 
     this.$http("authorities/user/".concat(this.props.id, "/edit")).then(function (res) {
-      _this.data = res.row;
+      _this.data = res.data;
       _this.roles.data = res.roles;
       _this.loading = false;
     });
@@ -832,135 +831,139 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c("i-table", {
-        attrs: {
-          current: _vm.page.current,
-          total: _vm.page.total,
-          table: _vm.table
+      _c(
+        "i-table",
+        {
+          attrs: { current: _vm.page.current, total: _vm.page.total },
+          on: { "on-page-change": _vm.pageChange }
         },
-        on: { "on-page-change": _vm.pageChange },
-        scopedSlots: _vm._u([
-          {
-            key: "name",
-            fn: function(ref) {
-              var row = ref.row
-              var index = ref.index
-              return [_c("span", [_vm._v(_vm._s(row.name))])]
-            }
-          },
-          {
-            key: "email",
-            fn: function(ref) {
-              var row = ref.row
-              var index = ref.index
-              return [_c("span", [_vm._v(_vm._s(row.email))])]
-            }
-          },
-          {
-            key: "phone",
-            fn: function(ref) {
-              var row = ref.row
-              var index = ref.index
-              return [_c("span", [_vm._v(_vm._s(row.phone))])]
-            }
-          },
-          {
-            key: "role",
-            fn: function(ref) {
-              var row = ref.row
-              var index = ref.index
-              return [_c("span", [_vm._v(_vm._s(row.role.name))])]
-            }
-          },
-          {
-            key: "sex",
-            fn: function(ref) {
-              var row = ref.row
-              var index = ref.index
-              return [_c("span", [_vm._v(_vm._s(row.sex))])]
-            }
-          },
-          {
-            key: "birthday",
-            fn: function(ref) {
-              var row = ref.row
-              var index = ref.index
-              return [_c("span", [_vm._v(_vm._s(row.birthday))])]
-            }
-          },
-          {
-            key: "entryday",
-            fn: function(ref) {
-              var row = ref.row
-              var index = ref.index
-              return [_c("span", [_vm._v(_vm._s(row.entryday))])]
-            }
-          },
-          {
-            key: "status",
-            fn: function(ref) {
-              var row = ref.row
-              var index = ref.index
-              return [
-                _c(
-                  "Poptip",
-                  {
-                    attrs: {
-                      transfer: "",
-                      confirm: "",
-                      title: "你确定要更改这个用户的状态吗？"
-                    },
-                    on: {
-                      "on-ok": function($event) {
-                        return _vm.status(row)
-                      }
-                    }
-                  },
-                  [
+        [
+          _c("Table", {
+            attrs: { columns: _vm.table.columns, data: _vm.table.data },
+            scopedSlots: _vm._u([
+              {
+                key: "name",
+                fn: function(ref) {
+                  var row = ref.row
+                  var index = ref.index
+                  return [_c("span", [_vm._v(_vm._s(row.name))])]
+                }
+              },
+              {
+                key: "email",
+                fn: function(ref) {
+                  var row = ref.row
+                  var index = ref.index
+                  return [_c("span", [_vm._v(_vm._s(row.email))])]
+                }
+              },
+              {
+                key: "phone",
+                fn: function(ref) {
+                  var row = ref.row
+                  var index = ref.index
+                  return [_c("span", [_vm._v(_vm._s(row.phone))])]
+                }
+              },
+              {
+                key: "role",
+                fn: function(ref) {
+                  var row = ref.row
+                  var index = ref.index
+                  return [_c("span", [_vm._v(_vm._s(row.role.name))])]
+                }
+              },
+              {
+                key: "sex",
+                fn: function(ref) {
+                  var row = ref.row
+                  var index = ref.index
+                  return [_c("span", [_vm._v(_vm._s(row.sex))])]
+                }
+              },
+              {
+                key: "birthday",
+                fn: function(ref) {
+                  var row = ref.row
+                  var index = ref.index
+                  return [_c("span", [_vm._v(_vm._s(row.birthday))])]
+                }
+              },
+              {
+                key: "entryday",
+                fn: function(ref) {
+                  var row = ref.row
+                  var index = ref.index
+                  return [_c("span", [_vm._v(_vm._s(row.entryday))])]
+                }
+              },
+              {
+                key: "status",
+                fn: function(ref) {
+                  var row = ref.row
+                  var index = ref.index
+                  return [
                     _c(
-                      "Button",
+                      "Poptip",
                       {
                         attrs: {
-                          type: row.status === "off" ? "error" : "success",
-                          size: "small"
+                          confirm: "",
+                          title: "你确定要更改这个用户的状态吗？"
+                        },
+                        on: {
+                          "on-ok": function($event) {
+                            return _vm.status(row)
+                          }
                         }
                       },
                       [
-                        _vm._v(
-                          _vm._s(row.status === "off" ? "关闭" : "开启") +
-                            "\n                "
+                        _c(
+                          "Button",
+                          {
+                            attrs: {
+                              type: row.status === "off" ? "error" : "success",
+                              size: "small"
+                            }
+                          },
+                          [
+                            _vm._v(
+                              _vm._s(row.status === "off" ? "关闭" : "开启") +
+                                "\n                    "
+                            )
+                          ]
                         )
-                      ]
+                      ],
+                      1
                     )
-                  ],
-                  1
-                )
-              ]
-            }
-          },
-          {
-            key: "action",
-            fn: function(ref) {
-              var row = ref.row
-              var index = ref.index
-              return [
-                _c(
-                  "Button",
-                  {
-                    attrs: { type: "warning", size: "small" },
-                    on: {
-                      click: function($event) {
-                        return _vm.openComponent("Update", row)
-                      }
-                    }
-                  },
-                  [_vm._v("编辑")]
-                )
-              ]
-            }
-          }
-        ])
-      }),
+                  ]
+                }
+              },
+              {
+                key: "action",
+                fn: function(ref) {
+                  var row = ref.row
+                  var index = ref.index
+                  return [
+                    _c(
+                      "Button",
+                      {
+                        attrs: { type: "warning", size: "small" },
+                        on: {
+                          click: function($event) {
+                            return _vm.openComponent("Update", row)
+                          }
+                        }
+                      },
+                      [_vm._v("编辑")]
+                    )
+                  ]
+                }
+              }
+            ])
+          })
+        ],
+        1
+      ),
       _vm._v(" "),
       _c(_vm.component.is, {
         tag: "component",

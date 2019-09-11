@@ -1,30 +1,35 @@
 <template>
     <span class="tree-li">
-        <span>
-            <Icon :type="data.children && data.children.length > 0 ? 'ios-folder-outline' : 'ios-paper-outline'"></Icon>
-            <span>
-                <Tooltip :content="data.description" placement="right">
-                {{ data.name }}
-                </Tooltip>
-            </span>
-        </span>
-        <span class="tree-li-buttons">
-            <template v-if="parent">
-                <Button type="primary" size="small" icon="ios-add" style="width: 65px" @click="append(data)"></Button>
-            </template>
-            <template v-else>
-                <Button type="warning" size="small" icon="md-checkmark-circle-outline"
+        <Row class="tree-li-a" v-if="data.id != '0'">
+            <Col :span="4" offset="8">{{data.url}}</Col>
+            <Col :span="4">{{data.sort}}</Col>
+            <Col :span="4">{{data.description == '' ? data.description : '-'}}</Col>
+            <Col :span="4" class="col-button">
+                <Button type="dashed" size="small" icon="ios-checkmark-circle-outline"
                         @click="append(data, 'update')"></Button>
-                <Button type="primary" size="small" icon="ios-add" @click="append(data)"></Button>
+                <Button type="dashed" size="small" icon="ios-add" @click="append(data)"></Button>
                 <Poptip
                         confirm
-                        title="你确定要删除这个菜单吗？"
+                        title="你确定要删除这个类目吗？"
                         @on-ok="remove(data)">
-                    <Button v-if="!(data.children && data.children.length > 0)" type="error" size="small"
+                    <Button v-if="!(data.children && data.children.length > 0)" type="dashed" size="small"
                             icon="ios-remove"></Button>
+                    <Button v-else icon="ios-remove" disabled size="small"></Button>
                 </Poptip>
-            </template>
-        </span>
+            </Col>
+        </Row>
+        <Row class="tree-li-a" v-else>
+            <Col :span="4" offset="8">菜单url</Col>
+            <Col :span="4">排序</Col>
+            <Col :span="4">说明</Col>
+            <Col :span="4" class="tree-li-action col-button">
+                <Button type="dashed" size="small" icon="ios-add" style="width: 90px" @click="append(data)"></Button>
+            </Col>
+        </Row>
+        <Col span="24">
+            <Icon :type="data.children && data.children.length > 0 ? 'ios-folder-outline' : 'ios-paper-outline'"></Icon>
+            <span class="hand">{{ data.name }}</span>
+        </Col>
     </span>
 </template>
 
@@ -43,16 +48,39 @@
     }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
     .tree-li {
-        display: inline-block;
+        display: inline-flex;
         width: 100%;
         font-size: 14px;
+        vertical-align: top;
+        position: initial;
 
-        .tree-li-buttons {
-            display: inline-block;
-            float: right;
-            margin-right: 32px
+        .tree-li-a {
+            padding-right: 15px;
+            position: absolute;
+            left: 0;
+            width: 100%;
+
+            &:hover {
+                background-color: #ebf7ff;
+            }
+
+            .ivu-col {
+                z-index: 6;
+            }
+        }
+    }
+
+    .tree {
+        .ivu-tree-children {
+            .ivu-tree-arrow {
+                position: relative;
+                z-index: 9;
+            }
+        }
+        .col-button {
+            text-align: right;
         }
     }
 </style>

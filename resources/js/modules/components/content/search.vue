@@ -1,10 +1,9 @@
 <template>
-  <Card :title="title" :icon="icon">
+    <div class="search-panel">
       <Form ref="formSearch" :model="value" inline :label-width="60">
         <slot></slot>
       </Form>
-  </Card>
-
+    </div>
 </template>
 
 <script>
@@ -14,18 +13,24 @@
     props: {
       value: {
         type: Object
-      },
-      title: {
-        type: String,
-        default: '搜索'
-      },
-      icon: {
-        type: String,
-        default: 'ios-search'
       }
     }
   }
 </script>
 
-<style scoped lang="less">
+<style scoped >
+    .search-panel{
+        padding: 10px;
+    }
+</style>
+<style lang="less">
+    .search-panel {
+        background-color: #fff;
+        .ivu-form-item{
+            margin-bottom: 0px;
+        }
+        .ivu-cascader{
+            display: inline-block;
+        }
+    }
 </style>

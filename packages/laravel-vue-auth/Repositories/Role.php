@@ -13,16 +13,16 @@ use LTools\Repositories\RepositoryAbstract;
 class Role extends RepositoryAbstract
 {
     /**
-     * @var \App\Models\Role
+     * @var \LAuth\Models\Role
      */
     protected $model;
 
     /**
      * RepositoryAbstract constructor.
      *
-     * @param \App\Models\Role $model
+     * @param \LAuth\Models\Role $model
      */
-    public function __construct(\App\Models\Role $model)
+    public function __construct(\LAuth\Models\Role $model)
     {
         $this->model = $model;
     }

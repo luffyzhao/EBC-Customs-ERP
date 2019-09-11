@@ -143,7 +143,7 @@ export const listConvertTree = (list) => {
             }
         }
     }
-    return root.children;
+    return root.children || [];
 }
 
 /**

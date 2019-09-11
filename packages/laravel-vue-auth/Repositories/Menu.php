@@ -16,9 +16,9 @@ class Menu extends RepositoryAbstract
     /**
      * RepositoryAbstract constructor.
      *
-     * @param \App\Models\Menu $model
+     * @param \LAuth\Models\Menu $model
      */
-    public function __construct(\App\Models\Menu $model)
+    public function __construct(\LAuth\Models\Menu $model)
     {
         $this->model = $model;
     }
