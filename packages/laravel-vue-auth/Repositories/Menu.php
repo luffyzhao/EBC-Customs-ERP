@@ -24,6 +24,18 @@ class Menu extends RepositoryAbstract
     }
 
     /**
+     * @param array $columns
+     * @param array $withs
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public function getWith(array $columns, array $withs)
+    {
+        $menus = parent::get($columns);
+        $menus->load($withs);
+        return $menus;
+    }
+
+    /**
      * @param int|string $id
      * @param array $columns
      * @return \Illuminate\Database\Eloquent\Model

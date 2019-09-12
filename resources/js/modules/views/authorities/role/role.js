@@ -1,7 +1,6 @@
 export default {
     data(){
         return {
-            current: 0,
             loading: true,
             data: {
                 authorities: [],
@@ -27,39 +26,6 @@ export default {
     methods: {
         handleChange(newTargetKeys) {
             this.data.authorities = newTargetKeys
-        },
-        getAuthorities(){
-            this.$http.get(`authorities/menu/authority`, {
-                params: {
-                    ids: this.data.menus
-                }
-            }).then((res) => {
-                this.authorities.data = this.toTransfer(res)
-            });
-        },
-        next(name) {
-            if (this.current === 0) {
-                this.validate(name).then(() => {
-                    this.getAuthorities();
-                    this.current = ++this.current
-                }).catch();
-            } else {
-                this.current = --this.current;
-            }
-        },
-        toTransfer(data) {
-            let lists = [];
-            data.forEach((item) => {
-                item.authorities.forEach((val) => {
-                    if (lists.findIndex((v) => v.key === val.id) === -1) {
-                        lists.push({
-                            key: val.id,
-                            label: `${val.name}`
-                        })
-                    }
-                })
-            })
-            return lists
         }
     }
 }

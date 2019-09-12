@@ -88,6 +88,25 @@ export const home = [
         component: () => import('./../../views/authorities/menu/index')
     },
     {
+        path: 'Authorities/menu/create',
+        name: 'authorities.menu.create',
+        meta: {
+            title: '添加菜单',
+            cache: false,
+            tags: false
+        },
+        component: () => import('./../../views/authorities/menu/create')
+    },{
+        path: 'Authorities/menu/update',
+        name: 'authorities.menu.update',
+        meta: {
+            title: '更新菜单',
+            cache: false,
+            tags: false
+        },
+        component: () => import('./../../views/authorities/menu/update')
+    },
+    {
         path: 'Authorities/authority',
         name: 'authorities.authority',
         meta: {

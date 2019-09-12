@@ -1,45 +1,49 @@
 <template>
-    <i-form :spin-show="loading">
-        <Steps :current="current">
-            <Step title="分配菜单"></Step>
-            <Step title="分配权限"></Step>
-        </Steps>
+    <i-form :spin-show="loading" width="1200">
         <Form :model="data" :label-width="100" :rules="ruleValidate" ref="formCreate">
-            <div v-show="current === 0">
-                <FormItem label="部门名称" prop="name">
-                    <Input v-model="data.name"></Input>
-                </FormItem>
-                <FormItem label="部门描述" prop="description">
-                    <Input v-model="data.description" type="textarea" :rows="6"></Input>
-                </FormItem>
-                <FormItem label="分配菜单">
-                    <div class="menu-box">
-                        <div class="box-body">
-                            <Tree :data="menus.data" show-checkbox multiple></Tree>
+            <Row>
+                <Col span="10">
+                    <FormItem label="部门名称" prop="name">
+                        <Input v-model="data.name"></Input>
+                    </FormItem>
+                    <FormItem label="部门描述" prop="description">
+                        <Input v-model="data.description" type="textarea" :rows="2"></Input>
+                    </FormItem>
+                </Col>
+            </Row>
+
+
+            <Row>
+                <Col span="6">
+                    <FormItem label="分配菜单">
+                        <div class="menu-box">
+                            <div class="box-body">
+                                <Tree :data="menus.data" show-checkbox multiple @on-check-change="change"></Tree>
+                            </div>
                         </div>
-                    </div>
-                </FormItem>
-            </div>
-            <div v-show="current === 1">
-                <FormItem label="分配权限">
-                    <Transfer
-                            :titles="['可分配权限', '已有权限']"
-                            :list-style="{width: '250px',height: '500px'}"
-                            :data="authorities.data"
-                            :target-keys="data.authorities"
-                            @on-change="handleChange"></Transfer>
-                </FormItem>
-            </div>
+                    </FormItem>
+                </Col>
+                <Col span="18">
+                    <FormItem label="分配权限">
+                        <div class="menu-box">
+                            <div class="box-body">
+                                <CheckboxGroup v-model="data.authorities">
+                                    <div v-for="(item, index) in authorities.data">
+                                        <h4 v-if="item.authorities.length > 0" class="authority-header">
+                                            {{item.title}}
+                                        </h4>
+                                        <Checkbox v-for="(val, key) in item.authorities" :label="val.id">{{val.name}}</Checkbox>
+                                    </div>
+                                </CheckboxGroup>
+                            </div>
+                        </div>
+                    </FormItem>
+                </Col>
+            </Row>
+
         </Form>
         <div slot="footer">
-            <Button type="primary" v-if="current === 1" @click="next('formCreate')">
-                <Icon type="ios-arrow-back"></Icon>
-                上一步
-            </Button>
-            <Button type="primary" v-if="current === 1" icon="ios-add" @click="submit('formCreate')">提交</Button>
-            <Button type="primary" v-if="current === 0" @click="next('formCreate')">下一步
-                <Icon type="ios-arrow-forward"></Icon>
-            </Button>
+            <Button type="primary" icon="ios-add" @click="submit('formCreate')">提交</Button>
             <Button type="warning" icon="md-log-out" @click="$router.go(-1)">返回</Button>
         </div>
     </i-form>
@@ -47,13 +51,12 @@
 
 <script>
     import contentDrawer from '../../../mixins/content-drawer'
-    import IDrawer from "../../../components/content/drawer";
     import Role from './role';
     import IForm from "../../../components/content/form";
 
     export default {
         name: "create",
-        components: {IForm, IDrawer},
+        components: {IForm},
         mixins: [contentDrawer, Role],
         mounted() {
             this.$http.get(`authorities/role/create`).then((res) => {
@@ -105,12 +108,14 @@
                     }
                 });
                 return arr
+            },
+            change(menus) {
+                this.authorities.data = menus;
             }
         },
         watch: {
             checkedMenus(val) {
                 this.data.menus = val
-                this.checked = true
             }
         }
     }
@@ -132,6 +137,10 @@
 
             .ivu-tree ul li {
                 margin: 0;
+            }
+
+            .authority-header {
+                border-bottom: 1px solid #dcdee2;
             }
         }
     }

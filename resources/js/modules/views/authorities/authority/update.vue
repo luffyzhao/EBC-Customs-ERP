@@ -1,5 +1,5 @@
 <template>
-    <i-form title="权限添加" :loading="loading" :width="720">
+    <i-form :spin-show="loading">
         <Form ref="formUpdate" :model="data" :label-width="100" :rules="ruleValidate">
             <FormItem label="权限名称" prop="name">
                 <Input v-model="data.name"></Input>

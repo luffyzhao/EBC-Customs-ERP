@@ -48,7 +48,7 @@ class RoleController extends Controller
     public function create(Menu $menu)
     {
         return $this->response(
-            $menu->get(['id', 'name as title', 'parent_id'])
+            $menu->getWith(['id', 'name as title', 'parent_id'], ['authorities'])
         );
     }
 
@@ -80,7 +80,7 @@ class RoleController extends Controller
     {
         return $this->response(
             [
-                'menus' => $menu->get(['id', 'name as title', 'parent_id']),
+                'menus' => $menu->getWith(['id', 'name as title', 'parent_id'], ['authorities']),
                 'row' => $this->role->findEdit($id)
             ]
         );

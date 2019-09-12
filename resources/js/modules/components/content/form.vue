@@ -1,7 +1,7 @@
 <template>
     <i-content :spin-show="spinShow">
         <div class="form-content">
-            <div :class="`body-size body-size-${size}`">
+            <div class="body-size" :style="`max-width: ${width}px`">
                 <slot></slot>
             </div>
         </div>
@@ -22,12 +22,9 @@
                 type: Boolean,
                 default: true
             },
-            size: {
-                type: String,
-                default: 'default',
-                validator: (val) => {
-                    return ['default', 'small', 'large'].findIndex((item) => item === val) !== -1;
-                }
+            width: {
+                type: [String, Number],
+                default: '720'
             }
         }
     }
@@ -46,18 +43,6 @@
                 padding-right: 100px;
                 padding-top: 20px;
                 height: 100%;
-            }
-
-            .body-size-default {
-                max-width: 720px;
-            }
-
-            .body-size-small {
-                max-width: 48px;
-            }
-
-            .body-size-large {
-                width: 100%;
             }
         }
 

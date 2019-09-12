@@ -1,8 +1,8 @@
 <template>
-    <i-drawer title="菜单添加" :width="720" :loading="loading">
+    <i-form :spin-show="loading">
         <Form ref="formCreate" :model="data" :label-width="100" :rules="ruleValidate">
             <FormItem label="上级菜单">
-                <Input :value="props.name" disabled></Input>
+                <Input :value="$route.query.name" disabled></Input>
             </FormItem>
             <FormItem label="菜单名称" prop="name">
                 <Input v-model="data.name"></Input>
@@ -19,7 +19,7 @@
             <FormItem label="分配权限">
                 <Transfer
                         :titles="['可分配权限', '已有权限']"
-                        :list-style="{width: '250px',height: '500px'}"
+                        :list-style="{width: '200px',height: '500px'}"
                         :data="authorities.data"
                         :target-keys="data.authorities"
                         @on-change="handleChange"></Transfer>
@@ -27,18 +27,19 @@
         </Form>
         <div slot="footer">
             <Button type="primary" icon="ios-add" @click="submit('formCreate')">提交</Button>
+            <Button type="warning" icon="md-log-out" @click="$router.go(-1)">返回</Button>
         </div>
-    </i-drawer>
+    </i-form>
 </template>
 
 <script>
     import contentDrawer from '../../../mixins/content-drawer'
-    import IDrawer from "../../../components/content/drawer";
     import Menu from './menu';
+    import IForm from "../../../components/content/form";
 
     export default {
         name: "create",
-        components: {IDrawer},
+        components: {IForm},
         mixins: [contentDrawer, Menu],
         mounted(){
             this.$http.get(`authorities/menu/create`).then((res) => {
@@ -52,7 +53,7 @@
                 this.validate(name).then(() => {
                     this.loading = true;
                     this.$http.post(`authorities/menu`, this.data).then(() => {
-                        this.closeDrawer(false)
+                        this.$store.dispatch('layout/remove', this.$route);
                     }).finally(() => {
                         this.loading = false;
                     });
