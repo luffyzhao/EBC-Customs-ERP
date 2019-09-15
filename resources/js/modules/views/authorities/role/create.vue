@@ -28,11 +28,11 @@
                         <div class="menu-box">
                             <div class="box-body">
                                 <CheckboxGroup v-model="data.authorities">
-                                    <div v-for="(item, index) in authorities.data">
+                                    <div v-for="(item, index) in authorities.data" :key="index">
                                         <h4 v-if="item.authorities.length > 0" class="authority-header">
                                             {{item.title}}
                                         </h4>
-                                        <Checkbox v-for="(val, key) in item.authorities" :label="val.id">{{val.name}}</Checkbox>
+                                        <Checkbox v-for="(val, key) in item.authorities" :key="key" :label="val.id">{{val.name}}</Checkbox>
                                     </div>
                                 </CheckboxGroup>
                             </div>
@@ -108,9 +108,6 @@
                     }
                 });
                 return arr
-            },
-            change(menus) {
-                this.authorities.data = menus;
             }
         },
         watch: {

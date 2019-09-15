@@ -26,6 +26,9 @@ export default {
     methods: {
         handleChange(newTargetKeys) {
             this.data.authorities = newTargetKeys
+        },
+        change(menus) {
+            this.authorities.data = menus;
         }
     }
 }

@@ -76,13 +76,13 @@ class User extends RepositoryAbstract
 
     /**
      * profileUpdate
-     * @param \App\Models\User $user
+     * @param \LAuth\Models\User $user
      * @param array $values
      * @author luffyzhao@vip.126.com
      * @return bool
      * @throws \Throwable
      */
-    public function profileUpdate(\App\Models\User $user, array $values)
+    public function profileUpdate(\LAuth\Models\User $user, array $values)
     {
         if (empty($values['password'])) {
             unset($values['password']);

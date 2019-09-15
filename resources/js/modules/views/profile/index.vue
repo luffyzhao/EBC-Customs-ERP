@@ -1,78 +1,54 @@
 <template>
-    <Row class="content-wrapper">
-        <Col :md="10" :lg="8" :xl="6" class="profile-card-list">
-            <Card :padding="0" :dis-hover="true" :shadow="true" class="profile-detail-card">
-                <div class="profile-detail">
+    <i-form class="content-wrapper" :spin-show="loading">
+        <Form :model="profile" :label-width="100" :rules="ruleValidate" ref="formProfile">
+            <FormItem label="手机号码" prop="phone">
+                <Input placeholder="手机号码" v-model="profile.phone"></Input>
+            </FormItem>
+            <Row class="ivu-form-item-row">
+                <Col span="12">
+                    <FormItem label="生日" prop="birthday" @on-form-change="(val) => this.profile.birthday = val">
+                        <DatePicker placeholder="生日" format="yyyy-MM-dd"
+                                    @on-change="(val) => this.profile.birthday = val"
+                                    v-model="profile.birthday"></DatePicker>
+                    </FormItem>
+                </Col>
+                <Col span="12">
+                    <FormItem label="性别" prop="sex">
+                        <i-switch true-value="man" false-value="women" v-model="profile.sex">
+                            <span slot="open">男</span>
+                            <span slot="close">女</span>
+                        </i-switch>
+                    </FormItem>
+                </Col>
+            </Row>
+            <FormItem>
+                <Alert show-icon type="error" class="form-alert">如果不需要修改密码，下面可以不填。</Alert>
+            </FormItem>
+            <FormItem label="用户密码" prop="password_original">
+                <Input type="password" placeholder="请输入用户密码" v-model="profile.password_original"></Input>
+            </FormItem>
+            <FormItem label="修改密码" prop="password">
+                <Input type="password" placeholder="请输入修改后密码" v-model="profile.password"></Input>
+            </FormItem>
+            <FormItem label="确认修改密码" prop="password_confirmation">
+                <Input type="password" placeholder="请输入确认密码" v-model="profile.password_confirmation"></Input>
+            </FormItem>
 
-                    <div class="profile-info">
-                        <div class="profile-info-list">
-                            <p>姓名: {{profile.name}}</p>
-                            <div class="profile-role">
-                                <Tag color="warning">{{profile.role ? profile.role.name : ''}}</Tag>
-                            </div>
-                            <p>邮箱: {{profile.email}}</p>
-                            <p>手机号码: {{profile.phone}}</p>
-                            <p>性别:
-                                <Icon type="md-male" v-if="profile.sex === 'man'" color="#2d8cf0"/>
-                                <Icon type="md-female" v-if="profile.sex === 'women'" color="#ed4014"/>
-                            </p>
-                            <p>生日: {{profile.birthday}}</p>
-                            <p>入职时间: {{profile.entryday}}</p>
-                        </div>
-                    </div>
-                </div>
-            </Card>
-        </Col>
-        <Col :md="14" :lg="16" :xl="18" class="profile-card-list">
-            <Card :dis-hover="true" :shadow="true" class="profile-edit-card">
-                <Form :model="profile" :label-width="100" :rules="ruleValidate" ref="formProfile">
-                    <FormItem label="手机号码" prop="phone">
-                        <Input placeholder="手机号码" v-model="profile.phone"></Input>
-                    </FormItem>
-                    <Row class="ivu-form-item-row">
-                        <Col span="12">
-                            <FormItem label="生日" prop="birthday" @on-form-change="(val) => this.profile.birthday = val">
-                                <DatePicker placeholder="生日" format="yyyy-MM-dd"
-                                            @on-change="(val) => this.profile.birthday = val"
-                                            v-model="profile.birthday"></DatePicker>
-                            </FormItem>
-                        </Col>
-                        <Col span="12">
-                            <FormItem label="性别" prop="sex">
-                                <i-switch true-value="man" false-value="women" v-model="profile.sex">
-                                    <span slot="open">男</span>
-                                    <span slot="close">女</span>
-                                </i-switch>
-                            </FormItem>
-                        </Col>
-                    </Row>
-                    <FormItem>
-                        <Alert show-icon type="error" class="form-alert">如果不需要修改密码，下面可以不填。</Alert>
-                    </FormItem>
-                    <FormItem label="用户密码" prop="password_original">
-                        <Input placeholder="请输入用户密码" v-model="profile.password_original"></Input>
-                    </FormItem>
-                    <FormItem label="修改后的密码" prop="password">
-                        <Input placeholder="请输入修改后密码" v-model="profile.password"></Input>
-                    </FormItem>
-                    <FormItem label="确认修改后的密码" prop="password_confirmation">
-                        <Input placeholder="请输入确认密码" v-model="profile.password_confirmation"></Input>
-                    </FormItem>
-                    <FormItem>
-                        <Button type="primary" @click="submit('formProfile')">保存</Button>
-                    </FormItem>
-                </Form>
-            </Card>
-        </Col>
-        <Spin size="large" fix v-if="loading"></Spin>
-    </Row>
+
+        </Form>
+        <div slot="footer">
+            <Button type="primary" @click="submit('formProfile')">保存</Button>
+        </div>
+    </i-form>
 </template>
 
 <script>
     import FromSubmit from '../../mixins/from-submit'
+    import IForm from "../../components/content/form";
 
     export default {
         name: "index",
+        components: {IForm},
         mixins: [FromSubmit],
         data() {
             return {
@@ -90,14 +66,13 @@
                     password: [
                         {
                             validator: (rule, value, callback) => {
-                                if (value === undefined || value === '') {
-                                    return callback();
-                                } else if (value.length < 6 || value.length > 20) {
-                                    return callback('用户密码字符长度是6-20个字符');
+                                if (value.length < 6 || value.length > 20) {
+                                    callback('用户密码字符长度是6-20个字符');
                                 } else if (value === this.profile.password_original) {
-                                    return callback('修改后的密码不能和原始密码一样');
+                                    callback('修改后的密码不能和原始密码一样');
                                 }
-                            }, message: '用户密码不能为空', trigger: 'blur'
+                                callback();
+                            }, trigger: 'blur'
                         }
                     ],
                     status: [
@@ -129,16 +104,14 @@
             })
         },
         methods: {
-            submit(name){
+            submit(name) {
                 this.validate(name).then(() => {
                     this.loading = true;
                     this.$http.put(`profile`, this.profile).then((res) => {
-
                     }).finally(() => {
                         this.loading = false
                     })
-                }).catch(() => {
-
+                }).catch((err) => {
                 })
             }
         }
@@ -157,10 +130,12 @@
                 .form-alert {
                     margin-bottom: 0px;
                 }
-                .ivu-form-item-row{
+
+                .ivu-form-item-row {
                     margin-bottom: 24px;
                 }
-                .ivu-form-item:last-child{
+
+                .ivu-form-item:last-child {
                     margin-bottom: 0px;
                 }
             }
