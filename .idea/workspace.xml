@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a90c168f-af2b-48cb-9911-530c2b58ec81" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.styleci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.styleci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/CheckForMaintenanceMode.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckForMaintenanceMode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/artisan" beforeDir="false" afterPath="$PROJECT_DIR$/artisan" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/cache/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/broadcasting.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/broadcasting.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cache.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/hashing.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/hashing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/logging.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/logging.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/ltools.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/ltools.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/queue.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/queue.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/database/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_18_031127_create_auth_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Http/Controllers/AuthController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Http/Controllers/Authorities/AuthorityController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Http/Controllers/Authorities/MenuController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Http/Controllers/Authorities/RoleController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Http/Controllers/Authorities/UserController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Http/Controllers/Controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Http/Controllers/UeditorController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Http/Middleware/RBAC.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Http/Requests/Auth/LoginRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Http/Requests/Auth/ProfileUpdateRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Http/Requests/Authorities/AuthoritiesRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Http/Requests/Authorities/MenuRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Http/Requests/Authorities/RoleRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Http/Requests/Authorities/UserRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Http/Requests/Authorities/UserStatusRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Http/Searchs/Authorities/AuthoritySearch.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Http/Searchs/Authorities/RoleSearch.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Http/Searchs/Authorities/UserSearch.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Models/Authority.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Models/Menu.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Models/Role.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Models/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Plugins/UEditor/Base.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Plugins/UEditor/Catchimage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Plugins/UEditor/Config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Plugins/UEditor/Contracts/UEditor.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Plugins/UEditor/Listfile.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Plugins/UEditor/Listimage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Plugins/UEditor/Uploadfile.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Plugins/UEditor/Uploadimage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Plugins/UEditor/Uploadscrawl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Plugins/UEditor/Uploadvideo.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Providers/LAuthServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Repositories/Authority.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Repositories/Menu.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Repositories/Role.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/Repositories/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/laravel-vue-auth/routes.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/css/fonts/ionicons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/css/fonts/ionicons.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/css/iview.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/css/iview.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/0.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/0.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/1.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/1.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/10.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/10.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/11.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/11.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/12.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/12.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/13.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/13.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/14.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/14.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/15.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/15.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/16.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/16.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/17.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/17.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/18.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/18.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/19.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/19.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/2.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/2.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/20.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/3.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/3.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/4.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/4.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/5.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/5.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/6.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/6.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/7.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/7.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/8.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/8.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/9.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/9.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/manifest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/vendor/js/app.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/vendor/js/app.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/vendor/js/vendor.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/vendor/js/vendor.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/anchor/anchor.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/anchor/anchor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/attachment/attachment.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/attachment/attachment.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/attachment/attachment.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/attachment/attachment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/attachment/attachment.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/attachment/attachment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/background/background.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/background/background.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/background/background.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/background/background.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/background/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/background/background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/charts/chart.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/charts/chart.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/charts/charts.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/charts/charts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/charts/charts.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/charts/charts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/charts/charts.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/charts/charts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/emotion/emotion.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/emotion/emotion.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/emotion/emotion.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/emotion/emotion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/emotion/emotion.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/emotion/emotion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/gmap/gmap.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/gmap/gmap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/help/help.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/help/help.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/help/help.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/help/help.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/help/help.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/help/help.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/image/image.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/image/image.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/image/image.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/image/image.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/image/image.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/image/image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/insertframe/insertframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/insertframe/insertframe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/internal.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/internal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/link/link.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/link/link.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/map/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/map/map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/map/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/map/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/music/music.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/music/music.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/music/music.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/music/music.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/music/music.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/music/music.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/preview/preview.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/preview/preview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/scrawl/scrawl.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/scrawl/scrawl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/scrawl/scrawl.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/scrawl/scrawl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/scrawl/scrawl.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/scrawl/scrawl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/searchreplace/searchreplace.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/searchreplace/searchreplace.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/searchreplace/searchreplace.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/searchreplace/searchreplace.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/snapscreen/snapscreen.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/snapscreen/snapscreen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/spechars/spechars.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/spechars/spechars.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/spechars/spechars.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/spechars/spechars.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/table/edittable.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/table/edittable.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/table/edittable.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/table/edittable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/table/edittable.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/table/edittable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/table/edittd.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/table/edittd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/table/edittip.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/table/edittip.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/template/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/template/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/template/template.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/template/template.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/template/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/template/template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/template/template.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/template/template.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/video/video.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/video/video.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/video/video.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/video/video.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/video/video.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/video/video.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/webapp/webapp.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/webapp/webapp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/wordimage/tangram.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/wordimage/tangram.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/wordimage/wordimage.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/wordimage/wordimage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/wordimage/wordimage.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/dialogs/wordimage/wordimage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/lang/en/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/lang/en/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/lang/zh-cn/zh-cn.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/lang/zh-cn/zh-cn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/php/Uploader.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/php/Uploader.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/php/action_crawler.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/php/action_crawler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/php/action_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/php/action_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/php/action_upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/php/action_upload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/php/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/php/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/php/controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/php/controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/themes/default/css/ueditor.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/themes/default/css/ueditor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/themes/default/css/ueditor.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/themes/default/css/ueditor.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/themes/default/dialogbase.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/themes/default/dialogbase.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/themes/iframe.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/themes/iframe.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/SyntaxHighlighter/shCore.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/SyntaxHighlighter/shCore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/codemirror/codemirror.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/codemirror/codemirror.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/codemirror/codemirror.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/codemirror/codemirror.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/adapters/mootools-adapter.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/adapters/mootools-adapter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/adapters/mootools-adapter.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/adapters/mootools-adapter.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/adapters/prototype-adapter.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/adapters/prototype-adapter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/adapters/prototype-adapter.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/adapters/prototype-adapter.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/adapters/standalone-framework.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/adapters/standalone-framework.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/adapters/standalone-framework.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/adapters/standalone-framework.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/highcharts-more.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/highcharts-more.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/highcharts-more.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/highcharts-more.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/highcharts.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/highcharts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/highcharts.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/highcharts.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/annotations.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/annotations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/annotations.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/annotations.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/canvas-tools.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/canvas-tools.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/canvas-tools.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/canvas-tools.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/data.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/data.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/drilldown.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/drilldown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/drilldown.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/drilldown.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/exporting.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/exporting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/exporting.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/exporting.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/funnel.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/funnel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/funnel.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/funnel.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/heatmap.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/heatmap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/heatmap.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/heatmap.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/map.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/map.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/no-data-to-display.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/no-data-to-display.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/no-data-to-display.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/modules/no-data-to-display.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/themes/dark-blue.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/themes/dark-blue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/themes/dark-green.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/themes/dark-green.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/themes/gray.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/themes/gray.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/themes/grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/themes/grid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/themes/skies.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/highcharts/themes/skies.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/jquery-1.10.2.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/jquery-1.10.2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/jquery-1.10.2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/jquery-1.10.2.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/video-js/font/vjs.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/video-js/font/vjs.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/video-js/video-js.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/video-js/video-js.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/video-js/video-js.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/video-js/video-js.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/video-js/video.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/video-js/video.dev.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/video-js/video.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/video-js/video.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/webuploader/webuploader.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/webuploader/webuploader.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/webuploader/webuploader.custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/webuploader/webuploader.custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/webuploader/webuploader.custom.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/webuploader/webuploader.custom.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/webuploader/webuploader.flashonly.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/webuploader/webuploader.flashonly.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/webuploader/webuploader.flashonly.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/webuploader/webuploader.flashonly.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/webuploader/webuploader.html5only.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/webuploader/webuploader.html5only.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/webuploader/webuploader.html5only.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/webuploader/webuploader.html5only.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/webuploader/webuploader.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/webuploader/webuploader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/webuploader/webuploader.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/webuploader/webuploader.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/webuploader/webuploader.withoutimage.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/webuploader/webuploader.withoutimage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/webuploader/webuploader.withoutimage.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/webuploader/webuploader.withoutimage.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/zeroclipboard/ZeroClipboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/zeroclipboard/ZeroClipboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/third-party/zeroclipboard/ZeroClipboard.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/third-party/zeroclipboard/ZeroClipboard.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/ueditor.all.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/ueditor.all.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/ueditor.all.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/ueditor.all.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/ueditor.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/ueditor.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/ueditor.parse.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/ueditor.parse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/ueditor/ueditor.parse.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/ueditor/ueditor.parse.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/web.config" beforeDir="false" afterPath="$PROJECT_DIR$/public/web.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/images/login_bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/images/login_image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/images/login_image2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/images/login_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/images/login_logo2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/images/login_logo3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/images/profile.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/config/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/directives/clickoutside.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/directives/transfer-dom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/anchor/anchor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/attachment.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/attachment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/fileTypeImages/icon_chm.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/fileTypeImages/icon_default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/fileTypeImages/icon_doc.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/fileTypeImages/icon_exe.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/fileTypeImages/icon_jpg.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/fileTypeImages/icon_mp3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/fileTypeImages/icon_mv.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/fileTypeImages/icon_pdf.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/fileTypeImages/icon_ppt.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/fileTypeImages/icon_psd.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/fileTypeImages/icon_rar.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/fileTypeImages/icon_txt.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/fileTypeImages/icon_xls.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/images/alignicon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/images/alignicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/images/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/images/file-icons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/images/file-icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/images/icons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/images/icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/images/image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/images/progress.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/images/success.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/attachment/images/success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/background/background.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/background/background.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/background/background.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/background/images/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/background/images/success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/charts/chart.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/charts/charts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/charts/charts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/charts/charts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/charts/images/charts0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/charts/images/charts1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/charts/images/charts2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/charts/images/charts3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/charts/images/charts4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/charts/images/charts5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/emotion/emotion.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/emotion/emotion.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/emotion/emotion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/emotion/images/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/emotion/images/bface.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/emotion/images/cface.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/emotion/images/fface.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/emotion/images/jxface2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/emotion/images/neweditor-tab-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/emotion/images/tface.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/emotion/images/wface.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/emotion/images/yface.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/gmap/gmap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/help/help.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/help/help.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/help/help.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/image/image.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/image/image.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/image/image.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/image/images/alignicon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/image/images/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/image/images/icons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/image/images/icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/image/images/image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/image/images/progress.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/image/images/success.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/image/images/success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/insertframe/insertframe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/internal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/link/link.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/map/map.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/map/show.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/music/music.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/music/music.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/music/music.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/preview/preview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/scrawl/images/addimg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/scrawl/images/brush.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/scrawl/images/delimg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/scrawl/images/delimgH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/scrawl/images/empty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/scrawl/images/emptyH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/scrawl/images/eraser.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/scrawl/images/redo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/scrawl/images/redoH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/scrawl/images/scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/scrawl/images/scaleH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/scrawl/images/size.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/scrawl/images/undo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/scrawl/images/undoH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/scrawl/scrawl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/scrawl/scrawl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/scrawl/scrawl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/searchreplace/searchreplace.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/searchreplace/searchreplace.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/snapscreen/snapscreen.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/spechars/spechars.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/spechars/spechars.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/table/dragicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/table/edittable.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/table/edittable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/table/edittable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/table/edittd.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/table/edittip.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/template/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/template/images/bg.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/template/images/pre0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/template/images/pre1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/template/images/pre2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/template/images/pre3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/template/images/pre4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/template/template.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/template/template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/template/template.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/video/images/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/video/images/center_focus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/video/images/file-icons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/video/images/file-icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/video/images/icons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/video/images/icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/video/images/image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/video/images/left_focus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/video/images/none_focus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/video/images/progress.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/video/images/right_focus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/video/images/success.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/video/images/success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/video/video.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/video/video.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/video/video.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/webapp/webapp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/wordimage/fClipboard_ueditor.swf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/wordimage/imageUploader.swf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/wordimage/tangram.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/wordimage/wordimage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/dialogs/wordimage/wordimage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/lang/en/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/lang/en/images/addimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/lang/en/images/alldeletebtnhoverskin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/lang/en/images/alldeletebtnupskin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/lang/en/images/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/lang/en/images/button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/lang/en/images/copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/lang/en/images/deletedisable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/lang/en/images/deleteenable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/lang/en/images/listbackground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/lang/en/images/localimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/lang/en/images/music.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/lang/en/images/rotateleftdisable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/lang/en/images/rotateleftenable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/lang/en/images/rotaterightdisable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/lang/en/images/rotaterightenable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/lang/en/images/upload.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/lang/zh-cn/images/copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/lang/zh-cn/images/localimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/lang/zh-cn/images/music.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/lang/zh-cn/images/upload.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/lang/zh-cn/zh-cn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/php/Uploader.class.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/php/action_crawler.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/php/action_list.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/php/action_upload.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/php/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/php/controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/css/ueditor.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/css/ueditor.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/dialogbase.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/anchor.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/arrow_down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/arrow_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/button-bg.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/cancelbutton.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/charts.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/cursor_h.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/cursor_h.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/cursor_v.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/cursor_v.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/dialog-title-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/filescan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/highlighted.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/icons-all.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/icons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/loaderror.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/lock.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/neweditor-tab-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/pagebreak.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/sortable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/spacer.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/sparator_v.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/table-cell-align.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/tangram-colorpicker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/toolbar_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/unhighlighted.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/upload.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/videologo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/word.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/default/images/wordpaste.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/themes/iframe.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/SyntaxHighlighter/shCore.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/codemirror/codemirror.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/codemirror/codemirror.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/adapters/mootools-adapter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/adapters/mootools-adapter.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/adapters/prototype-adapter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/adapters/prototype-adapter.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/adapters/standalone-framework.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/adapters/standalone-framework.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/highcharts-more.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/highcharts-more.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/highcharts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/highcharts.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/modules/annotations.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/modules/annotations.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/modules/canvas-tools.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/modules/canvas-tools.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/modules/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/modules/data.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/modules/drilldown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/modules/drilldown.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/modules/exporting.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/modules/exporting.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/modules/funnel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/modules/funnel.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/modules/heatmap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/modules/heatmap.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/modules/map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/modules/map.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/modules/no-data-to-display.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/modules/no-data-to-display.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/themes/dark-blue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/themes/dark-green.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/themes/gray.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/themes/grid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/highcharts/themes/skies.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/jquery-1.10.2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/jquery-1.10.2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/jquery-1.10.2.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/snapscreen/UEditorSnapscreen.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/video-js/font/vjs.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/video-js/font/vjs.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/video-js/font/vjs.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/video-js/font/vjs.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/video-js/video-js.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/video-js/video-js.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/video-js/video-js.swf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/video-js/video.dev.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/video-js/video.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/webuploader/Uploader.swf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/webuploader/webuploader.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/webuploader/webuploader.custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/webuploader/webuploader.custom.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/webuploader/webuploader.flashonly.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/webuploader/webuploader.flashonly.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/webuploader/webuploader.html5only.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/webuploader/webuploader.html5only.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/webuploader/webuploader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/webuploader/webuploader.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/webuploader/webuploader.withoutimage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/webuploader/webuploader.withoutimage.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/xss.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/zeroclipboard/ZeroClipboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/zeroclipboard/ZeroClipboard.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/third-party/zeroclipboard/ZeroClipboard.swf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/ueditor.all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/ueditor.all.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/ueditor.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/ueditor.parse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/ueditor/ueditor.parse.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/libs/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/api/auth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/components/content/drawer.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/components/content/form.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/components/content/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/components/content/search.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/components/content/table.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/components/form/cascader.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/components/layout/components/side-menu/dropdown-menu-side.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/components/layout/components/side-menu/side-menu.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/components/layout/error.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/components/layout/main.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/mixins/content-drawer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/mixins/content-list-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/mixins/emitter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/mixins/from-submit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/router/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/router/modules/common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/router/modules/home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/router/modules/layout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/store/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/store/modules/auth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/store/modules/layout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/views/authorities/authority/authority.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/views/authorities/authority/create.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/views/authorities/authority/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/views/authorities/authority/update.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/views/authorities/menu/create.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/views/authorities/menu/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/views/authorities/menu/menu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/views/authorities/menu/render.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/views/authorities/menu/update.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/views/authorities/role/create.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/views/authorities/role/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/views/authorities/role/role.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/views/authorities/role/update.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/views/authorities/user/create.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/views/authorities/user/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/views/authorities/user/update.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/views/authorities/user/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/views/index/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/views/layout/login.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/modules/views/profile/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/plugins/cache/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/plugins/fetch/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/pagination.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/passwords.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/console.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/console.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/public/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/testing/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/testing/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/CreatesApplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CreatesApplication.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/node_modules/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/config/ltools.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
+      <path value="$PROJECT_DIR$/vendor/facade/ignition" />
+      <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
+      <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
+      <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-color" />
+      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/vendor/maatwebsite/excel" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/namshi/jose" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/luffyzhao/laravel-tools" />
+      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/luffyzhao/laravel-admin-auth" />
+      <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/matrix" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+    </include_path>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/EBC-Customs-ERP.iml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/php.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="232" />
+    <option name="y" value="72" />
+    <option name="width" value="1380" />
+    <option name="height" value="734" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="EBC-Customs-ERP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EBC-Customs-ERP" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+    <configuration name="watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="watch" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.watch" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a90c168f-af2b-48cb-9911-530c2b58ec81" name="Default Changelist" comment="" />
+      <created>1568871171656</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1568871171656</updated>
+      <workItem from="1568871177521" duration="3205000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3205000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="npm" sideWeight="0.50165564" side_tool="true" weight="0.24962178" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49834436" visible="true" weight="0.20801815" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3294702" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/config/ltools.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="66" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

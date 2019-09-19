@@ -44,7 +44,7 @@ return [
         'api' => [
             'driver' => 'ltools.token',
             'provider' => 'users',
-            'hash' => true,
+            'hash' => false,
         ],
     ],
 

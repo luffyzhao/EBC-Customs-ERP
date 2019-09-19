@@ -173,9 +173,7 @@ return [
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
-        LAuth\Providers\LAuthServiceProvider::class,
-
-        LAuth\Providers\LAuthServiceProvider::class
+        App\Providers\RouteServiceProvider::class,
 
     ],
 
