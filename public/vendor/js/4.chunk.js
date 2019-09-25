@@ -124,6 +124,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -318,7 +328,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../../../node_
 
 
 // module
-exports.push([module.i, ".collapsed-item {\n  text-align: center;\n  line-height: 49px;\n  cursor: pointer;\n  display: block;\n  overflow: visible;\n}\n.collapsed-item .ivu-icon {\n  color: #fff;\n}\n.collapsed-item .ivu-tooltip-rel {\n  display: block;\n}\n.ivu-menu-dark {\n  background-color: #000;\n}\n.ivu-menu-dark.ivu-menu-vertical .ivu-menu-opened {\n  background-color: #0c212b;\n}\n.ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu .ivu-menu-item-active,\n.ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu .ivu-menu-item-active:hover {\n  background-color: #ff9900 !important;\n  color: #000 !important;\n}\n.ivu-menu-dark.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu),\n.ivu-menu-dark.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu):hover,\n.ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu-title-active:not(.ivu-menu-submenu),\n.ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu-title-active:not(.ivu-menu-submenu):hover {\n  background-color: #ff9900 !important;\n  color: #000 !important;\n}\n.ivu-menu-dark.ivu-menu-vertical .ivu-menu-opened .ivu-menu-submenu-title {\n  background-color: #121a2a;\n}\n.ivu-menu-dark.ivu-menu-vertical .ivu-menu-item:hover,\n.ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu-title:hover {\n  background-color: #ff9900 !important;\n}\n.ivu-menu-dark.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu),\n.ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu-title-active:not(.ivu-menu-submenu) {\n  color: #fff;\n}\n", ""]);
+exports.push([module.i, ".collapsed-item {\n  text-align: center;\n  line-height: 49px;\n  cursor: pointer;\n  display: block;\n  overflow: visible;\n}\n.collapsed-item .ivu-icon {\n  color: #fff;\n}\n.collapsed-item .ivu-tooltip-rel {\n  display: block;\n}\n.ivu-menu-dark {\n  background-color: transparent;\n  padding: 10px;\n}\n.ivu-menu-dark > li {\n  margin-bottom: 10px;\n}\n.ivu-menu-dark > li > .ivu-menu-submenu-title {\n  background-color: #0d82f6 !important;\n  padding: 0 9px !important;\n  border-radius: 3px;\n}\n.ivu-menu-dark > li > .ivu-menu {\n  width: 182px;\n  margin: 0 auto;\n  background-color: transparent;\n}\n.ivu-menu-dark > li > .ivu-menu .ivu-menu-submenu-title,\n.ivu-menu-dark > li > .ivu-menu .ivu-menu-item-group-title {\n  padding: 0 10px !important;\n  min-width: 180px !important;\n  background-color: hsla(0, 0%, 100%, 0.1) !important;\n  box-sizing: border-box;\n}\n.ivu-menu-dark > li > .ivu-menu .ivu-menu .ivu-menu-submenu-title,\n.ivu-menu-dark > li > .ivu-menu .ivu-menu .ivu-menu-item-group-title {\n  padding: 0 20px !important;\n  min-width: 180px !important;\n  background-color: hsla(0, 0%, 100%, 0.1) !important;\n  box-sizing: border-box;\n}\n.ivu-menu-submenu-title,\n.ivu-menu-item-group-title {\n  height: 36px !important;\n  line-height: 36px !important;\n}\n.ivu-menu-dark.ivu-menu-vertical .ivu-menu-opened {\n  background-color: transparent;\n}\n.ivu-menu-vertical .ivu-menu-submenu-title-icon {\n  right: 10px;\n  font-size: 16px;\n}\n.ivu-menu-dark.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu),\n.ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu-title-active:not(.ivu-menu-submenu) {\n  color: #f7d573 !important;\n}\n.ivu-menu-vertical .ivu-menu-item,\n.ivu-menu-vertical .ivu-menu-submenu-title {\n  padding: 0px !important;\n}\n", ""]);
 
 // exports
 
@@ -337,7 +347,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../node_module
 
 
 // module
-exports.push([module.i, ".ivu-layout[data-v-1316ed7c] {\n  height: 100%;\n}\n.ivu-layout .ivu-layout-header[data-v-1316ed7c] {\n  background: #fff;\n  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);\n  padding: 0 20px;\n  display: flex;\n}\n.ivu-layout .ivu-layout-header .header-menu .menu-icon[data-v-1316ed7c] {\n  cursor: pointer;\n  transition: all 0.3s;\n}\n.ivu-layout .ivu-layout-header .header-menu .rotate-icon[data-v-1316ed7c] {\n  transform: rotate(-90deg);\n}\n.ivu-layout .ivu-layout-header .header-sider[data-v-1316ed7c] {\n  flex: 1;\n}\n.ivu-layout .ivu-layout-content[data-v-1316ed7c] {\n  position: relative;\n}\n.ivu-layout .ivu-layout-content .content-wrapper[data-v-1316ed7c] {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\n.ivu-layout .ivu-layout-sider[data-v-1316ed7c] {\n  background-color: #000;\n}\n.ivu-layout .ivu-layout-sider .logo[data-v-1316ed7c] {\n  height: 64px;\n  line-height: 64px;\n  background: #000;\n  text-align: center;\n}\n.ivu-layout .ivu-layout-sider .logo img[data-v-1316ed7c] {\n  height: 64px;\n}\n.ivu-layout .layout-router[data-v-1316ed7c] {\n  height: 48px;\n  line-height: 46px;\n  overflow: hidden;\n  background: #fefefe;\n  border-top: 1px solid #e8eaec;\n  border-bottom: 2px solid #464c5b;\n  padding-left: 10px;\n  position: relative;\n  box-sizing: border-box;\n  padding-right: 120px;\n  width: 100%;\n}\n.ivu-layout .layout-router .layout-router-scroll-dropdown[data-v-1316ed7c] {\n  position: absolute;\n  right: 0;\n  top: 0;\n  box-sizing: border-box;\n  text-align: center;\n  width: 110px;\n  height: 100%;\n  background: #fff;\n  box-shadow: -3px 0 15px 3px rgba(0, 0, 0, 0.1);\n  z-index: 10;\n}\n.ivu-layout .layout-router .layout-router-scroll[data-v-1316ed7c] {\n  overflow: visible;\n  white-space: nowrap;\n  transition: left 0.3s ease;\n}\n.ivu-layout .ivu-layout-footer[data-v-1316ed7c] {\n  padding: 20px;\n}\n", ""]);
+exports.push([module.i, ".ivu-layout[data-v-1316ed7c] {\n  height: 100%;\n}\n.ivu-layout .ivu-layout-header[data-v-1316ed7c] {\n  background: #1c3159;\n  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);\n  padding: 0 20px;\n  display: flex;\n}\n.ivu-layout .ivu-layout-header .header-menu[data-v-1316ed7c] {\n  color: #fff;\n}\n.ivu-layout .ivu-layout-header .header-menu .menu-icon[data-v-1316ed7c] {\n  cursor: pointer;\n  transition: all 0.3s;\n}\n.ivu-layout .ivu-layout-header .header-menu .rotate-icon[data-v-1316ed7c] {\n  transform: rotate(-90deg);\n}\n.ivu-layout .ivu-layout-header .header-sider[data-v-1316ed7c] {\n  flex: 1;\n}\n.ivu-layout .ivu-layout-content[data-v-1316ed7c] {\n  position: relative;\n}\n.ivu-layout .ivu-layout-content .content-wrapper[data-v-1316ed7c] {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\n.ivu-layout .ivu-layout-sider[data-v-1316ed7c] {\n  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAPoCAIAAACQ1AMJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA39pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDozNjUxNmRiNC05ZWQxLTQ0NGQtYWYxNi05NmVlMTI2NGI1N2EiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RUEyMjg3Nzk3REExMTFFOEJEMEFFNkZDMTZFMzNGNzgiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RUEyMjg3Nzg3REExMTFFOEJEMEFFNkZDMTZFMzNGNzgiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOmY1NTM4ZGY2LTMyMDMtYWI0Ny1iZjM0LWUxNzI4YWIwM2RiNiIgc3RSZWY6ZG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjE3MjczNWExLTgyNmUtNDI0Yi1hYTUzLTQ0N2M3MjVhZjE3OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgbkTr4AAADuSURBVHjaxJdLDsMgDETzsuwJeo7e/27uqmrSBpgxRlkgRYlhPoZg74/na9+27Tv4PHN+3xyNOIzYqxgSmCdsCngjcw1bKx2NI25oumQt+DkD3VtmOLj4mPuBS55h5Yw8P4UbWT9ULGfPoOVogk80crKMyxIM0/uu7wIHGvMO30PWmPVQ0Zf0mKq153IX5Xmb8JUVe3K9rrhTV3e/iP9bblr7oC3uOGfK+iUcnHuq9l6ItNYVek2c8lphVb3QuPeVvEv1pFlLWnWdiF2CP+oF3BrY62n8voufsyTOxewNbX+L+8th/5Ptkf/i3gIMAJ2EEzXU+Q1VAAAAAElFTkSuQmCC);\n}\n.ivu-layout .ivu-layout-sider .logo[data-v-1316ed7c] {\n  height: 64px;\n  line-height: 64px;\n  background: #1c3159;\n  text-align: center;\n  overflow: hidden;\n}\n.ivu-layout .ivu-layout-sider .logo img[data-v-1316ed7c] {\n  height: 64px;\n}\n.ivu-layout .layout-router[data-v-1316ed7c] {\n  height: 48px;\n  line-height: 46px;\n  overflow: hidden;\n  background: #fefefe;\n  border-top: 1px solid #e8eaec;\n  border-bottom: 2px solid #464c5b;\n  padding-left: 10px;\n  position: relative;\n  box-sizing: border-box;\n  padding-right: 120px;\n  width: 100%;\n}\n.ivu-layout .layout-router .layout-router-scroll-dropdown[data-v-1316ed7c] {\n  position: absolute;\n  right: 0;\n  top: 0;\n  box-sizing: border-box;\n  text-align: center;\n  width: 110px;\n  height: 100%;\n  background: #fff;\n  box-shadow: -3px 0 15px 3px rgba(0, 0, 0, 0.1);\n  z-index: 10;\n}\n.ivu-layout .layout-router .layout-router-scroll[data-v-1316ed7c] {\n  overflow: visible;\n  white-space: nowrap;\n  transition: left 0.3s ease;\n}\n.ivu-layout .ivu-layout-footer[data-v-1316ed7c] {\n  padding: 20px;\n}\n", ""]);
 
 // exports
 
@@ -633,29 +643,57 @@ var render = function() {
                             return [
                               item.children && item.children.length > 0
                                 ? _c(
-                                    "MenuGroup",
+                                    "Submenu",
                                     {
                                       key: index + "-" + key,
-                                      attrs: { title: item.name }
+                                      attrs: { name: item.link }
                                     },
-                                    _vm._l(item.children, function(val, i) {
-                                      return _c(
-                                        "MenuItem",
-                                        {
-                                          key: index + "-" + key + "-" + i,
-                                          attrs: { name: val.link }
-                                        },
+                                    [
+                                      _c(
+                                        "template",
+                                        { slot: "title" },
                                         [
                                           _c("Icon", {
-                                            attrs: { type: val.icon }
+                                            attrs: { type: item.icon }
                                           }),
                                           _vm._v(" "),
-                                          _c("span", [_vm._v(_vm._s(val.name))])
+                                          _c("span", [
+                                            _vm._v(_vm._s(item.name))
+                                          ])
                                         ],
                                         1
-                                      )
-                                    }),
-                                    1
+                                      ),
+                                      _vm._v(" "),
+                                      _vm._l(item.children, function(val, i) {
+                                        return _c(
+                                          "MenuItem",
+                                          {
+                                            key: index + "-" + key + "-" + i,
+                                            attrs: { name: val.link }
+                                          },
+                                          [
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "ivu-menu-submenu-title"
+                                              },
+                                              [
+                                                _c("Icon", {
+                                                  attrs: { type: val.icon }
+                                                }),
+                                                _vm._v(" "),
+                                                _c("span", [
+                                                  _vm._v(_vm._s(val.name))
+                                                ])
+                                              ],
+                                              1
+                                            )
+                                          ]
+                                        )
+                                      })
+                                    ],
+                                    2
                                   )
                                 : _c(
                                     "MenuItem",
@@ -664,13 +702,23 @@ var render = function() {
                                       attrs: { name: item.link }
                                     },
                                     [
-                                      _c("Icon", {
-                                        attrs: { type: item.icon }
-                                      }),
-                                      _vm._v(" "),
-                                      _c("span", [_vm._v(_vm._s(item.name))])
-                                    ],
-                                    1
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "ivu-menu-submenu-title"
+                                        },
+                                        [
+                                          _c("Icon", {
+                                            attrs: { type: item.icon }
+                                          }),
+                                          _vm._v(" "),
+                                          _c("span", [
+                                            _vm._v(_vm._s(item.name))
+                                          ])
+                                        ],
+                                        1
+                                      )
+                                    ]
                                   )
                             ]
                           })
@@ -681,11 +729,17 @@ var render = function() {
                         "MenuItem",
                         { key: index, attrs: { name: menu.link } },
                         [
-                          _c("Icon", { attrs: { type: menu.icon } }),
-                          _vm._v(" "),
-                          _c("span", [_vm._v(_vm._s(menu.name))])
-                        ],
-                        1
+                          _c(
+                            "div",
+                            { staticClass: "ivu-menu-submenu-title" },
+                            [
+                              _c("Icon", { attrs: { type: menu.icon } }),
+                              _vm._v(" "),
+                              _c("span", [_vm._v(_vm._s(menu.name))])
+                            ],
+                            1
+                          )
+                        ]
                       )
                 ]
               })
@@ -763,7 +817,12 @@ var render = function() {
         "Sider",
         {
           ref: "sider",
-          attrs: { "hide-trigger": "", collapsible: "", "collapsed-width": 78 },
+          attrs: {
+            "hide-trigger": "",
+            collapsible: "",
+            "collapsed-width": 78,
+            width: 220
+          },
           model: {
             value: _vm.isCollapsed,
             callback: function($$v) {
@@ -773,9 +832,7 @@ var render = function() {
           }
         },
         [
-          _c("div", { staticClass: "logo" }, [
-            _c("img", { attrs: { src: "/vendor/images/logo.png" } })
-          ]),
+          _c("div", { staticClass: "logo" }),
           _vm._v(" "),
           _c("side-menu", { attrs: { data: _vm.data } })
         ],

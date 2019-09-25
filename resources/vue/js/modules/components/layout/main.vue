@@ -1,10 +1,10 @@
 <template>
     <Layout>
-        <Sider ref="sider" hide-trigger collapsible :collapsed-width="78"  v-model="isCollapsed">
+        <Sider ref="sider" hide-trigger collapsible :collapsed-width="78" :width="220" v-model="isCollapsed">
             <div class="logo">
-                <img src="/vendor/images/logo.png" />
+<!--                <img src="/vendor/images/logo.png" />-->
             </div>
-            <side-menu :data="data"></side-menu>                
+            <side-menu :data="data"></side-menu>
         </Sider>
         <Layout>
             <Header>
@@ -97,11 +97,12 @@
     height: 100%;
 
     .ivu-layout-header{
-        background: #fff;
+        background: #1c3159;
         box-shadow: 0 1px 1px rgba(0,0,0,.1);
         padding: 0 20px;
         display: flex;
         .header-menu{
+            color: #fff;
             .menu-icon{
                 cursor: pointer;
                 transition: all .3s;
@@ -115,6 +116,8 @@
         .header-sider{
             flex: 1;
         }
+
+
     }
 
     .ivu-layout-content{
@@ -130,12 +133,13 @@
     }
 
     .ivu-layout-sider{
-        background-color: #000;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAPoCAIAAACQ1AMJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA39pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDozNjUxNmRiNC05ZWQxLTQ0NGQtYWYxNi05NmVlMTI2NGI1N2EiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RUEyMjg3Nzk3REExMTFFOEJEMEFFNkZDMTZFMzNGNzgiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RUEyMjg3Nzg3REExMTFFOEJEMEFFNkZDMTZFMzNGNzgiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOmY1NTM4ZGY2LTMyMDMtYWI0Ny1iZjM0LWUxNzI4YWIwM2RiNiIgc3RSZWY6ZG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjE3MjczNWExLTgyNmUtNDI0Yi1hYTUzLTQ0N2M3MjVhZjE3OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgbkTr4AAADuSURBVHjaxJdLDsMgDETzsuwJeo7e/27uqmrSBpgxRlkgRYlhPoZg74/na9+27Tv4PHN+3xyNOIzYqxgSmCdsCngjcw1bKx2NI25oumQt+DkD3VtmOLj4mPuBS55h5Yw8P4UbWT9ULGfPoOVogk80crKMyxIM0/uu7wIHGvMO30PWmPVQ0Zf0mKq153IX5Xmb8JUVe3K9rrhTV3e/iP9bblr7oC3uOGfK+iUcnHuq9l6ItNYVek2c8lphVb3QuPeVvEv1pFlLWnWdiF2CP+oF3BrY62n8voufsyTOxewNbX+L+8th/5Ptkf/i3gIMAJ2EEzXU+Q1VAAAAAElFTkSuQmCC);
         .logo{
             height: 64px;
             line-height: 64px;
-            background: #000;
+            background: #1c3159;
             text-align: center;
+            overflow: hidden;
             img{
                 height: 64px;
             }
