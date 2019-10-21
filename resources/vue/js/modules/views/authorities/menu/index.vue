@@ -58,6 +58,7 @@
             setTreeData(source) {
                 let cloneData = JSON.parse(JSON.stringify(source))
                 let tree = cloneData.filter(father => {
+                    father.expand = true;
                     let branchArr = cloneData.filter(child => {
                         return father['id'] == child['parent_id']
                     });

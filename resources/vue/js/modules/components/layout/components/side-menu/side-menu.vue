@@ -127,6 +127,7 @@
                 width: 182px;
                 margin: 0 auto;
                 background-color: transparent;
+                border-top: 3px solid rgb(22,66,101);
 
                 .ivu-menu-submenu-title, .ivu-menu-item-group-title {
                     padding: 0 10px !important;

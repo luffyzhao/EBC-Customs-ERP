@@ -1,18 +1,46 @@
 <?php
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
+Route::group(
+    ['prefix' => '{company}', 'middleware' => ['company', 'api']],
+    function () {
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+        Route::group(
+            ['middleware' => 'rbac', 'prefix' => 'system', 'namespace'=>'System'],
+            function () {
+                Route::get(
+                    'customs_currency',
+                    'CustomsCurrencyController@index'
+                )->name('system.customs_currency');
+
+
+                Route::get(
+                    'customs_district',
+                    'CustomsDistrictController@index'
+                )->name('system.customs_district');
+
+                Route::get(
+                    'customs_hs_code',
+                    'CustomsHsCodeController@index'
+                )->name('system.customs_hs_code');
+
+                Route::get(
+                    'customs_unit',
+                    'CustomsUnitController@index'
+                )->name('system.customs_unit');
+
+            }
+        );
+
+        Route::group(
+            ['middleware' => 'rbac', 'prefix' => 'goods', 'namespace'=>'Product'],
+            function () {
+                Route::get(
+                    'index',
+                    'IndexController@index'
+                )->name('product.index');
+            }
+        );
+    }
+);

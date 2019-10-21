@@ -322,6 +322,7 @@ var render = function() {
           ref: "Table",
           attrs: {
             columns: _vm.table.columns,
+            size: "small",
             data: _vm.table.data,
             height: _vm.tableHeight
           }

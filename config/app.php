@@ -175,6 +175,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        LAuth\Providers\LAuthServiceProvider::class
     ],
 
     /*

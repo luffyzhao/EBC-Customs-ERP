@@ -116,6 +116,7 @@ __webpack_require__.r(__webpack_exports__);
     setTreeData: function setTreeData(source) {
       var cloneData = JSON.parse(JSON.stringify(source));
       var tree = cloneData.filter(function (father) {
+        father.expand = true;
         var branchArr = cloneData.filter(function (child) {
           return father['id'] == child['parent_id'];
         });

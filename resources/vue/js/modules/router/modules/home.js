@@ -20,7 +20,7 @@ export const home = [
         component: () => import('../../views/profile/index')
     },
     {
-        path: 'Authorities/user',
+        path: 'authorities/user',
         name: 'authorities.user',
         meta: {
             title: '用户管理',
@@ -30,7 +30,7 @@ export const home = [
         component: () => import('../../views/authorities/user/index')
     },
     {
-        path: 'Authorities/user/create',
+        path: 'authorities/user/create',
         name: 'authorities.user.create',
         meta: {
             title: '添加用户',
@@ -40,7 +40,7 @@ export const home = [
         component: () => import('../../views/authorities/user/create')
     },
     {
-        path: 'Authorities/user/update',
+        path: 'authorities/user/update',
         name: 'authorities.user.update',
         meta: {
             title: '更新用户',
@@ -50,7 +50,7 @@ export const home = [
         component: () => import('../../views/authorities/user/update')
     },
     {
-        path: 'Authorities/role',
+        path: 'authorities/role',
         name: 'authorities.role',
         meta: {
             title: '部门管理',
@@ -59,7 +59,7 @@ export const home = [
         },
         component: () => import('../../views/authorities/role/index')
     },{
-        path: 'Authorities/role/create',
+        path: 'authorities/role/create',
         name: 'authorities.role.create',
         meta: {
             title: '添加部门',
@@ -68,7 +68,7 @@ export const home = [
         },
         component: () => import('../../views/authorities/role/create')
     },{
-        path: 'Authorities/role/update',
+        path: 'authorities/role/update',
         name: 'authorities.role.update',
         meta: {
             title: '添加部门',
@@ -78,7 +78,7 @@ export const home = [
         component: () => import('../../views/authorities/role/update')
     },
     {
-        path: 'Authorities/menu',
+        path: 'authorities/menu',
         name: 'authorities.menu',
         meta: {
             title: '菜单管理',
@@ -88,7 +88,7 @@ export const home = [
         component: () => import('../../views/authorities/menu/index')
     },
     {
-        path: 'Authorities/menu/create',
+        path: 'authorities/menu/create',
         name: 'authorities.menu.create',
         meta: {
             title: '添加菜单',
@@ -97,7 +97,7 @@ export const home = [
         },
         component: () => import('../../views/authorities/menu/create')
     },{
-        path: 'Authorities/menu/update',
+        path: 'authorities/menu/update',
         name: 'authorities.menu.update',
         meta: {
             title: '更新菜单',
@@ -107,7 +107,7 @@ export const home = [
         component: () => import('../../views/authorities/menu/update')
     },
     {
-        path: 'Authorities/authority',
+        path: 'authorities/authority',
         name: 'authorities.authority',
         meta: {
             title: '权限管理',
@@ -117,7 +117,7 @@ export const home = [
         component: () => import('../../views/authorities/authority/index')
     },
     {
-        path: 'Authorities/authority/create',
+        path: 'authorities/authority/create',
         name: 'authorities.authority.create',
         meta: {
             title: '添加权限',
@@ -127,7 +127,7 @@ export const home = [
         component: () => import('../../views/authorities/authority/create')
     },
     {
-        path: 'Authorities/authority/update',
+        path: 'authorities/authority/update',
         name: 'authorities.authority.update',
         meta: {
             title: '更新权限',
@@ -135,5 +135,75 @@ export const home = [
             tags: false
         },
         component: () => import('../../views/authorities/authority/update')
+    },
+    {
+        path: 'system/customs/currency',
+        name: 'system.customs.currency',
+        meta: {
+            title: '海关币制代码',
+            cache: true,
+            tags: true
+        },
+        component: () => import('../../views/system/customs/currency')
+    },
+    {
+        path: 'system/customs/districts',
+        name: 'system.customs.districts',
+        meta: {
+            title: '海关关区代码',
+            cache: true,
+            tags: true
+        },
+        component: () => import('../../views/system/customs/districts')
+    },
+    {
+        path: 'system/customs/hscode',
+        name: 'system.customs.hscode',
+        meta: {
+            title: '10位海关编码',
+            cache: true,
+            tags: true
+        },
+        component: () => import('../../views/system/customs/hscode')
+    },
+    {
+        path: 'system/customs/unit',
+        name: 'system.customs.unit',
+        meta: {
+            title: '海关计量单位',
+            cache: true,
+            tags: true
+        },
+        component: () => import('../../views/system/customs/unit')
+    },
+    {
+        path: 'product/lists/index',
+        name: 'product.lists.index',
+        meta: {
+            title: '商品列表',
+            cache: true,
+            tags: true
+        },
+        component: () => import('../../views/product/lists/index')
+    },
+    {
+        path: 'product/lists/create',
+        name: 'product.lists.create',
+        meta: {
+            title: '添加商品',
+            cache: false,
+            tags: false
+        },
+        component: () => import('../../views/product/lists/create')
+    },
+    {
+        path: 'product/lists/update',
+        name: 'product.lists.update',
+        meta: {
+            title: '修改商品',
+            cache: false,
+            tags: false
+        },
+        component: () => import('../../views/product/lists/update')
     }
 ];

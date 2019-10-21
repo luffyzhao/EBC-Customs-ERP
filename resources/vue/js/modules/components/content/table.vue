@@ -1,6 +1,6 @@
 <template>
     <div class="list-panel">
-        <Table :columns="table.columns" :data="table.data" ref="Table" :height="tableHeight">
+        <Table :columns="table.columns" size="small" :data="table.data" ref="Table" :height="tableHeight">
             <slot></slot>
         </Table>
         <Page :current="current" :total="total" :page-size="pageSize" show-total @on-change="change" size="small"/>

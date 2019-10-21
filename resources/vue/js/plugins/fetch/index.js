@@ -3,8 +3,10 @@ import {$cache} from '../cache'
 import $store from '../../modules/store'
 import {Message} from 'iview'
 
+const company = /\/company\/(\d)/gi.exec(window.location.pathname)[1];
+
 const instance = axios.create({
-    baseURL: '/api/',
+    baseURL: '/api/' + company + '/',
     timeout: 10000
 });
 

@@ -48925,7 +48925,7 @@ var home = [{
     tags: true
   },
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 11).then(__webpack_require__.bind(null, /*! ../../views/index/index */ "./resources/vue/js/modules/views/index/index.vue"));
+    return __webpack_require__.e(/*! import() */ 18).then(__webpack_require__.bind(null, /*! ../../views/index/index */ "./resources/vue/js/modules/views/index/index.vue"));
   }
 }, {
   path: 'profile',
@@ -48936,10 +48936,10 @@ var home = [{
     tags: true
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(12)]).then(__webpack_require__.bind(null, /*! ../../views/profile/index */ "./resources/vue/js/modules/views/profile/index.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(19)]).then(__webpack_require__.bind(null, /*! ../../views/profile/index */ "./resources/vue/js/modules/views/profile/index.vue"));
   }
 }, {
-  path: 'Authorities/user',
+  path: 'authorities/user',
   name: 'authorities.user',
   meta: {
     title: '用户管理',
@@ -48950,7 +48950,7 @@ var home = [{
     return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(7)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/user/index */ "./resources/vue/js/modules/views/authorities/user/index.vue"));
   }
 }, {
-  path: 'Authorities/user/create',
+  path: 'authorities/user/create',
   name: 'authorities.user.create',
   meta: {
     title: '添加用户',
@@ -48958,10 +48958,10 @@ var home = [{
     tags: false
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(15)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/user/create */ "./resources/vue/js/modules/views/authorities/user/create.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(22)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/user/create */ "./resources/vue/js/modules/views/authorities/user/create.vue"));
   }
 }, {
-  path: 'Authorities/user/update',
+  path: 'authorities/user/update',
   name: 'authorities.user.update',
   meta: {
     title: '更新用户',
@@ -48969,10 +48969,10 @@ var home = [{
     tags: false
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(16)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/user/update */ "./resources/vue/js/modules/views/authorities/user/update.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(23)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/user/update */ "./resources/vue/js/modules/views/authorities/user/update.vue"));
   }
 }, {
-  path: 'Authorities/role',
+  path: 'authorities/role',
   name: 'authorities.role',
   meta: {
     title: '部门管理',
@@ -48980,10 +48980,10 @@ var home = [{
     tags: true
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(2), __webpack_require__.e(3), __webpack_require__.e(18)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/role/index */ "./resources/vue/js/modules/views/authorities/role/index.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(2), __webpack_require__.e(3), __webpack_require__.e(25)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/role/index */ "./resources/vue/js/modules/views/authorities/role/index.vue"));
   }
 }, {
-  path: 'Authorities/role/create',
+  path: 'authorities/role/create',
   name: 'authorities.role.create',
   meta: {
     title: '添加部门',
@@ -48991,10 +48991,10 @@ var home = [{
     tags: false
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(3), __webpack_require__.e(19)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/role/create */ "./resources/vue/js/modules/views/authorities/role/create.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(3), __webpack_require__.e(26)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/role/create */ "./resources/vue/js/modules/views/authorities/role/create.vue"));
   }
 }, {
-  path: 'Authorities/role/update',
+  path: 'authorities/role/update',
   name: 'authorities.role.update',
   meta: {
     title: '添加部门',
@@ -49005,7 +49005,7 @@ var home = [{
     return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(2)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/role/update */ "./resources/vue/js/modules/views/authorities/role/update.vue"));
   }
 }, {
-  path: 'Authorities/menu',
+  path: 'authorities/menu',
   name: 'authorities.menu',
   meta: {
     title: '菜单管理',
@@ -49016,7 +49016,7 @@ var home = [{
     return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ../../views/authorities/menu/index */ "./resources/vue/js/modules/views/authorities/menu/index.vue"));
   }
 }, {
-  path: 'Authorities/menu/create',
+  path: 'authorities/menu/create',
   name: 'authorities.menu.create',
   meta: {
     title: '添加菜单',
@@ -49024,10 +49024,10 @@ var home = [{
     tags: false
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(13)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/menu/create */ "./resources/vue/js/modules/views/authorities/menu/create.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(20)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/menu/create */ "./resources/vue/js/modules/views/authorities/menu/create.vue"));
   }
 }, {
-  path: 'Authorities/menu/update',
+  path: 'authorities/menu/update',
   name: 'authorities.menu.update',
   meta: {
     title: '更新菜单',
@@ -49035,10 +49035,10 @@ var home = [{
     tags: false
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(14)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/menu/update */ "./resources/vue/js/modules/views/authorities/menu/update.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(21)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/menu/update */ "./resources/vue/js/modules/views/authorities/menu/update.vue"));
   }
 }, {
-  path: 'Authorities/authority',
+  path: 'authorities/authority',
   name: 'authorities.authority',
   meta: {
     title: '权限管理',
@@ -49049,7 +49049,7 @@ var home = [{
     return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(6)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/authority/index */ "./resources/vue/js/modules/views/authorities/authority/index.vue"));
   }
 }, {
-  path: 'Authorities/authority/create',
+  path: 'authorities/authority/create',
   name: 'authorities.authority.create',
   meta: {
     title: '添加权限',
@@ -49057,10 +49057,10 @@ var home = [{
     tags: false
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(8)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/authority/create */ "./resources/vue/js/modules/views/authorities/authority/create.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(15)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/authority/create */ "./resources/vue/js/modules/views/authorities/authority/create.vue"));
   }
 }, {
-  path: 'Authorities/authority/update',
+  path: 'authorities/authority/update',
   name: 'authorities.authority.update',
   meta: {
     title: '更新权限',
@@ -49068,7 +49068,84 @@ var home = [{
     tags: false
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(9)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/authority/update */ "./resources/vue/js/modules/views/authorities/authority/update.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(16)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/authority/update */ "./resources/vue/js/modules/views/authorities/authority/update.vue"));
+  }
+}, {
+  path: 'system/customs/currency',
+  name: 'system.customs.currency',
+  meta: {
+    title: '海关币制代码',
+    cache: true,
+    tags: true
+  },
+  component: function component() {
+    return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(9)]).then(__webpack_require__.bind(null, /*! ../../views/system/customs/currency */ "./resources/vue/js/modules/views/system/customs/currency.vue"));
+  }
+}, {
+  path: 'system/customs/districts',
+  name: 'system.customs.districts',
+  meta: {
+    title: '海关关区代码',
+    cache: true,
+    tags: true
+  },
+  component: function component() {
+    return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(10)]).then(__webpack_require__.bind(null, /*! ../../views/system/customs/districts */ "./resources/vue/js/modules/views/system/customs/districts.vue"));
+  }
+}, {
+  path: 'system/customs/hscode',
+  name: 'system.customs.hscode',
+  meta: {
+    title: '10位海关编码',
+    cache: true,
+    tags: true
+  },
+  component: function component() {
+    return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(11)]).then(__webpack_require__.bind(null, /*! ../../views/system/customs/hscode */ "./resources/vue/js/modules/views/system/customs/hscode.vue"));
+  }
+}, {
+  path: 'system/customs/unit',
+  name: 'system.customs.unit',
+  meta: {
+    title: '海关计量单位',
+    cache: true,
+    tags: true
+  },
+  component: function component() {
+    return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(12)]).then(__webpack_require__.bind(null, /*! ../../views/system/customs/unit */ "./resources/vue/js/modules/views/system/customs/unit.vue"));
+  }
+}, {
+  path: 'product/lists/index',
+  name: 'product.lists.index',
+  meta: {
+    title: '商品列表',
+    cache: true,
+    tags: true
+  },
+  component: function component() {
+    return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(8)]).then(__webpack_require__.bind(null, /*! ../../views/product/lists/index */ "./resources/vue/js/modules/views/product/lists/index.vue"));
+  }
+}, {
+  path: 'product/lists/create',
+  name: 'product.lists.create',
+  meta: {
+    title: '添加商品',
+    cache: false,
+    tags: false
+  },
+  component: function component() {
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(14)]).then(__webpack_require__.bind(null, /*! ../../views/product/lists/create */ "./resources/vue/js/modules/views/product/lists/create.vue"));
+  }
+}, {
+  path: 'product/lists/update',
+  name: 'product.lists.update',
+  meta: {
+    title: '修改商品',
+    cache: false,
+    tags: false
+  },
+  component: function component() {
+    return __webpack_require__.e(/*! import() */ 13).then(__webpack_require__.bind(null, /*! ../../views/product/lists/update */ "./resources/vue/js/modules/views/product/lists/update.vue"));
   }
 }];
 
@@ -49092,7 +49169,7 @@ var loyout = [{
     cache: false
   },
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 10).then(__webpack_require__.bind(null, /*! ../../views/layout/login.vue */ "./resources/vue/js/modules/views/layout/login.vue"));
+    return __webpack_require__.e(/*! import() */ 17).then(__webpack_require__.bind(null, /*! ../../views/layout/login.vue */ "./resources/vue/js/modules/views/layout/login.vue"));
   }
 }, {
   path: '*',
@@ -49102,7 +49179,7 @@ var loyout = [{
     cache: true
   },
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 17).then(__webpack_require__.bind(null, /*! ../../components/layout/error.vue */ "./resources/vue/js/modules/components/layout/error.vue"));
+    return __webpack_require__.e(/*! import() */ 24).then(__webpack_require__.bind(null, /*! ../../components/layout/error.vue */ "./resources/vue/js/modules/components/layout/error.vue"));
   }
 }];
 
@@ -49473,8 +49550,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var company = /\/company\/(\d)/gi.exec(window.location.pathname)[1];
 var instance = axios__WEBPACK_IMPORTED_MODULE_0___default.a.create({
-  baseURL: '/api/',
+  baseURL: '/api/' + company + '/',
   timeout: 10000
 }); // 添加请求拦截器
 
