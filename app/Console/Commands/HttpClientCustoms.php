@@ -44,48 +44,31 @@ class HttpClientCustoms extends Command
             'base_uri' => 'http://58.20.36.50:8860/cod_cus/',
             'timeout' => 5.0,
             'headers' => [
-                'userToken' => 'eyJoZWFkZXIxIjoiaGVhZGVyMSB2YWx1ZTIiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJzaWduYXR1cmUiLCJjbGllbnRJZCI6IkJMUyIsImNsaWVudEtleSI6InRrMjM2NUU5OHU4NzQiLCJwYXNzd29yZCI6ImI0Mzk4MjA4MDVhODY5YzU2NTE2YjBhYzE5OWQ5OWQyN2QxMjhiZDUwMDMyNjI2MjcxOTdmZWQ2MzRlOGEwZGJhNzc0NDUyZmU0MmM1NTgwMDkyYTBkZTljNTBjNjk5ZGQwOGE3MmQ4YTVlMjM1OTRhODhlZDAxODVkYzRmZmYxOWZlZDQ0ZGY3MDhjMTE1MjFkM2I0NWRjNzA1NzE3NGZkZGJiMWFiM2FhZTZmNjJjMzU1ZjdhMDRlZGIyZGU3MDAzNWM3MWViNDJmNzBmOWY2NDhkZTcwNzNlMTdmYTUwMmUzZjI1YTY4YzdiZTRlYzA0NWY1MGIxNDJlNDdiNjkiLCJ1c2VyTmFtZSI6ImhoaGFuY2hvbmciLCJ0cyI6IjE1Njg5NjY3ODU1MDIifQ.Ua3Yo5hvm8EJH2lnlhuoPqKUbDIr2ulF2Q2wLs7WRt9FMMxXbXodxPwIXmTGq4QBvBSJSrsoB3DNlyk-e3-Jfs_9NnY5nRJoIoePFVxf5qNfVrhMdJC-pldNHEkhbKDf9WEcRugJ3gFAgSZ5ye-UqmTbno9NsfgLhLs_Dwu8Jy97iIDsco3aqwmVtAzCwo3Uvz_XVyhwi6zAl99QIRVqF9XQyoBj8Jh7_ZrIPq1SxUG-xoSqEyyFWS2yPx0F79ayqNCJAdLOTI1RiNwVB6JSy2W318Wh7MRCqIEs9IGb1aYc7Cy2TOW7s_ARO-40UZCLBQwNKR9wMwJKccBU9hyplA'
+                'userToken' => 'eyJoZWFkZXIxIjoiaGVhZGVyMSB2YWx1ZTIiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJzaWduYXR1cmUiLCJjbGllbnRJZCI6IkJMUyIsImNsaWVudEtleSI6InRrMjM2NUU5OHU4NzQiLCJwYXNzd29yZCI6ImI0Mzk4MjA4MDVhODY5YzU2NTE2YjBhYzE5OWQ5OWQyN2QxMjhiZDUwMDMyNjI2MjcxOTdmZWQ2MzRlOGEwZGJhNzc0NDUyZmU0MmM1NTgwMDkyYTBkZTljNTBjNjk5ZGQwOGE3MmQ4YTVlMjM1OTRhODhlZDAxODVkYzRmZmYxOWZlZDQ0ZGY3MDhjMTE1MjFkM2I0NWRjNzA1NzE3NGZkZGJiMWFiM2FhZTZmNjJjMzU1ZjdhMDRlZGIyZGU3MDAzNWM3MWViNDJmNzBmOWY2NDhkZTcwNzNlMTdmYTUwMmUzZjI1YTY4YzdiZTRlYzA0NWY1MGIxNDJlNDdiNjkiLCJ1c2VyTmFtZSI6ImhoaGFuY2hvbmciLCJ0cyI6IjE1NzE2MjE0OTU5NTMifQ.sk510eixkq_BcUfkeNFkGwkLM0vfnOoBE-EpVsZyqTn9-wKKtGdUUMtOng4L-ggl4b43CCiYuGUuwc8AD0GvpdHinlw5R8gG_LNVYvBURBtH0NhdwyWulvED4OLuJP_9dS6ncXbmvTAdGhAOSjjvbTKvYj64NYI5rsM-3AYAzl2rli-c9T6YIZ-f37O3RIXqQpIaJTxlqHla4LTc9if6myG0DI_jUhcqW-EjAvhVXthatocCstu9OUpePod9vLq2ygKTEcrSDEmXLJFz_esCD8QhYQ3052XRvhW36CGFheU6GyLYuV-dG5IOq8VDtePLm0LXIViDmKoIHvx4_EbG3g'
             ]
         ]);
 
-        $this->once($client);
+        $this->handleOnce($client);
 
     }
 
-    protected function once(Client $client){
-        DB::table('customs_hs_codes')->chunkById(100, function ($arr) use ($client){
-            foreach ($arr as $item){
-                $body = $this->getBody($client, 'codMerchClassify/list/view', [
-                    'codeTs' => $item->code,
-                ]);
-                $elements = [];
-                foreach ($body['data'] as $data){
-                    $elements[$data['sNum']] = $data['element'];
-                }
-                DB::table('customs_hs_codes')->where('code', '=', $item->code)->update([
-                    'elements' => \GuzzleHttp\json_encode($elements)
-                ]);
-            }
-        }, 'code');
-    }
+
 
     protected function handleOnce(Client $client, $pageSize = 100, $pageNumber = 0){
 
-        $body = $this->getBody($client, 'codCusComplex/list', [
+        $body = $this->getBody($client, 'codCusCountry/list', [
             'pageSize' => $pageSize,
             'pageNumber' => $pageNumber,
             'appId' => 1,
-            'sort' => 'codeTS',
+            'sort' => 'countryCo',
             'sortOrder' => 'asc'
         ]);
 
         foreach ($body['data'] as $data){
-            DB::table('customs_hs_codes')->insert([
-                'code' => $data['codeTS'],
-                'name' => $data['gName'],
-                'describe' => $data['noteS'],
-                'unit1' => $data['unit1'],
-                'unit2' => $data['unit2'],
+            DB::table('customs_countries')->insert([
+                'code' => $data['countryCo'],
+                'name' => $data['countryNa'],
+                'code_en' => $data['countryEn'],
             ]);
         }
 

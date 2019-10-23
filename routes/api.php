@@ -3,11 +3,11 @@
 use Illuminate\Support\Facades\Route;
 
 Route::group(
-    ['prefix' => '{company}', 'middleware' => ['company', 'api']],
+    ['prefix' => '{company}', 'middleware' => ['company', 'api', 'rbac']],
     function () {
 
         Route::group(
-            ['middleware' => 'rbac', 'prefix' => 'system', 'namespace'=>'System'],
+            ['prefix' => 'system', 'namespace'=>'System'],
             function () {
                 Route::get(
                     'customs_currency',
@@ -33,14 +33,11 @@ Route::group(
             }
         );
 
-        Route::group(
-            ['middleware' => 'rbac', 'prefix' => 'goods', 'namespace'=>'Product'],
-            function () {
-                Route::get(
-                    'index',
-                    'IndexController@index'
-                )->name('product.index');
-            }
-        );
+        Route::resource('product', 'Product\IndexController', [
+            'names' => [
+                'create' => 'product.store',
+                'edit' => 'product.update',
+            ],
+        ]);
     }
 );

@@ -1,13 +1,95 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[28],{
 
-/***/ "./resources/vue/js/data/units.json":
-/*!******************************************!*\
-  !*** ./resources/vue/js/data/units.json ***!
-  \******************************************/
-/*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, default */
-/***/ (function(module) {
+/***/ "./resources/vue/js/modules/mixins/content-drawer.js":
+/*!***********************************************************!*\
+  !*** ./resources/vue/js/modules/mixins/content-drawer.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = JSON.parse("[{\"code\":\"001\",\"name\":\"台\"},{\"code\":\"002\",\"name\":\"座\"},{\"code\":\"003\",\"name\":\"辆\"},{\"code\":\"004\",\"name\":\"艘\"},{\"code\":\"005\",\"name\":\"架\"},{\"code\":\"006\",\"name\":\"套\"},{\"code\":\"007\",\"name\":\"个\"},{\"code\":\"008\",\"name\":\"只\"},{\"code\":\"009\",\"name\":\"头\"},{\"code\":\"010\",\"name\":\"张\"},{\"code\":\"011\",\"name\":\"件\"},{\"code\":\"012\",\"name\":\"支\"},{\"code\":\"013\",\"name\":\"枝\"},{\"code\":\"014\",\"name\":\"根\"},{\"code\":\"015\",\"name\":\"条\"},{\"code\":\"016\",\"name\":\"把\"},{\"code\":\"017\",\"name\":\"块\"},{\"code\":\"018\",\"name\":\"卷\"},{\"code\":\"019\",\"name\":\"副\"},{\"code\":\"020\",\"name\":\"片\"},{\"code\":\"021\",\"name\":\"组\"},{\"code\":\"022\",\"name\":\"份\"},{\"code\":\"023\",\"name\":\"幅\"},{\"code\":\"025\",\"name\":\"双\"},{\"code\":\"026\",\"name\":\"对\"},{\"code\":\"027\",\"name\":\"棵\"},{\"code\":\"028\",\"name\":\"株\"},{\"code\":\"029\",\"name\":\"井\"},{\"code\":\"030\",\"name\":\"米\"},{\"code\":\"031\",\"name\":\"盘\"},{\"code\":\"032\",\"name\":\"平方米\"},{\"code\":\"033\",\"name\":\"立方米\"},{\"code\":\"034\",\"name\":\"筒\"},{\"code\":\"035\",\"name\":\"千克\"},{\"code\":\"036\",\"name\":\"克\"},{\"code\":\"037\",\"name\":\"盆\"},{\"code\":\"038\",\"name\":\"万个\"},{\"code\":\"039\",\"name\":\"具\"},{\"code\":\"040\",\"name\":\"百副\"},{\"code\":\"041\",\"name\":\"百支\"},{\"code\":\"042\",\"name\":\"百把\"},{\"code\":\"043\",\"name\":\"百个\"},{\"code\":\"044\",\"name\":\"百片\"},{\"code\":\"045\",\"name\":\"刀\"},{\"code\":\"046\",\"name\":\"疋\"},{\"code\":\"047\",\"name\":\"公担\"},{\"code\":\"048\",\"name\":\"扇\"},{\"code\":\"049\",\"name\":\"百枝\"},{\"code\":\"050\",\"name\":\"千只\"},{\"code\":\"051\",\"name\":\"千块\"},{\"code\":\"052\",\"name\":\"千盒\"},{\"code\":\"053\",\"name\":\"千枝\"},{\"code\":\"054\",\"name\":\"千个\"},{\"code\":\"055\",\"name\":\"亿支\"},{\"code\":\"056\",\"name\":\"亿个\"},{\"code\":\"057\",\"name\":\"万套\"},{\"code\":\"058\",\"name\":\"千张\"},{\"code\":\"059\",\"name\":\"万张\"},{\"code\":\"060\",\"name\":\"千伏安\"},{\"code\":\"061\",\"name\":\"千瓦\"},{\"code\":\"062\",\"name\":\"千瓦时\"},{\"code\":\"063\",\"name\":\"千升\"},{\"code\":\"067\",\"name\":\"英尺\"},{\"code\":\"070\",\"name\":\"吨\"},{\"code\":\"071\",\"name\":\"长吨\"},{\"code\":\"072\",\"name\":\"短吨\"},{\"code\":\"073\",\"name\":\"司马担\"},{\"code\":\"074\",\"name\":\"司马斤\"},{\"code\":\"075\",\"name\":\"斤\"},{\"code\":\"076\",\"name\":\"磅\"},{\"code\":\"077\",\"name\":\"担\"},{\"code\":\"078\",\"name\":\"英担\"},{\"code\":\"079\",\"name\":\"短担\"},{\"code\":\"080\",\"name\":\"两\"},{\"code\":\"081\",\"name\":\"市担\"},{\"code\":\"083\",\"name\":\"盎司\"},{\"code\":\"084\",\"name\":\"克拉\"},{\"code\":\"085\",\"name\":\"市尺\"},{\"code\":\"086\",\"name\":\"码\"},{\"code\":\"088\",\"name\":\"英寸\"},{\"code\":\"089\",\"name\":\"寸\"},{\"code\":\"095\",\"name\":\"升\"},{\"code\":\"096\",\"name\":\"毫升\"},{\"code\":\"097\",\"name\":\"英加仑\"},{\"code\":\"098\",\"name\":\"美加仑\"},{\"code\":\"099\",\"name\":\"立方英尺\"},{\"code\":\"101\",\"name\":\"立方尺\"},{\"code\":\"110\",\"name\":\"平方码\"},{\"code\":\"111\",\"name\":\"平方英尺\"},{\"code\":\"112\",\"name\":\"平方尺\"},{\"code\":\"115\",\"name\":\"英制马力\"},{\"code\":\"116\",\"name\":\"公制马力\"},{\"code\":\"118\",\"name\":\"令\"},{\"code\":\"120\",\"name\":\"箱\"},{\"code\":\"121\",\"name\":\"批\"},{\"code\":\"122\",\"name\":\"罐\"},{\"code\":\"123\",\"name\":\"桶\"},{\"code\":\"124\",\"name\":\"扎\"},{\"code\":\"125\",\"name\":\"包\"},{\"code\":\"126\",\"name\":\"箩\"},{\"code\":\"127\",\"name\":\"打\"},{\"code\":\"128\",\"name\":\"筐\"},{\"code\":\"129\",\"name\":\"罗\"},{\"code\":\"130\",\"name\":\"匹\"},{\"code\":\"131\",\"name\":\"册\"},{\"code\":\"132\",\"name\":\"本\"},{\"code\":\"133\",\"name\":\"发\"},{\"code\":\"134\",\"name\":\"枚\"},{\"code\":\"135\",\"name\":\"捆\"},{\"code\":\"136\",\"name\":\"袋\"},{\"code\":\"139\",\"name\":\"粒\"},{\"code\":\"140\",\"name\":\"盒\"},{\"code\":\"141\",\"name\":\"合\"},{\"code\":\"142\",\"name\":\"瓶\"},{\"code\":\"143\",\"name\":\"千支\"},{\"code\":\"144\",\"name\":\"万双\"},{\"code\":\"145\",\"name\":\"万粒\"},{\"code\":\"146\",\"name\":\"千粒\"},{\"code\":\"147\",\"name\":\"千米\"},{\"code\":\"148\",\"name\":\"千英尺\"},{\"code\":\"149\",\"name\":\"百万贝可\"},{\"code\":\"163\",\"name\":\"部\"},{\"code\":\"164\",\"name\":\"亿株\"}]");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _from_submit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./from-submit */ "./resources/vue/js/modules/mixins/from-submit.js");
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mixins: [_from_submit__WEBPACK_IMPORTED_MODULE_0__["default"]],
+  props: {
+    props: null
+  },
+  data: function data() {
+    return {
+      drawer: {
+        value: true
+      }
+    };
+  },
+  methods: {
+    closeDrawer: function closeDrawer(v) {
+      if (v === false) {
+        this.drawer.value = false;
+        this.drawer.props = null;
+        this.$emit('on-close', false);
+        this.$emit('on-refresh');
+      }
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/vue/js/modules/views/authorities/role/role.js":
+/*!*****************************************************************!*\
+  !*** ./resources/vue/js/modules/views/authorities/role/role.js ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      loading: true,
+      data: {
+        authorities: [],
+        menus: []
+      },
+      authorities: {
+        data: []
+      },
+      menus: {
+        data: []
+      },
+      ruleValidate: {
+        name: [{
+          required: true,
+          message: '部门名称不能为空',
+          trigger: 'blur'
+        }, {
+          type: 'string',
+          min: 2,
+          max: 20,
+          message: '权限名称字符长度是2-20个字符',
+          trigger: 'blur'
+        }],
+        description: [{
+          type: 'string',
+          max: 255,
+          message: '权限描述最长255个字符',
+          trigger: 'blur'
+        }]
+      }
+    };
+  },
+  methods: {
+    handleChange: function handleChange(newTargetKeys) {
+      this.data.authorities = newTargetKeys;
+    },
+    change: function change(menus) {
+      this.authorities.data = menus;
+    }
+  }
+});
 
 /***/ })
 

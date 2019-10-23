@@ -48859,7 +48859,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
     path: '/admin',
     name: 'admin',
     component: function component() {
-      return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ../components/layout/main */ "./resources/vue/js/modules/components/layout/main.vue"));
+      return __webpack_require__.e(/*! import() */ 6).then(__webpack_require__.bind(null, /*! ../components/layout/main */ "./resources/vue/js/modules/components/layout/main.vue"));
     },
     children: _toConsumableArray(_modules_home__WEBPACK_IMPORTED_MODULE_1__["home"])
   }].concat(_toConsumableArray(_modules_common__WEBPACK_IMPORTED_MODULE_2__["common"]), _toConsumableArray(_modules_layout__WEBPACK_IMPORTED_MODULE_3__["loyout"]))
@@ -48947,7 +48947,7 @@ var home = [{
     tags: true
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(7)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/user/index */ "./resources/vue/js/modules/views/authorities/user/index.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(9)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/user/index */ "./resources/vue/js/modules/views/authorities/user/index.vue"));
   }
 }, {
   path: 'authorities/user/create',
@@ -48980,7 +48980,7 @@ var home = [{
     tags: true
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(2), __webpack_require__.e(3), __webpack_require__.e(25)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/role/index */ "./resources/vue/js/modules/views/authorities/role/index.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1), __webpack_require__.e(2), __webpack_require__.e(4), __webpack_require__.e(25)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/role/index */ "./resources/vue/js/modules/views/authorities/role/index.vue"));
   }
 }, {
   path: 'authorities/role/create',
@@ -48991,7 +48991,7 @@ var home = [{
     tags: false
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(3), __webpack_require__.e(26)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/role/create */ "./resources/vue/js/modules/views/authorities/role/create.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(4), __webpack_require__.e(28)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/role/create */ "./resources/vue/js/modules/views/authorities/role/create.vue"));
   }
 }, {
   path: 'authorities/role/update',
@@ -49013,7 +49013,7 @@ var home = [{
     tags: true
   },
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ../../views/authorities/menu/index */ "./resources/vue/js/modules/views/authorities/menu/index.vue"));
+    return __webpack_require__.e(/*! import() */ 7).then(__webpack_require__.bind(null, /*! ../../views/authorities/menu/index */ "./resources/vue/js/modules/views/authorities/menu/index.vue"));
   }
 }, {
   path: 'authorities/menu/create',
@@ -49046,7 +49046,7 @@ var home = [{
     tags: true
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(6)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/authority/index */ "./resources/vue/js/modules/views/authorities/authority/index.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(8)]).then(__webpack_require__.bind(null, /*! ../../views/authorities/authority/index */ "./resources/vue/js/modules/views/authorities/authority/index.vue"));
   }
 }, {
   path: 'authorities/authority/create',
@@ -49079,7 +49079,7 @@ var home = [{
     tags: true
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(9)]).then(__webpack_require__.bind(null, /*! ../../views/system/customs/currency */ "./resources/vue/js/modules/views/system/customs/currency.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(11)]).then(__webpack_require__.bind(null, /*! ../../views/system/customs/currency */ "./resources/vue/js/modules/views/system/customs/currency.vue"));
   }
 }, {
   path: 'system/customs/districts',
@@ -49090,7 +49090,7 @@ var home = [{
     tags: true
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(10)]).then(__webpack_require__.bind(null, /*! ../../views/system/customs/districts */ "./resources/vue/js/modules/views/system/customs/districts.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(12)]).then(__webpack_require__.bind(null, /*! ../../views/system/customs/districts */ "./resources/vue/js/modules/views/system/customs/districts.vue"));
   }
 }, {
   path: 'system/customs/hscode',
@@ -49101,7 +49101,7 @@ var home = [{
     tags: true
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(11)]).then(__webpack_require__.bind(null, /*! ../../views/system/customs/hscode */ "./resources/vue/js/modules/views/system/customs/hscode.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(13)]).then(__webpack_require__.bind(null, /*! ../../views/system/customs/hscode */ "./resources/vue/js/modules/views/system/customs/hscode.vue"));
   }
 }, {
   path: 'system/customs/unit',
@@ -49112,7 +49112,7 @@ var home = [{
     tags: true
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(12)]).then(__webpack_require__.bind(null, /*! ../../views/system/customs/unit */ "./resources/vue/js/modules/views/system/customs/unit.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(14)]).then(__webpack_require__.bind(null, /*! ../../views/system/customs/unit */ "./resources/vue/js/modules/views/system/customs/unit.vue"));
   }
 }, {
   path: 'product/lists/index',
@@ -49123,7 +49123,7 @@ var home = [{
     tags: true
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(8)]).then(__webpack_require__.bind(null, /*! ../../views/product/lists/index */ "./resources/vue/js/modules/views/product/lists/index.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(10)]).then(__webpack_require__.bind(null, /*! ../../views/product/lists/index */ "./resources/vue/js/modules/views/product/lists/index.vue"));
   }
 }, {
   path: 'product/lists/create',
@@ -49134,7 +49134,7 @@ var home = [{
     tags: false
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(14)]).then(__webpack_require__.bind(null, /*! ../../views/product/lists/create */ "./resources/vue/js/modules/views/product/lists/create.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(3), __webpack_require__.e(26)]).then(__webpack_require__.bind(null, /*! ../../views/product/lists/create */ "./resources/vue/js/modules/views/product/lists/create.vue"));
   }
 }, {
   path: 'product/lists/update',
@@ -49145,7 +49145,7 @@ var home = [{
     tags: false
   },
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 13).then(__webpack_require__.bind(null, /*! ../../views/product/lists/update */ "./resources/vue/js/modules/views/product/lists/update.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(3), __webpack_require__.e(27)]).then(__webpack_require__.bind(null, /*! ../../views/product/lists/update */ "./resources/vue/js/modules/views/product/lists/update.vue"));
   }
 }];
 

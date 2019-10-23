@@ -44,19 +44,27 @@
                 <span>{{ row.status }}</span>
             </template>
             <template slot-scope="{ row, index }" slot="customer_code">
-                <span>{{ row.product_customers.customer_code }}</span>
+                <span>{{ row.product_customer.customer_code }}</span>
             </template>
             <template slot-scope="{ row, index }" slot="origin_country_code">
-                <span>{{ row.product_customers.origin_country_code }}</span>
+                <span>{{ row.product_customer.origin_country_code }}</span>
             </template>
             <template slot-scope="{ row, index }" slot="unit_code">
-                <span>{{ row.product_customers.unit_code }}</span>
+                <span>{{ row.product_customer.unit_code }}</span>
             </template>
             <template slot-scope="{ row, index }" slot="currency_code">
-                <span>{{ row.product_customers.currency_code }}</span>
+                <span>{{ row.product_customer.currency_code }}</span>
             </template>
             <template slot-scope="{ row, index }" slot="price">
-                <span>{{ row.product_customers.price }}</span>
+                <span>{{ row.product_customer.price }}</span>
+            </template>
+            <template slot-scope="{ row, index }" slot="status">
+                <span v-if="row.status === 0">草稿</span>
+                <span v-else>审核通过</span>
+            </template>
+            <template slot-scope="{ row, index }" slot="action">
+                <Button type="warning" size="small" @click="routerPush('product.lists.update', {id: row.id})">编辑</Button>
+                <Button type="primary" size="small">查看</Button>
             </template>
         </i-table>
     </i-content>
@@ -83,7 +91,7 @@
                     },{
                         title: '商品名称',
                         slot: 'name',
-                        width: 250
+                        width: 350
                     },{
                         title: '商品条码',
                         slot: 'barcode',
@@ -116,6 +124,14 @@
                         title: '申报价值',
                         slot: 'price',
                         width: 100
+                    }, {
+                        title: '状态',
+                        slot: 'status',
+                        width: 100
+                    }, {
+                        title: '操作',
+                        slot: 'action',
+                        width: 150
                     }
                     ]
                 }
@@ -127,7 +143,7 @@
         methods:{
             getLists(page){
                 this.loading = true;
-                this.$http.get(`goods/index`, {
+                this.$http.get(`product`, {
                     params: Object.assign({}, this.search, {page: page})
                 }).then((data) => {
                     this.table.data = data.data

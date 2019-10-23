@@ -49,7 +49,7 @@ class CreateCustomsTable extends Migration
 
         Schema::create('customs_countries', function (Blueprint $table) {
             $table->char('code', 3)->comment('国别地区代码');
-            $table->string('code_en', 3)->comment('英文简码');
+            $table->string('code_en', 50)->nullable()->comment('英文简码');
             $table->string('name', 50)->comment('中文名称');
             $table->primary(['code']);
         });

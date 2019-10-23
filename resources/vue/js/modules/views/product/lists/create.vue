@@ -24,17 +24,20 @@
                 </Col>
                 <Col :span="8">
                     <FormItem label="毛重" prop="weight">
-                        <Input v-model="data.weight"></Input>
+                        <Input v-model="data.weight" number></Input>
                     </FormItem>
                 </Col>
                 <Col :span="8">
                     <FormItem label="净重" prop="net_weight">
-                        <Input v-model="data.net_weight"></Input>
+                        <Input v-model="data.net_weight" number></Input>
                     </FormItem>
                 </Col>
                 <Col :span="6">
                     <FormItem label="海关代码" prop="product_customer.customer_code">
-                        <Input v-model="data.product_customer.customer_code"></Input>
+                        <Input v-model="data.product_customer.customer_code"
+                               @on-enter="setHsCode($event, data.product_customer.customer_code)"
+                                @on-blur="setHsCode($event, data.product_customer.customer_code)"
+                        ></Input>
                     </FormItem>
                 </Col>
                 <Col :span="6">
@@ -44,52 +47,60 @@
                 </Col>
                 <Col :span="12">
                     <FormItem label="规格型号" prop="product_customer.specs">
-                        <Input v-model="data.product_customer.specs"></Input>
+                        <Input v-model="data.product_customer.specs">
+                            <Icon type="md-code-working" slot="suffix" @click="setSpecModal(true)"/>
+                        </Input>
                     </FormItem>
                 </Col>
                 <Col :span="6">
                     <FormItem label="法1单位">
-                        <Input disabled v-model="data.product_customer.customs_hs_code.unit1"></Input>
+                        <SelectJson disabled type="unit" v-model="data.product_customer.customs_hs_code.unit1"></SelectJson>
                     </FormItem>
                 </Col>
                 <Col :span="6">
                     <FormItem label="法2单位">
-                        <Input disabled v-model="data.product_customer.customs_hs_code.unit2"></Input>
+                        <SelectJson disabled type="unit" v-model="data.product_customer.customs_hs_code.unit2"></SelectJson>
                     </FormItem>
                 </Col>
                 <Col :span="6">
                     <FormItem label="原产地" prop="product_customer.origin_country_code">
-                        <Input v-model="data.product_customer.origin_country_code"></Input>
+                        <SelectJson type="country" v-model="data.product_customer.origin_country_code"></SelectJson>
                     </FormItem>
                 </Col>
                 <Col :span="6">
                     <FormItem label="申报单位" prop="product_customer.unit_code">
-                        <Unit v-model="data.product_customer.unit_code"></Unit>
+                        <SelectJson v-model="data.product_customer.unit_code"></SelectJson>
                     </FormItem>
                 </Col>
                 <Col :span="6">
                     <FormItem label="法1数量" prop="product_customer.qty1">
-                        <Unit v-model="data.product_customer.qty1"></Unit>
+                        <Input v-model="data.product_customer.qty1" number></Input>
                     </FormItem>
                 </Col>
                 <Col :span="6">
                     <FormItem label="法2数量" prop="product_customer.qty2">
-                        <Unit v-model="data.product_customer.qty2"></Unit>
+                        <Input v-model="data.product_customer.qty2" number></Input>
                     </FormItem>
                 </Col>
                 <Col :span="6">
                     <FormItem label="申报币种" prop="product_customer.currency_code">
-                        <Input v-model="data.product_customer.currency_code"></Input>
+                        <SelectJson type="currency" v-model="data.product_customer.currency_code"></SelectJson>
                     </FormItem>
                 </Col>
                 <Col :span="6">
                     <FormItem label="申报价格" prop="product_customer.price">
-                        <Input v-model="data.product_customer.price"></Input>
+                        <Input v-model="data.product_customer.price" number></Input>
                     </FormItem>
                 </Col>
-
             </Row>
         </Form>
+        <Modal title="规格型号" v-model="specModal" @on-ok="specModalOk" @on-cancel="specModalCancel">
+            <Form :label-width="100">
+                <FormItem v-for="(item, index) in specElements" :key="index" :label="item">
+                    <Input v-model="specValues[index]"></Input>
+                </FormItem>
+            </Form>
+        </Modal>
         <div slot="footer">
             <Button type="primary" icon="ios-add" @click="submit('formCreate')">提交</Button>
             <Button type="warning" icon="md-log-out" @click="$router.go(-1)">返回</Button>
@@ -101,14 +112,29 @@
     import IForm from "../../../components/content/form";
     import contentDrawer from '../../../mixins/content-drawer';
     import Goods from './goods';
-    import Unit from "../../../components/form/unit";
+    import SelectJson from "../../../components/form/select-json";
+
 
     export default {
         name: "create",
-        components: {Unit, IForm},
+        components: {SelectJson, IForm},
         mixins: [contentDrawer, Goods],
         mounted() {
             this.loading = false;
+        },
+        methods:{
+            submit(name){
+                this.validate(name).then(() => {
+                    this.loading = true;
+                    this.$http.post(`product`,
+                        this.data
+                    ).then(() => {
+                        this.$store.dispatch('layout/remove', this.$route);
+                    }).finally(() => {
+                        this.loading = false;
+                    });
+                })
+            }
         }
     }
 </script>
