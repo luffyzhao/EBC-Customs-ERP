@@ -30,10 +30,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/vue/js/modules/views/system/customs/currency.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/vue/js/modules/views/system/customs/currency.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/vue/js/modules/views/system/customs/country.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/vue/js/modules/views/system/customs/country.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -88,13 +88,13 @@ __webpack_require__.r(__webpack_exports__);
       search: {},
       table: {
         columns: [{
-          title: '币制代码',
+          title: '国别代码',
           slot: 'code'
         }, {
           title: '英文简码',
           slot: 'code_en'
         }, {
-          title: '币制名称',
+          title: '国别名称',
           slot: 'name'
         }]
       }
@@ -108,7 +108,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       this.loading = true;
-      this.$http.get("system/customs_currency", {
+      this.$http.get("system/customs_country", {
         params: Object.assign({}, this.search, {
           page: page
         })
@@ -209,10 +209,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/vue/js/modules/views/system/customs/currency.vue?vue&type=template&id=b88bc220&scoped=true&":
-/*!*********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/vue/js/modules/views/system/customs/currency.vue?vue&type=template&id=b88bc220&scoped=true& ***!
-  \*********************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/vue/js/modules/views/system/customs/country.vue?vue&type=template&id=98efa4f2&scoped=true&":
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/vue/js/modules/views/system/customs/country.vue?vue&type=template&id=98efa4f2&scoped=true& ***!
+  \********************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -242,10 +242,10 @@ var render = function() {
         [
           _c(
             "FormItem",
-            { attrs: { label: "币制代码" } },
+            { attrs: { label: "国别代码" } },
             [
               _c("Input", {
-                attrs: { placeholder: "币制代码", size: "small" },
+                attrs: { placeholder: "国别代码", size: "small" },
                 model: {
                   value: _vm.search.code,
                   callback: function($$v) {
@@ -260,10 +260,10 @@ var render = function() {
           _vm._v(" "),
           _c(
             "FormItem",
-            { attrs: { label: "币制名称" } },
+            { attrs: { label: "国别名称" } },
             [
               _c("Input", {
-                attrs: { placeholder: "币制名称", size: "small" },
+                attrs: { placeholder: "国别名称", size: "small" },
                 model: {
                   value: _vm.search.name,
                   callback: function($$v) {
@@ -456,17 +456,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/vue/js/modules/views/system/customs/currency.vue":
-/*!********************************************************************!*\
-  !*** ./resources/vue/js/modules/views/system/customs/currency.vue ***!
-  \********************************************************************/
+/***/ "./resources/vue/js/modules/views/system/customs/country.vue":
+/*!*******************************************************************!*\
+  !*** ./resources/vue/js/modules/views/system/customs/country.vue ***!
+  \*******************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _currency_vue_vue_type_template_id_b88bc220_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./currency.vue?vue&type=template&id=b88bc220&scoped=true& */ "./resources/vue/js/modules/views/system/customs/currency.vue?vue&type=template&id=b88bc220&scoped=true&");
-/* harmony import */ var _currency_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./currency.vue?vue&type=script&lang=js& */ "./resources/vue/js/modules/views/system/customs/currency.vue?vue&type=script&lang=js&");
+/* harmony import */ var _country_vue_vue_type_template_id_98efa4f2_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./country.vue?vue&type=template&id=98efa4f2&scoped=true& */ "./resources/vue/js/modules/views/system/customs/country.vue?vue&type=template&id=98efa4f2&scoped=true&");
+/* harmony import */ var _country_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./country.vue?vue&type=script&lang=js& */ "./resources/vue/js/modules/views/system/customs/country.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -476,50 +476,50 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _currency_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _currency_vue_vue_type_template_id_b88bc220_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _currency_vue_vue_type_template_id_b88bc220_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _country_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _country_vue_vue_type_template_id_98efa4f2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _country_vue_vue_type_template_id_98efa4f2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  "b88bc220",
+  "98efa4f2",
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/vue/js/modules/views/system/customs/currency.vue"
+component.options.__file = "resources/vue/js/modules/views/system/customs/country.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/vue/js/modules/views/system/customs/currency.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************!*\
-  !*** ./resources/vue/js/modules/views/system/customs/currency.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************/
+/***/ "./resources/vue/js/modules/views/system/customs/country.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************!*\
+  !*** ./resources/vue/js/modules/views/system/customs/country.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_currency_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./currency.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/vue/js/modules/views/system/customs/currency.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_currency_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_country_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./country.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/vue/js/modules/views/system/customs/country.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_country_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/vue/js/modules/views/system/customs/currency.vue?vue&type=template&id=b88bc220&scoped=true&":
-/*!***************************************************************************************************************!*\
-  !*** ./resources/vue/js/modules/views/system/customs/currency.vue?vue&type=template&id=b88bc220&scoped=true& ***!
-  \***************************************************************************************************************/
+/***/ "./resources/vue/js/modules/views/system/customs/country.vue?vue&type=template&id=98efa4f2&scoped=true&":
+/*!**************************************************************************************************************!*\
+  !*** ./resources/vue/js/modules/views/system/customs/country.vue?vue&type=template&id=98efa4f2&scoped=true& ***!
+  \**************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_currency_vue_vue_type_template_id_b88bc220_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./currency.vue?vue&type=template&id=b88bc220&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/vue/js/modules/views/system/customs/currency.vue?vue&type=template&id=b88bc220&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_currency_vue_vue_type_template_id_b88bc220_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_country_vue_vue_type_template_id_98efa4f2_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./country.vue?vue&type=template&id=98efa4f2&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/vue/js/modules/views/system/customs/country.vue?vue&type=template&id=98efa4f2&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_country_vue_vue_type_template_id_98efa4f2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_currency_vue_vue_type_template_id_b88bc220_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_country_vue_vue_type_template_id_98efa4f2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

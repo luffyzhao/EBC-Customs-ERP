@@ -5,6 +5,7 @@ namespace App\Http\Controllers\System;
 
 
 
+use App\Http\Searchs\System\CustomsSearch;
 use LAuth\Http\Controllers\Controller;
 
 class CustomsHsCodeController extends Controller
@@ -20,12 +21,14 @@ class CustomsHsCodeController extends Controller
     }
 
     /**
+     * @param CustomsSearch $search
+     * @return \Illuminate\Http\JsonResponse
      * @author luffyzhao@vip.126.com
      */
-    public function index()
+    public function index(CustomsSearch $search)
     {
         return $this->response(
-            $this->hsCode->paginate([])
+            $this->hsCode->paginate($search->toArray())
         );
     }
 }

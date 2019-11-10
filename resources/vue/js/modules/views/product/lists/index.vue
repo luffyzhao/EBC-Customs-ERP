@@ -19,11 +19,13 @@
             <FormItem :label-width="1">
                 <Button type="primary" icon="ios-search" @click="getLists(1)" size="small">搜索</Button>
                 <Button type="success" icon="ios-add" @click="routerPush('product.lists.create')" size="small">添加</Button>
+                <Button type="warning" icon="md-checkbox-outline" @click="batchCallback('examine')" size="small">批量审核</Button>
             </FormItem>
         </i-search>
-        <i-table :current="page.current" :table="table" :total="page.total" @on-page-change="pageChange">
+        <i-table :current="page.current" :table="table" :total="page.total" @on-page-change="pageChange" @on-selection-change="onSelectionChange">
             <template slot-scope="{ row, index }" slot="sku">
-                <span>{{ row.sku }}</span>
+                <a @click="openComponent('ProductView', row)" v-if="row.status === 1">{{ row.sku }}</a>
+                <a @click="routerPush('product.lists.update', {id: row.id})" v-else>{{ row.sku }}</a>
             </template>
             <template slot-scope="{ row, index }" slot="barcode">
                 <span>{{ row.barcode }}</span>
@@ -62,11 +64,9 @@
                 <span v-if="row.status === 0">草稿</span>
                 <span v-else>审核通过</span>
             </template>
-            <template slot-scope="{ row, index }" slot="action">
-                <Button type="warning" size="small" @click="routerPush('product.lists.update', {id: row.id})">编辑</Button>
-                <Button type="primary" size="small">查看</Button>
-            </template>
         </i-table>
+        <component v-bind:is="component.is" :props="component.prop" @on-close="closeComponent"
+                   @on-refresh="getLists(1)"></component>
     </i-content>
 </template>
 
@@ -75,16 +75,21 @@
     import contentListPage from "../../../mixins/content-list-page";
     import ISearch from "../../../components/content/search";
     import ITable from "../../../components/content/table";
+    import ProductView from "./view";
 
     export default {
         name: "index",
-        components: {ITable, ISearch, IContent},
+        components: {ITable, ISearch, IContent, ProductView},
         mixins: [contentListPage],
         data(){
             return {
                 search: {},
                 table: {
                     columns: [{
+                        type: 'selection',
+                        width: 60,
+                        align: 'center'
+                    },{
                         title: '商品货号',
                         slot: 'sku',
                         width: 120
@@ -128,10 +133,6 @@
                         title: '状态',
                         slot: 'status',
                         width: 100
-                    }, {
-                        title: '操作',
-                        slot: 'action',
-                        width: 150
                     }
                     ]
                 }
@@ -151,6 +152,13 @@
                     this.page.current = data.current_page
                 }).finally(() => {
                     this.loading = false;
+                });
+            },
+            examine(row){
+                this.$http.put(`product/${row.id}/examine`).then((res) => {
+                    this.$Message.success(`${row.sku} 审核通过!`);
+                }).catch((err) => {
+                    console.log(err);
                 });
             }
         }

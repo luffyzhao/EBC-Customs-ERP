@@ -2,41 +2,79 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a90c168f-af2b-48cb-9911-530c2b58ec81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Product/StoreRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Product/UpdateRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/vue/js/modules/components/form/select-json.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Concerns/Models/HasUpdateWhere.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Exceptions/ValidationException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/System/CustomsCountryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/System/WarehouseController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Searchs/Product/IndexSearch.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Searchs/System/CustomsSearch.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/CompanyWarehouse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/CustomsCountry.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Deliver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Warehouse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/CompanyWarehouse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/CustomsCountry.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/Deliver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/Warehouse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/vue/js/modules/components/content/cell.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/vue/js/modules/components/content/cellJson.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/vue/js/modules/components/content/modal.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/vue/js/modules/views/product/lists/view.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/vue/js/modules/views/system/customs/country.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/vue/js/modules/views/system/warehouses/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/HttpClientCustoms.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/HttpClientCustoms.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Product/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Product/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/System/CustomsCurrencyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/System/CustomsCurrencyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/System/CustomsDistrictController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/System/CustomsDistrictController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/System/CustomsHsCodeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/System/CustomsHsCodeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/System/CustomsUnitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/System/CustomsUnitController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ProductCustomer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ProductCustomer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_20_015438_create_customs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_20_015438_create_customs_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/ltools.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/ltools.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_25_005746_create_warehouse_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_25_005746_create_warehouse_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_25_014337_create_company_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_25_014337_create_company_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_25_030741_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_25_030741_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_29_080710_create_deliver_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_29_080710_create_deliver_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/1.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/1.chunk.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/vendor/js/10.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/10.chunk.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/vendor/js/11.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/11.chunk.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/vendor/js/12.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/12.chunk.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/vendor/js/13.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/13.chunk.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/vendor/js/14.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/14.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/15.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/15.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/16.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/16.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/17.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/17.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/18.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/18.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/19.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/19.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/2.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/2.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/20.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/20.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/21.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/21.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/22.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/22.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/23.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/23.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/24.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/24.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/25.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/25.chunk.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/vendor/js/26.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/26.chunk.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/vendor/js/27.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/27.chunk.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/vendor/js/28.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/28.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/29.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/29.chunk.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/vendor/js/3.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/3.chunk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/js/4.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/4.chunk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendor/js/5.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/5.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/30.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/30.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/31.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/31.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/js/32.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/32.chunk.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/vendor/js/6.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/6.chunk.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/vendor/js/7.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/7.chunk.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/vendor/js/8.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/8.chunk.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/vendor/js/9.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/9.chunk.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/vendor/js/vendor/js/app.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/js/vendor/js/app.chunk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/vue/js/data/hs_codes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/vue/js/data/units.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/vue/js/modules/components/form/hsCode.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/vue/js/modules/components/form/unit.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/vue/js/modules/views/product/lists/create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vue/js/modules/views/product/lists/create.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vue/js/modules/components/content/table.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vue/js/modules/components/content/table.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vue/js/modules/mixins/content-list-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vue/js/modules/mixins/content-list-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vue/js/modules/router/modules/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vue/js/modules/router/modules/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vue/js/modules/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vue/js/modules/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vue/js/modules/store/modules/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vue/js/modules/store/modules/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/vue/js/modules/views/product/lists/goods.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vue/js/modules/views/product/lists/goods.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/vue/js/modules/views/product/lists/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vue/js/modules/views/product/lists/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/vue/js/modules/views/product/lists/update.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vue/js/modules/views/product/lists/update.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vue/js/plugins/fetch/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vue/js/plugins/fetch/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
@@ -54,83 +92,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Requests/Product/UpdateRequest.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/vue/js/modules/views/system/warehouses/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="21" column="174" selection-start-line="21" selection-start-column="174" selection-end-line="21" selection-end-column="174" />
+            <state relative-caret-position="243">
+              <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/System/WarehouseController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
               <folding>
-                <element signature="e#47#90#0#PHP" expanded="true" />
+                <element signature="e#49#87#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Repositories/Product.php">
+        <entry file="file://$PROJECT_DIR$/app/Models/CompanyWarehouse.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="22" column="27" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Repositories/CompanyWarehouse.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_09_29_080710_create_deliver_table.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="430">
-              <caret line="100" column="45" selection-start-line="100" selection-start-column="45" selection-end-line="100" selection-end-column="45" />
+              <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Repositories/CustomsCountry.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/vue/js/modules/views/system/customs/country.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1350">
+              <caret line="53" column="17" selection-start-line="40" selection-start-column="16" selection-end-line="53" selection-end-column="17" />
               <folding>
-                <element signature="e#38#52#0#PHP" expanded="true" />
+                <element signature="e#1131#1188#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-10-23.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="743" column="17" selection-start-line="743" selection-start-column="12" selection-end-line="743" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Models/Product.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="72" selection-start-line="72" selection-end-line="72" />
-              <folding>
-                <element signature="e#32#73#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="1129" column="20" selection-start-line="1129" selection-start-column="20" selection-end-line="1129" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="812" column="23" selection-start-line="812" selection-start-column="23" selection-end-line="812" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/HasOne.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -147,12 +173,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dark</find>
-      <find>.ivu-menu-opened</find>
-      <find>status</find>
-      <find>.ivu-menu-dark.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu), .ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu-title-active:not(.ivu-menu-submenu)</find>
-      <find>.ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu .ivu-menu-item-active, .ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu .ivu-menu-item-active:hover</find>
-      <find>users</find>
       <find>roles</find>
       <find>describe</find>
       <find>Lau</find>
@@ -175,8 +195,14 @@
       <find>touch</find>
       <find>setKeysForSaveQuery</find>
       <find>create</find>
-      <find>update</find>
       <find>forceFill</find>
+      <find>count</find>
+      <find>tool</find>
+      <find>showTooltip</find>
+      <find>handleTooltipOut</find>
+      <find>number</find>
+      <find>update</find>
+      <find>examine</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -185,57 +211,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Model/CustomsDistrict.php" />
-        <option value="$PROJECT_DIR$/app/Model/CustomsHsCode.php" />
-        <option value="$PROJECT_DIR$/app/Model/CustomsUnit.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/CustomsUnit.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/CustomsHsCode.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/CustomsDistrict.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/CustomsCurrency.php" />
-        <option value="$PROJECT_DIR$/resources/vue/js/modules/views/system/customs/currency.vue" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/System/CustomsCurrency.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/System/CustomsDistrict.php" />
-        <option value="$PROJECT_DIR$/resources/vue/js/modules/views/system/customs/districts.vue" />
-        <option value="$PROJECT_DIR$/resources/vue/js/modules/views/system/customs/hscode.vue" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/System/CustomsUnit.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/System/CustomsHsCode.php" />
-        <option value="$PROJECT_DIR$/resources/vue/js/modules/views/system/customs/units.vue" />
-        <option value="$PROJECT_DIR$/resources/vue/js/modules/views/system/customs/unit.vue" />
-        <option value="$PROJECT_DIR$/resources/vue/js/modules/components/content/table.vue" />
-        <option value="$PROJECT_DIR$/resources/vue/js/modules/views/goods/lists/index.vue" />
-        <option value="$PROJECT_DIR$/app/Models/Goods.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Goods/IndexController.php" />
-        <option value="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" />
-        <option value="$PROJECT_DIR$/app/Console/Commands/Backup/Run.php" />
-        <option value="$PROJECT_DIR$/resources/vue/js/modules/router/modules/home.js" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_09_25_030741_create_products_table.php" />
-        <option value="$PROJECT_DIR$/resources/vue/js/data/units.js" />
-        <option value="$PROJECT_DIR$/resources/vue/js/data/customs.js" />
-        <option value="$PROJECT_DIR$/resources/vue/js/libs/util.js" />
-        <option value="$PROJECT_DIR$/resources/vue/js/data/hs_codes.json" />
-        <option value="$PROJECT_DIR$/resources/vue/js/data/units.json" />
-        <option value="$PROJECT_DIR$/resources/vue/js/modules/components/form/hsCode.vue" />
-        <option value="$PROJECT_DIR$/app/Console/Commands/HttpClientCustoms.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_09_20_015438_create_customs_table.php" />
-        <option value="$PROJECT_DIR$/resources/vue/js/modules/components/form/country.vue" />
-        <option value="$PROJECT_DIR$/resources/vue/js/modules/components/form/unit.vue" />
-        <option value="$PROJECT_DIR$/resources/vue/js/modules/mixins/select-data.js" />
-        <option value="$PROJECT_DIR$/resources/vue/js/modules/components/form/currency.vue" />
-        <option value="$PROJECT_DIR$/node_modules/iview/src/components/input/input.vue" />
-        <option value="$PROJECT_DIR$/resources/vue/js/modules/components/form/select-json.vue" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Goods/StoreRequest.php" />
-        <option value="$PROJECT_DIR$/resources/vue/js/modules/views/product/lists/create.vue" />
-        <option value="$PROJECT_DIR$/resources/vue/js/modules/views/product/lists/index.vue" />
-        <option value="$PROJECT_DIR$/routes/api.php" />
-        <option value="$PROJECT_DIR$/app/Models/ProductCustomer.php" />
-        <option value="$PROJECT_DIR$/resources/vue/js/modules/views/product/lists/goods.js" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Product/StoreRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Product/IndexController.php" />
         <option value="$PROJECT_DIR$/resources/vue/js/modules/views/product/lists/update.vue" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Product/UpdateRequest.php" />
         <option value="$PROJECT_DIR$/storage/logs/laravel-2019-10-23.log" />
-        <option value="$PROJECT_DIR$/app/Repositories/Product.php" />
+        <option value="$PROJECT_DIR$/app/Exceptions/Handler.php" />
+        <option value="$PROJECT_DIR$/app/Exceptions/ValidationException.php" />
         <option value="$PROJECT_DIR$/app/Models/Product.php" />
+        <option value="$PROJECT_DIR$/node_modules/iview/src/components/table/cell.vue" />
+        <option value="$PROJECT_DIR$/node_modules/iview/src/components/tooltip/tooltip.vue" />
+        <option value="$PROJECT_DIR$/resources/vue/js/modules/components/content/cell.vue" />
+        <option value="$PROJECT_DIR$/resources/vue/js/modules/components/content/cellJson.vue" />
+        <option value="$PROJECT_DIR$/resources/vue/js/modules/views/product/lists/goods.js" />
+        <option value="$PROJECT_DIR$/resources/vue/js/modules/components/content/modal.vue" />
+        <option value="$PROJECT_DIR$/resources/vue/js/modules/views/product/lists/view.vue" />
+        <option value="$PROJECT_DIR$/resources/vue/js/modules/components/content/table.vue" />
+        <option value="$PROJECT_DIR$/resources/vue/js/modules/store/modules/auth.js" />
+        <option value="$PROJECT_DIR$/resources/vue/js/modules/store/index.js" />
+        <option value="$PROJECT_DIR$/resources/vue/js/plugins/fetch/index.js" />
+        <option value="$PROJECT_DIR$/app/Concerns/Models/HasUpdateWhere.php" />
+        <option value="$PROJECT_DIR$/config/ltools.php" />
+        <option value="$PROJECT_DIR$/resources/vue/js/modules/views/product/lists/index.vue" />
+        <option value="$PROJECT_DIR$/resources/vue/js/modules/mixins/content-list-page.js" />
+        <option value="$PROJECT_DIR$/app/Repositories/Product.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_09_25_030741_create_products_table.php" />
+        <option value="$PROJECT_DIR$/resources/vue/js/modules/views/system/customs/country.vue" />
+        <option value="$PROJECT_DIR$/app/Models/CustomsCountry.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/CustomsCountry.php" />
+        <option value="$PROJECT_DIR$/app/Http/Searchs/System/CustomsCountrySearch.php" />
+        <option value="$PROJECT_DIR$/app/Http/Searchs/System/CustomsCurrencySearch.php" />
+        <option value="$PROJECT_DIR$/app/Http/Searchs/System/CustomsSearch.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/System/CustomsCountryController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/System/CustomsCurrencyController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/System/CustomsDistrictController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/System/CustomsHsCodeController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/System/CustomsUnitController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Searchs/Product/IndexSearch.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Product/IndexController.php" />
+        <option value="$PROJECT_DIR$/vendor/luffyzhao/laravel-tools/src/Searchs/SearchAbstract.php" />
+        <option value="$PROJECT_DIR$/resources/vue/js/modules/router/modules/home.js" />
+        <option value="$PROJECT_DIR$/app/Models/Warehouse.php" />
+        <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_09_25_005746_create_warehouse_table.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/System/WarehouseController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_09_25_014337_create_company_table.php" />
+        <option value="$PROJECT_DIR$/app/Models/Deliver.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/Deliver.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/Warehouse.php" />
+        <option value="$PROJECT_DIR$/app/Models/CompanyWarehouse.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/CompanyWarehouse.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_09_29_080710_create_deliver_table.php" />
+        <option value="$PROJECT_DIR$/resources/vue/js/modules/views/system/warehouses/index.vue" />
       </list>
     </option>
   </component>
@@ -343,8 +369,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="528" />
-    <option name="y" value="248" />
+    <option name="x" value="-82" />
+    <option name="y" value="129" />
     <option name="width" value="1380" />
     <option name="height" value="634" />
   </component>
@@ -363,47 +389,6 @@
             <path>
               <item name="EBC-Customs-ERP" type="b2602c69:ProjectViewProjectNode" />
               <item name="EBC-Customs-ERP" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EBC-Customs-ERP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EBC-Customs-ERP" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EBC-Customs-ERP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EBC-Customs-ERP" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EBC-Customs-ERP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EBC-Customs-ERP" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Product" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EBC-Customs-ERP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EBC-Customs-ERP" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Requests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EBC-Customs-ERP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EBC-Customs-ERP" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Requests" type="462c0819:PsiDirectoryNode" />
-              <item name="Product" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EBC-Customs-ERP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EBC-Customs-ERP" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -444,7 +429,7 @@
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="authorities" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EBC-Customs-ERP" type="b2602c69:ProjectViewProjectNode" />
@@ -454,63 +439,8 @@
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="authorities" type="462c0819:PsiDirectoryNode" />
-              <item name="authority" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EBC-Customs-ERP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EBC-Customs-ERP" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="vue" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="product" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EBC-Customs-ERP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EBC-Customs-ERP" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="vue" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="product" type="462c0819:PsiDirectoryNode" />
-              <item name="lists" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EBC-Customs-ERP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EBC-Customs-ERP" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor-package" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EBC-Customs-ERP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EBC-Customs-ERP" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor-package" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel-admin-auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EBC-Customs-ERP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EBC-Customs-ERP" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor-package" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel-admin-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EBC-Customs-ERP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EBC-Customs-ERP" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor-package" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel-admin-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EBC-Customs-ERP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EBC-Customs-ERP" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor-package" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel-admin-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="warehouses" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -522,13 +452,18 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/vue/js/modules/views/goods/lists" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Repositories" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="D:\Program Files\JetBrains\PhpStorm 2019.1.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\www\EBC-Customs-ERP\app\Repositories" />
+      <recent name="E:\www\EBC-Customs-ERP\app\Models" />
+      <recent name="E:\www\EBC-Customs-ERP\app\Http\Controllers\System" />
+      <recent name="E:\www\EBC-Customs-ERP\resources\vue\js\modules\views\system\customs" />
       <recent name="E:\www\EBC-Customs-ERP\resources\vue\js\modules\views\goods\lists" />
     </key>
   </component>
@@ -549,6 +484,16 @@
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <configuration name="production" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="production" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -562,6 +507,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.watch" />
+        <item itemvalue="npm.production" />
       </list>
     </recent_temporary>
   </component>
@@ -601,6 +547,21 @@
       <workItem from="1571731638723" duration="1207000" />
       <workItem from="1571733625891" duration="3073000" />
       <workItem from="1571792510477" duration="5016000" />
+      <workItem from="1571878300603" duration="6425000" />
+      <workItem from="1572228109229" duration="14914000" />
+      <workItem from="1572326495884" duration="5919000" />
+      <workItem from="1572345197239" duration="43000" />
+      <workItem from="1572397673940" duration="13024000" />
+      <workItem from="1572485687132" duration="1553000" />
+      <workItem from="1572492088460" duration="5590000" />
+      <workItem from="1572571511389" duration="5196000" />
+      <workItem from="1572834214483" duration="599000" />
+      <workItem from="1572857268636" duration="42000" />
+      <workItem from="1572947837985" duration="3623000" />
+      <workItem from="1573002474124" duration="32000" />
+      <workItem from="1573091693937" duration="465000" />
+      <workItem from="1573093248614" duration="25000" />
+      <workItem from="1573183475104" duration="3781000" />
     </task>
     <task id="LOCAL-00001" summary=" 数据库设计">
       <created>1569403965351</created>
@@ -627,50 +588,52 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140919000" />
+    <option name="totallyTimeSpent" value="202150000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.47826087" weight="0.254298" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4673913" weight="0.1969914" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.5217391" side_tool="true" weight="0.254298" />
+      <window_info id="npm" order="2" sideWeight="0.5326087" side_tool="true" weight="0.1969914" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32880434" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32880434" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3294702" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="TypeScript" order="0" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32880434" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32880434" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3294702" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32880434" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32880434" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.47826087" visible="true" weight="0.254298" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4673913" visible="true" weight="0.1969914" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.5217391" side_tool="true" weight="0.254298" />
+      <window_info id="npm" order="2" sideWeight="0.5326087" side_tool="true" weight="0.1969914" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32880434" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32880434" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3294702" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="TypeScript" order="0" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32880434" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32880434" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3294702" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32880434" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32880434" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -688,362 +651,371 @@
     <option name="LAST_COMMIT_MESSAGE" value=" 数据库设计" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/vue/js/modules/mixins/emitter.js">
+    <entry file="file://$PROJECT_DIR$/resources/vue/js/plugins/fetch/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/vue/js/modules/mixins/select-data.js" />
-    <entry file="file://$PROJECT_DIR$/resources/vue/js/modules/components/form/currency.vue" />
-    <entry file="file://$PROJECT_DIR$/node_modules/iview/src/components/select/select.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="174" column="12" lean-forward="true" selection-start-line="174" selection-start-column="12" selection-end-line="177" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/iview/src/components/input/input.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
+          <caret line="40" column="40" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
           <folding>
-            <element signature="e#3785#3849#0" expanded="true" />
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/vue/js/modules/components/form/select-json.vue">
+    <entry file="file://$PROJECT_DIR$/resources/vue/js/modules/store/modules/auth.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/iview/src/components/icon/icon.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-839">
-          <caret line="1" column="38" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="537" column="16" selection-start-line="537" selection-start-column="16" selection-end-line="537" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/iview/src/components/form/form.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/iview/src/components/form/form-item.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/vue/js/modules/views/authorities/authority/authority.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="99" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/vue/js/modules/views/authorities/authority/create.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="54" column="23" lean-forward="true" selection-start-line="48" selection-start-column="20" selection-end-line="54" selection-end-column="23" />
+        <state relative-caret-position="351">
+          <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
           <folding>
-            <element signature="e#1095#1153#0" expanded="true" />
+            <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor-package/laravel-admin-auth/src/Http/Requests/Authorities/AuthoritiesRequest.php">
+    <entry file="file://$PROJECT_DIR$/vendor-package/laravel-admin-auth/src/Http/Controllers/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="56" column="27" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/luffyzhao/laravel-tools/src/Auths/Cache/TokenHandle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2538">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/luffyzhao/laravel-tools/src/Auths/Cache/Token.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1460">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-10-30.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6515" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="600" column="23" selection-start-line="600" selection-start-column="23" selection-end-line="600" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="771" column="26" selection-start-line="771" selection-start-column="20" selection-end-line="771" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Concerns/Models/HasUpdateWhere.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="718">
+          <caret line="35" column="46" lean-forward="true" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
+          <folding>
+            <element signature="e#32#71#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/ltools.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/vue/js/modules/views/product/lists/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-972">
+          <caret line="21" column="80" selection-start-line="21" selection-start-column="80" selection-end-line="21" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_09_20_015438_create_customs_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_10_15_031946_add_fields_for_auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_09_25_030741_create_products_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
-          <caret line="23" column="52" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="52" />
+          <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Http/FormRequest.php">
+    <entry file="file://$PROJECT_DIR$/app/Models/CustomsCountry.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4698">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        <state relative-caret-position="162">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php">
+    <entry file="file://$PROJECT_DIR$/app/Models/CustomsCurrency.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="167" column="23" selection-start-line="167" selection-start-column="23" selection-end-line="167" selection-end-column="23" />
+        <state relative-caret-position="162">
+          <caret line="6" selection-start-line="6" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor-package/laravel-admin-auth/src/routes.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/ProductCustomer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Searchs/System/CustomsCountrySearch.php" />
+    <entry file="file://$PROJECT_DIR$/app/Http/Searchs/System/CustomsCurrencySearch.php" />
+    <entry file="file://$PROJECT_DIR$/app/Http/Searchs/System/CustomsSearch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/System/CustomsCurrencyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+          <folding>
+            <element signature="e#49#91#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/System/CustomsDistrictController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+          <folding>
+            <element signature="e#49#91#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/System/CustomsHsCodeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="27" column="39" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="39" />
+          <folding>
+            <element signature="e#50#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Product/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/luffyzhao/laravel-tools/src/Searchs/SearchAbstract.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="129" column="20" lean-forward="true" selection-start-line="129" selection-start-column="20" selection-end-line="136" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Searchs/Product/IndexSearch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../hnwms/application/models/Api/Zs/ImportXml.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="166" column="105" selection-start-line="166" selection-start-column="84" selection-end-line="166" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/vue/js/modules/router/modules/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="219" column="38" selection-start-line="219" selection-start-column="15" selection-end-line="219" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/vue/js/modules/mixins/content-list-page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-351">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/System/CustomsCountryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="49" />
+          <folding>
+            <element signature="e#49#91#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Warehouse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/System/CustomsUnitController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+          <folding>
+            <element signature="e#49#91#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_09_25_005746_create_warehouse_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="36" column="77" selection-start-line="36" selection-start-column="77" selection-end-line="36" selection-end-column="93" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/vue/js/modules/views/authorities/authority/index.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="26" column="16" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="33" selection-end-column="25" />
-          <folding>
-            <element signature="e#1757#1814#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/vue/js/modules/router/modules/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="200" column="28" selection-start-line="200" selection-start-column="23" selection-end-line="200" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/vue/js/modules/views/product/lists/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2293">
-          <caret line="145" column="39" lean-forward="true" selection-start-line="145" selection-start-column="39" selection-end-line="145" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor-package/laravel-admin-auth/src/Http/Controllers/Authorities/AuthorityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="78" column="32" lean-forward="true" selection-start-line="78" selection-start-column="15" selection-end-line="78" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor-package/laravel-admin-auth/src/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="39" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/vue/js/modules/views/product/lists/goods.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="112" column="75" selection-start-line="112" selection-start-column="75" selection-end-line="112" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/ProductCustomer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-10-22.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="650" column="12" selection-start-line="650" selection-start-column="12" selection-end-line="650" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Validation/Rule.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="84" column="30" selection-start-line="84" selection-start-column="30" selection-end-line="84" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="35" column="32" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Validation/Rules/Unique.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasTimestamps.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Product/StoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="84" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/luffyzhao/laravel-tools/src/Repositories/RepositoryAbstract.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="127" column="4" selection-start-line="127" selection-start-column="4" selection-end-line="143" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/vue/js/modules/views/authorities/authority/update.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="69" column="23" lean-forward="true" selection-start-line="63" selection-start-column="20" selection-end-line="69" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/vue/js/modules/views/product/lists/create.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="128" column="44" selection-start-line="128" selection-start-column="37" selection-end-line="128" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/Concerns/SupportsDefaultModels.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-137">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasRelationships.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="52" column="59" lean-forward="true" selection-start-line="52" selection-start-column="59" selection-end-line="52" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor-package/laravel-admin-auth/src/Models/Menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-583">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor-package/laravel-admin-auth/src/Repositories/Menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="63" column="42" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor-package/laravel-admin-auth/src/Repositories/Role.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1161">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Product/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="71" column="30" lean-forward="true" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/vue/js/modules/views/product/lists/update.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3537">
-          <caret line="134" column="33" selection-start-line="134" selection-start-column="33" selection-end-line="134" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/HasOne.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/HasOneOrMany.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="247" column="20" selection-start-line="247" selection-start-column="20" selection-end-line="247" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/ConnectionInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="71" column="20" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="2687" column="37" lean-forward="true" selection-start-line="2687" selection-start-column="34" selection-end-line="2687" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Concerns/ManagesTransactions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Collection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="91" column="34" lean-forward="true" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Product/UpdateRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="21" column="174" selection-start-line="21" selection-start-column="174" selection-end-line="21" selection-end-column="174" />
-          <folding>
-            <element signature="e#47#90#0#PHP" expanded="true" />
-          </folding>
+          <caret line="26" column="129" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="129" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Repositories/Product.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="32" column="54" lean-forward="true" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="54" />
+          <folding>
+            <element signature="e#38#77#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_09_25_014337_create_company_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="32" column="40" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/Deliver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Deliver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/luffyzhao/laravel-tools/src/Repositories/RepositoryAbstract.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="81" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/Warehouse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/System/WarehouseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+          <folding>
+            <element signature="e#49#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/CompanyWarehouse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/CompanyWarehouse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/CustomsCountry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/vue/js/modules/views/system/customs/country.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="53" column="17" selection-start-line="40" selection-start-column="16" selection-end-line="53" selection-end-column="17" />
+          <folding>
+            <element signature="e#1131#1188#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_09_29_080710_create_deliver_table.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="430">
-          <caret line="100" column="45" selection-start-line="100" selection-start-column="45" selection-end-line="100" selection-end-column="45" />
-          <folding>
-            <element signature="e#38#52#0#PHP" expanded="true" />
-          </folding>
+          <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-10-23.log">
+    <entry file="file://$PROJECT_DIR$/resources/vue/js/modules/views/system/warehouses/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="743" column="17" selection-start-line="743" selection-start-column="12" selection-end-line="743" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="812" column="23" selection-start-line="812" selection-start-column="23" selection-end-line="812" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="1129" column="20" selection-start-line="1129" selection-start-column="20" selection-end-line="1129" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-          <folding>
-            <element signature="e#32#73#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="243">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
         </state>
       </provider>
     </entry>

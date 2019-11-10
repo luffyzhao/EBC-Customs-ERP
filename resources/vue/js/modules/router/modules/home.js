@@ -177,6 +177,16 @@ export const home = [
         component: () => import('../../views/system/customs/unit')
     },
     {
+        path: 'system/customs/country',
+        name: 'system.customs.country',
+        meta: {
+            title: '海关国别代码',
+            cache: true,
+            tags: true
+        },
+        component: () => import('../../views/system/customs/country')
+    },
+    {
         path: 'product/lists/index',
         name: 'product.lists.index',
         meta: {
@@ -205,5 +215,14 @@ export const home = [
             tags: false
         },
         component: () => import('../../views/product/lists/update')
-    }
+    },{
+        path: 'system/warehouses/index',
+        name: 'system.warehouses.index',
+        meta: {
+            title: '仓库管理',
+            cache: false,
+            tags: false
+        },
+        component: () => import('../../views/system/warehouses/index')
+    },
 ];

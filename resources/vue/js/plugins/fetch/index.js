@@ -1,6 +1,6 @@
 import axios from 'axios'
 import {$cache} from '../cache'
-import $store from '../../modules/store'
+import $store from '../../modules/store/index'
 import {Message} from 'iview'
 
 const company = /\/company\/(\d)/gi.exec(window.location.pathname)[1];
@@ -36,13 +36,15 @@ instance.interceptors.response.use((response) => {
         Message.error('网络加载失败！');
     }else if(error.response.status === 401){
         Message.error(error.response.data.message);
-        $store.dispatch('auth/afterLogout');
     }else if(error.response.status === 403){
         Message.error(error.response.data.message);
+        $store.dispatch('auth/refresh');
     }else if(error.response.status === 422){
         Message.error('数据验证错误，请检查提交的数据!');
     }else if(error.response.status === 404){
         Message.error('数据不存在!');
+    }else if(error.response.status === 400){
+        Message.error(error.response.data.message);
     }else{
         Message.error('服务器错误,请联系管理员!');
     }

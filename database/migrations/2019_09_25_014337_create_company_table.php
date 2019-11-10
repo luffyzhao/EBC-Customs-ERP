@@ -25,14 +25,17 @@ class CreateCompanyTable extends Migration
         });
         DB::statement("ALTER TABLE `company` comment '公司表'");
 
-        Schema::create('company_customs', function (Blueprint $table){
+
+        Schema::create('company_warehouses', function (Blueprint $table){
             $table->unsignedBigInteger('company_id')->comment('公司ID');
+            $table->unsignedBigInteger('warehouse_id')->comment('仓库ID');
             $table->char('customs_code', 10)->comment('海关十位代码');
             $table->string('customs_name', 255)->comment('海关企业备案名称');
             $table->string('dxpid')->comment('dxpid');
-            $table->timestamps();
+            $table->unsignedBigInteger('deliver_id')->comment('仓库快递方式');
+            $table->primary(['company_id', 'warehouse_id']);
         });
-        DB::statement("ALTER TABLE `company_customs` comment '公司海关信息表'");
+        DB::statement("ALTER TABLE `company_warehouses` comment '公司仓库表'");
     }
 
     /**
@@ -43,6 +46,6 @@ class CreateCompanyTable extends Migration
     public function down()
     {
         Schema::dropIfExists('company');
-        Schema::dropIfExists('company_customs');
+        Schema::dropIfExists('company_warehouses');
     }
 }

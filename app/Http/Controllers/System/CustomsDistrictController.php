@@ -4,6 +4,7 @@
 namespace App\Http\Controllers\System;
 
 
+use App\Http\Searchs\System\CustomsSearch;
 use LAuth\Http\Controllers\Controller;
 
 class CustomsDistrictController extends Controller
@@ -19,12 +20,14 @@ class CustomsDistrictController extends Controller
     }
 
     /**
+     * @param CustomsSearch $search
+     * @return \Illuminate\Http\JsonResponse
      * @author luffyzhao@vip.126.com
      */
-    public function index()
+    public function index(CustomsSearch $search)
     {
         return $this->response(
-            $this->district->paginate([])
+            $this->district->paginate($search->toArray())
         );
     }
 }

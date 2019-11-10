@@ -1,6 +1,6 @@
 <template>
     <div class="list-panel">
-        <Table :columns="table.columns" size="small" :data="table.data" ref="Table" :height="tableHeight">
+        <Table :columns="table.columns" size="small" :data="table.data" ref="Table" :height="tableHeight" @on-selection-change="onSelectionChange">
             <slot></slot>
         </Table>
         <Page :current="current" :total="total" :page-size="pageSize" show-total @on-change="change" size="small"/>
@@ -49,6 +49,9 @@
         methods: {
             change(v) {
                 this.$emit('on-page-change', v);
+            },
+            onSelectionChange(selection){
+                this.$emit('on-selection-change', selection);
             }
         }
     }

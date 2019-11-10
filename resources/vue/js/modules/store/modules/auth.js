@@ -47,6 +47,8 @@ export default {
         refresh({commit, dispatch}){
             $http.put('refresh').then((res) => {
                 commit('setLogin', res.data);
+            }).catch(() => {
+                dispatch('afterLogout');
             });
         }
     }

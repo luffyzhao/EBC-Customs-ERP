@@ -105,6 +105,9 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     change: function change(v) {
       this.$emit('on-page-change', v);
+    },
+    onSelectionChange: function onSelectionChange(selection) {
+      this.$emit('on-selection-change', selection);
     }
   }
 });
@@ -325,7 +328,8 @@ var render = function() {
             size: "small",
             data: _vm.table.data,
             height: _vm.tableHeight
-          }
+          },
+          on: { "on-selection-change": _vm.onSelectionChange }
         },
         [_vm._t("default")],
         2
@@ -565,7 +569,8 @@ __webpack_require__.r(__webpack_exports__);
       },
       table: {
         columns: [],
-        data: []
+        data: [],
+        selections: []
       },
       component: {
         is: '',
@@ -601,7 +606,22 @@ __webpack_require__.r(__webpack_exports__);
         query: query
       });
     },
-    getLists: function getLists() {}
+    getLists: function getLists() {},
+    onSelectionChange: function onSelectionChange(selection) {
+      this.table.selections = selection;
+    },
+    batchCallback: function batchCallback(callback) {
+      var _this2 = this;
+
+      if (this.table.selections.length === 0) {
+        this.$Message.error('没有选择任何数据，请先选择数据！');
+      } else {
+        this.table.selections.forEach(function (row) {
+          _this2[callback](row);
+        });
+        this.getLists();
+      }
+    }
   }
 });
 

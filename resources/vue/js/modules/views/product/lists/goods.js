@@ -1,3 +1,5 @@
+const _util = require('async-validator/lib/util');
+
 let hsCodes = [];
 
 const findHsCode = (code) => {
@@ -33,6 +35,11 @@ export default {
             loading: true,
             specModal: false,
             specValues: [],
+            data: {
+                product_customer: {
+                    customs_hs_code: {}
+                }
+            },
             ruleValidate: {
                 name: [
                     {required: true, message: '商品名称必须填写', trigger: 'blur'},
@@ -51,10 +58,10 @@ export default {
                     {type: 'string', min: 1, max: 255, message: '商品品牌字符长度是1-255个字符', trigger: 'blur'}
                 ],
                 weight: [
-                    {required: true, type: 'number',message: '商品毛重必须填写并且必须是数值类型', trigger: 'blur'},
+                    {required: true, type: 'number', message: '商品毛重必须填写并且必须是数值类型', trigger: 'blur'},
                 ],
                 net_weight: [
-                    {required: true,type: 'number', message: '商品毛重必须填写并且必须是数值类型', trigger: 'blur'},
+                    {required: true, type: 'number', message: '商品毛重必须填写并且必须是数值类型', trigger: 'blur'},
                 ],
                 "product_customer.customer_code": [
                     {required: true, message: '商品海关编码必须填写', trigger: 'blur'},
@@ -82,6 +89,20 @@ export default {
                     {required: true, type: 'number', message: '法1数量必须填写并且必须是数值类型', trigger: 'blur'},
                 ],
                 "product_customer.qty2": [
+                    {
+                        asyncValidator: (rule, value, callback) => {
+                            if (_util.isEmptyValue(this.data.product_customer.customs_hs_code.unit2, 'string')) {
+                                if (!_util.isEmptyValue(value, 'string')) {
+                                    callback(new Error('第二法定单位为空时，第二法定数量也必须为空！'));
+                                }
+                            } else {
+                                if (_util.isEmptyValue(value, 'string')) {
+                                    callback(new Error('第二法定单位不为空时，第二法定数量也不能为空！'));
+                                }
+                            }
+                            callback();
+                        }, trigger: 'blur'
+                    },
                     {type: 'number', message: '法2数量必须是数值类型', trigger: 'blur'},
                 ],
                 "product_customer.currency_code": [
@@ -90,12 +111,7 @@ export default {
                 "product_customer.price": [
                     {required: true, type: 'number', message: '商品单价必须填写并且必须是数值类型', trigger: 'blur'},
                 ]
-            },
-            data: {
-                product_customer: {
-                    customs_hs_code: {}
-                }
-            },
+            }
         }
     },
     computed: {
@@ -110,7 +126,7 @@ export default {
     },
     methods: {
         setHsCode(event, hsCode) {
-            if(this.data.product_customer.customs_hs_code.code === hsCode){
+            if (this.data.product_customer.customs_hs_code.code === hsCode) {
                 return;
             }
             findHsCode(hsCode).then((code) => {
@@ -123,6 +139,7 @@ export default {
             });
         },
         setSpecModal(status) {
+            this.specValues = this.data.product_customer.specs.split('|');
             this.specModal = status;
         },
         specModalOk() {
@@ -132,10 +149,11 @@ export default {
                     this.data.product_customer.specs += this.specValues[index];
                 }
                 this.data.product_customer.specs += '|';
-            })
+            });
+            this.specValues = [];
         },
         specModalCancel() {
-            this.data.product_customer.specs = '';
+            // this.data.product_customer.specs = '';
         }
     }
 }

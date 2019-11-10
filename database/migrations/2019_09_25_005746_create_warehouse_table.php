@@ -14,17 +14,16 @@ class CreateWarehouseTable extends Migration
      */
     public function up()
     {
-        Schema::create('warehouse', function (Blueprint $table) {
+        Schema::create('warehouses', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->char('warehouse_code', 5)->comment('仓库代码');
             $table->string('name', 100)->comment('仓库名称');
-            $table->enum('trade_mode', ['9610', '1210'])->comment('直购进口填写“9610”保税进口填写“1210”');
             $table->string('areas')->comment('仓库地区 ps: 湖南省 长沙市 长沙县');
             $table->string('address')->comment('仓库详细地址');
             $table->string('description')->comment('仓库说明');
             $table->timestamps();
         });
-        DB::statement("ALTER TABLE `warehouse` comment '库存表'");
+        DB::statement("ALTER TABLE `warehouses` comment '仓库表'");
     }
 
     /**
@@ -34,6 +33,6 @@ class CreateWarehouseTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('warehouse');
+        Schema::dropIfExists('warehouses');
     }
 }

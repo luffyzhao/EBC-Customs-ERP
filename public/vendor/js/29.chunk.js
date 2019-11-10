@@ -1,13 +1,875 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[29],{
 
-/***/ "./resources/vue/js/data/country.json":
-/*!********************************************!*\
-  !*** ./resources/vue/js/data/country.json ***!
-  \********************************************/
-/*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, default */
-/***/ (function(module) {
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/vue/js/modules/views/product/lists/update.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/vue/js/modules/views/product/lists/update.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = JSON.parse("[{\"code\":\"100\",\"code_en\":\"Asia\",\"name\":\"亚洲\"},{\"code\":\"101\",\"code_en\":\"Afghanistan\",\"name\":\"阿富汗\"},{\"code\":\"102\",\"code_en\":\"Bahrian\",\"name\":\"巴林\"},{\"code\":\"103\",\"code_en\":\"Bangladesh\",\"name\":\"孟加拉国\"},{\"code\":\"104\",\"code_en\":\"Bhutan\",\"name\":\"不丹\"},{\"code\":\"105\",\"code_en\":\"Brunei\",\"name\":\"文莱\"},{\"code\":\"106\",\"code_en\":\"Myanmar\",\"name\":\"缅甸\"},{\"code\":\"107\",\"code_en\":\"Cambodia\",\"name\":\"柬埔寨\"},{\"code\":\"108\",\"code_en\":\"Cyprus\",\"name\":\"塞浦路斯\"},{\"code\":\"109\",\"code_en\":\"Korea,DPR\",\"name\":\"朝鲜\"},{\"code\":\"110\",\"code_en\":\"Hong Kong\",\"name\":\"中国香港\"},{\"code\":\"111\",\"code_en\":\"India\",\"name\":\"印度\"},{\"code\":\"112\",\"code_en\":\"Indonesia\",\"name\":\"印度尼西亚\"},{\"code\":\"113\",\"code_en\":\"Iran\",\"name\":\"伊朗\"},{\"code\":\"114\",\"code_en\":\"Iraq\",\"name\":\"伊拉克\"},{\"code\":\"115\",\"code_en\":\"Israel\",\"name\":\"以色列\"},{\"code\":\"116\",\"code_en\":\"Japan\",\"name\":\"日本\"},{\"code\":\"117\",\"code_en\":\"Jordan\",\"name\":\"约旦\"},{\"code\":\"118\",\"code_en\":\"Kuwait\",\"name\":\"科威特\"},{\"code\":\"119\",\"code_en\":\"Laos,PDR\",\"name\":\"老挝\"},{\"code\":\"120\",\"code_en\":\"Lebanon\",\"name\":\"黎巴嫩\"},{\"code\":\"121\",\"code_en\":\"Macau\",\"name\":\"中国澳门\"},{\"code\":\"122\",\"code_en\":\"Malaysia\",\"name\":\"马来西亚\"},{\"code\":\"123\",\"code_en\":\"Maldives\",\"name\":\"马尔代夫\"},{\"code\":\"124\",\"code_en\":\"Mongolia\",\"name\":\"蒙古\"},{\"code\":\"125\",\"code_en\":\"Nepal\",\"name\":\"尼泊尔\"},{\"code\":\"126\",\"code_en\":\"Oman\",\"name\":\"阿曼\"},{\"code\":\"127\",\"code_en\":\"Pakistan\",\"name\":\"巴基斯坦\"},{\"code\":\"128\",\"code_en\":\"Palestine\",\"name\":\"巴勒斯坦\"},{\"code\":\"129\",\"code_en\":\"Philippines\",\"name\":\"菲律宾\"},{\"code\":\"130\",\"code_en\":\"Qatar\",\"name\":\"卡塔尔\"},{\"code\":\"131\",\"code_en\":\"Saudi Arabia\",\"name\":\"沙特阿拉伯\"},{\"code\":\"132\",\"code_en\":\"Singapore\",\"name\":\"新加坡\"},{\"code\":\"133\",\"code_en\":\"Korea Rep.\",\"name\":\"韩国\"},{\"code\":\"134\",\"code_en\":\"Sri Lanka\",\"name\":\"斯里兰卡\"},{\"code\":\"135\",\"code_en\":\"Syrian\",\"name\":\"叙利亚\"},{\"code\":\"136\",\"code_en\":\"Thailand\",\"name\":\"泰国\"},{\"code\":\"137\",\"code_en\":\"Turkey\",\"name\":\"土耳其\"},{\"code\":\"138\",\"code_en\":\"United Arab Emirates\",\"name\":\"阿联酋\"},{\"code\":\"139\",\"code_en\":\"Republic of Yemen\",\"name\":\"也门共和国\"},{\"code\":\"141\",\"code_en\":\"Vietnam\",\"name\":\"越南\"},{\"code\":\"142\",\"code_en\":\"China\",\"name\":\"中国\"},{\"code\":\"143\",\"code_en\":\"Taiwan prov.\",\"name\":\"中国台湾\"},{\"code\":\"144\",\"code_en\":\"East Timor\",\"name\":\"东帝汶\"},{\"code\":\"145\",\"code_en\":\"Kazakhstan\",\"name\":\"哈萨克斯坦\"},{\"code\":\"146\",\"code_en\":\"Kirghizia\",\"name\":\"吉尔吉斯斯坦\"},{\"code\":\"147\",\"code_en\":\"Tadzhikistan\",\"name\":\"塔吉克斯坦\"},{\"code\":\"148\",\"code_en\":\"Turkmenistan\",\"name\":\"土库曼斯坦\"},{\"code\":\"149\",\"code_en\":\"Uzbekstan\",\"name\":\"乌兹别克斯坦\"},{\"code\":\"199\",\"code_en\":\"Oth. Asia nes\",\"name\":\"亚洲其他国家(地区)\"},{\"code\":\"200\",\"code_en\":\"Africa\",\"name\":\"非洲\"},{\"code\":\"201\",\"code_en\":\"Algeria\",\"name\":\"阿尔及利亚\"},{\"code\":\"202\",\"code_en\":\"Angora\",\"name\":\"安哥拉\"},{\"code\":\"203\",\"code_en\":\"Benin\",\"name\":\"贝宁\"},{\"code\":\"204\",\"code_en\":\"Botswana\",\"name\":\"博茨瓦那\"},{\"code\":\"205\",\"code_en\":\"Burundi\",\"name\":\"布隆迪\"},{\"code\":\"206\",\"code_en\":\"Cameroon\",\"name\":\"喀麦隆\"},{\"code\":\"207\",\"code_en\":\"Canary Is\",\"name\":\"加那利群岛\"},{\"code\":\"208\",\"code_en\":\"Cape Vrde\",\"name\":\"佛得角\"},{\"code\":\"209\",\"code_en\":\"Central African Rep.\",\"name\":\"中非共和国\"},{\"code\":\"210\",\"code_en\":\"Ceuta\",\"name\":\"塞卜泰\"},{\"code\":\"211\",\"code_en\":\"Chad\",\"name\":\"乍得\"},{\"code\":\"212\",\"code_en\":\"Comoros\",\"name\":\"科摩罗\"},{\"code\":\"213\",\"code_en\":\"Congo\",\"name\":\"刚果\"},{\"code\":\"214\",\"code_en\":\"Djibouti\",\"name\":\"吉布提\"},{\"code\":\"215\",\"code_en\":\"Egypt\",\"name\":\"埃及\"},{\"code\":\"216\",\"code_en\":\"Eq.Guinea\",\"name\":\"赤道几内亚\"},{\"code\":\"217\",\"code_en\":\"Ethiopia\",\"name\":\"埃塞俄比亚\"},{\"code\":\"218\",\"code_en\":\"Gabon\",\"name\":\"加蓬\"},{\"code\":\"219\",\"code_en\":\"Gambia\",\"name\":\"冈比亚\"},{\"code\":\"220\",\"code_en\":\"Ghana\",\"name\":\"加纳\"},{\"code\":\"221\",\"code_en\":\"Guinea\",\"name\":\"几内亚\"},{\"code\":\"222\",\"code_en\":\"Guinea Bissau\",\"name\":\"几内亚(比绍)\"},{\"code\":\"223\",\"code_en\":\"Cote d'lvoir\",\"name\":\"科特迪瓦\"},{\"code\":\"224\",\"code_en\":\"Kenya\",\"name\":\"肯尼亚\"},{\"code\":\"225\",\"code_en\":\"Liberia\",\"name\":\"利比里亚\"},{\"code\":\"226\",\"code_en\":\"Libyan Arab Jm\",\"name\":\"利比亚\"},{\"code\":\"227\",\"code_en\":\"Madagascar\",\"name\":\"马达加斯加\"},{\"code\":\"228\",\"code_en\":\"Malawi\",\"name\":\"马拉维\"},{\"code\":\"229\",\"code_en\":\"Mali\",\"name\":\"马里\"},{\"code\":\"230\",\"code_en\":\"Mauritania\",\"name\":\"毛里塔尼亚\"},{\"code\":\"231\",\"code_en\":\"Mauritius\",\"name\":\"毛里求斯\"},{\"code\":\"232\",\"code_en\":\"Morocco\",\"name\":\"摩洛哥\"},{\"code\":\"233\",\"code_en\":\"Mozambique\",\"name\":\"莫桑比克\"},{\"code\":\"234\",\"code_en\":\"Namibia\",\"name\":\"纳米比亚\"},{\"code\":\"235\",\"code_en\":\"Niger\",\"name\":\"尼日尔\"},{\"code\":\"236\",\"code_en\":\"Nigeria\",\"name\":\"尼日利亚\"},{\"code\":\"237\",\"code_en\":\"Reunion\",\"name\":\"留尼汪\"},{\"code\":\"238\",\"code_en\":\"Rwanda\",\"name\":\"卢旺达\"},{\"code\":\"239\",\"code_en\":\"Sao Tome & Principe\",\"name\":\"圣多美和普林西比\"},{\"code\":\"240\",\"code_en\":\"Senegal\",\"name\":\"塞内加尔\"},{\"code\":\"241\",\"code_en\":\"Seychelles\",\"name\":\"塞舌尔\"},{\"code\":\"242\",\"code_en\":\"Sierra Leone\",\"name\":\"塞拉利昂\"},{\"code\":\"243\",\"code_en\":\"Somalia\",\"name\":\"索马里\"},{\"code\":\"244\",\"code_en\":\"S.Africa\",\"name\":\"南非\"},{\"code\":\"245\",\"code_en\":\"Western Sahara\",\"name\":\"西撒哈拉\"},{\"code\":\"246\",\"code_en\":\"Sudan\",\"name\":\"苏丹\"},{\"code\":\"247\",\"code_en\":\"Tanzania\",\"name\":\"坦桑尼亚\"},{\"code\":\"248\",\"code_en\":\"Togo\",\"name\":\"多哥\"},{\"code\":\"249\",\"code_en\":\"Tunisia\",\"name\":\"突尼斯\"},{\"code\":\"250\",\"code_en\":\"Uganda\",\"name\":\"乌干达\"},{\"code\":\"251\",\"code_en\":\"Burkina Faso\",\"name\":\"布基纳法索\"},{\"code\":\"252\",\"code_en\":\"Congo,DR\",\"name\":\"民主刚果\"},{\"code\":\"253\",\"code_en\":\"Zambia\",\"name\":\"赞比亚\"},{\"code\":\"254\",\"code_en\":\"Zimbabwe\",\"name\":\"津巴布韦\"},{\"code\":\"255\",\"code_en\":\"Lesotho\",\"name\":\"莱索托\"},{\"code\":\"256\",\"code_en\":\"Melilla\",\"name\":\"梅利利亚\"},{\"code\":\"257\",\"code_en\":\"Swaziland\",\"name\":\"斯威士兰\"},{\"code\":\"258\",\"code_en\":\"Eritrea\",\"name\":\"厄立特里亚\"},{\"code\":\"259\",\"code_en\":\"Mayotte\",\"name\":\"马约特岛\"},{\"code\":\"299\",\"code_en\":\"Oth. Afr. nes\",\"name\":\"非洲其他国家(地区)\"},{\"code\":\"300\",\"code_en\":\"Europe\",\"name\":\"欧洲\"},{\"code\":\"301\",\"code_en\":\"Belgium\",\"name\":\"比利时\"},{\"code\":\"302\",\"code_en\":\"Denmark\",\"name\":\"丹麦\"},{\"code\":\"303\",\"code_en\":\"United Kingdom\",\"name\":\"英国\"},{\"code\":\"304\",\"code_en\":\"Germany\",\"name\":\"德国\"},{\"code\":\"305\",\"code_en\":\"France\",\"name\":\"法国\"},{\"code\":\"306\",\"code_en\":\"Ireland\",\"name\":\"爱尔兰\"},{\"code\":\"307\",\"code_en\":\"Italy\",\"name\":\"意大利\"},{\"code\":\"308\",\"code_en\":\"Luxembourg\",\"name\":\"卢森堡\"},{\"code\":\"309\",\"code_en\":\"Netherlands\",\"name\":\"荷兰\"},{\"code\":\"310\",\"code_en\":\"Greece\",\"name\":\"希腊\"},{\"code\":\"311\",\"code_en\":\"Portugal\",\"name\":\"葡萄牙\"},{\"code\":\"312\",\"code_en\":\"Spain\",\"name\":\"西班牙\"},{\"code\":\"313\",\"code_en\":\"Albania\",\"name\":\"阿尔巴尼亚\"},{\"code\":\"314\",\"code_en\":\"Andorra\",\"name\":\"安道尔\"},{\"code\":\"315\",\"code_en\":\"Austria\",\"name\":\"奥地利\"},{\"code\":\"316\",\"code_en\":\"Bulgaria\",\"name\":\"保加利亚\"},{\"code\":\"318\",\"code_en\":\"Finland\",\"name\":\"芬兰\"},{\"code\":\"320\",\"code_en\":\"Gibraltar\",\"name\":\"直布罗陀\"},{\"code\":\"321\",\"code_en\":\"Hungary\",\"name\":\"匈牙利\"},{\"code\":\"322\",\"code_en\":\"Iceland\",\"name\":\"冰岛\"},{\"code\":\"323\",\"code_en\":\"Liechtenstein\",\"name\":\"列支敦士登\"},{\"code\":\"324\",\"code_en\":\"Malta\",\"name\":\"马耳他\"},{\"code\":\"325\",\"code_en\":\"Monaco\",\"name\":\"摩纳哥\"},{\"code\":\"326\",\"code_en\":\"Norway\",\"name\":\"挪威\"},{\"code\":\"327\",\"code_en\":\"Poland\",\"name\":\"波兰\"},{\"code\":\"328\",\"code_en\":\"Romania\",\"name\":\"罗马尼亚\"},{\"code\":\"329\",\"code_en\":\"San Marino\",\"name\":\"圣马力诺\"},{\"code\":\"330\",\"code_en\":\"Sweden\",\"name\":\"瑞典\"},{\"code\":\"331\",\"code_en\":\"Switzerland\",\"name\":\"瑞士\"},{\"code\":\"334\",\"code_en\":\"Estonia\",\"name\":\"爱沙尼亚\"},{\"code\":\"335\",\"code_en\":\"Latvia\",\"name\":\"拉脱维亚\"},{\"code\":\"336\",\"code_en\":\"Lithuania\",\"name\":\"立陶宛\"},{\"code\":\"337\",\"code_en\":\"Georgia\",\"name\":\"格鲁吉亚\"},{\"code\":\"338\",\"code_en\":\"Armenia\",\"name\":\"亚美尼亚\"},{\"code\":\"339\",\"code_en\":\"Azerbaijan\",\"name\":\"阿塞拜疆\"},{\"code\":\"340\",\"code_en\":\"Byelorussia\",\"name\":\"白俄罗斯\"},{\"code\":\"343\",\"code_en\":\"Moldavia\",\"name\":\"摩尔多瓦\"},{\"code\":\"344\",\"code_en\":\"Russia\",\"name\":\"俄罗斯联邦\"},{\"code\":\"347\",\"code_en\":\"Ukraine\",\"name\":\"乌克兰\"},{\"code\":\"349\",\"code_en\":\"Serbia and Montenegro\",\"name\":\"塞尔维亚和黑山\"},{\"code\":\"350\",\"code_en\":\"Slovenia Rep\",\"name\":\"斯洛文尼亚\"},{\"code\":\"351\",\"code_en\":\"Croatia Rep\",\"name\":\"克罗地亚\"},{\"code\":\"352\",\"code_en\":\"Czech Rep\",\"name\":\"捷克共和国\"},{\"code\":\"353\",\"code_en\":\"Slovak Rep\",\"name\":\"斯洛伐克\"},{\"code\":\"354\",\"code_en\":\"Macedonia Rep\",\"name\":\"马其顿\"},{\"code\":\"355\",\"code_en\":\"Bosnia\",\"name\":\"波斯尼亚-黑塞哥维那共和\"},{\"code\":\"356\",\"code_en\":\"Vatican City State\",\"name\":\"梵蒂冈城国\"},{\"code\":\"399\",\"code_en\":\"Oth. Eur. nes\",\"name\":\"欧洲其他国家(地区)\"},{\"code\":\"400\",\"code_en\":\"Latin America\",\"name\":\"拉丁美洲\"},{\"code\":\"401\",\"code_en\":\"Antigua & Barbuda\",\"name\":\"安提瓜和巴布达\"},{\"code\":\"402\",\"code_en\":\"Argentina\",\"name\":\"阿根廷\"},{\"code\":\"403\",\"code_en\":\"Aruba\",\"name\":\"阿鲁巴岛\"},{\"code\":\"404\",\"code_en\":\"Bahamas\",\"name\":\"巴哈马\"},{\"code\":\"405\",\"code_en\":\"Barbados\",\"name\":\"巴巴多斯\"},{\"code\":\"406\",\"code_en\":\"Belize\",\"name\":\"伯利兹\"},{\"code\":\"408\",\"code_en\":\"Bolivia\",\"name\":\"玻利维亚\"},{\"code\":\"409\",\"code_en\":\"Bonaire\",\"name\":\"博内尔\"},{\"code\":\"410\",\"code_en\":\"Brazil\",\"name\":\"巴西\"},{\"code\":\"411\",\"code_en\":\"Cayman Is\",\"name\":\"开曼群岛\"},{\"code\":\"412\",\"code_en\":\"Chile\",\"name\":\"智利\"},{\"code\":\"413\",\"code_en\":\"Colombia\",\"name\":\"哥伦比亚\"},{\"code\":\"414\",\"code_en\":\"Dominica\",\"name\":\"多米尼亚共和国\"},{\"code\":\"415\",\"code_en\":\"Costa Rica\",\"name\":\"哥斯达黎加\"},{\"code\":\"416\",\"code_en\":\"Cuba\",\"name\":\"古巴\"},{\"code\":\"417\",\"code_en\":\"Curacao\",\"name\":\"库腊索岛\"},{\"code\":\"418\",\"code_en\":\"Dominican Rep.\",\"name\":\"多米尼加共和国\"},{\"code\":\"419\",\"code_en\":\"Ecuador\",\"name\":\"厄瓜多尔\"},{\"code\":\"420\",\"code_en\":\"French Guyana\",\"name\":\"法属圭亚那\"},{\"code\":\"421\",\"code_en\":\"Grenada\",\"name\":\"格林纳达\"},{\"code\":\"422\",\"code_en\":\"Guadeloupe\",\"name\":\"瓜德罗普\"},{\"code\":\"423\",\"code_en\":\"Guatemala\",\"name\":\"危地马拉\"},{\"code\":\"424\",\"code_en\":\"Guyana\",\"name\":\"圭亚那\"},{\"code\":\"425\",\"code_en\":\"Haiti\",\"name\":\"海地\"},{\"code\":\"426\",\"code_en\":\"Honduras\",\"name\":\"洪都拉斯\"},{\"code\":\"427\",\"code_en\":\"Jamaica\",\"name\":\"牙买加\"},{\"code\":\"428\",\"code_en\":\"Martinique\",\"name\":\"马提尼克\"},{\"code\":\"429\",\"code_en\":\"Mexico\",\"name\":\"墨西哥\"},{\"code\":\"430\",\"code_en\":\"Montserrat\",\"name\":\"蒙特塞拉特\"},{\"code\":\"431\",\"code_en\":\"Nicaragua\",\"name\":\"尼加拉瓜\"},{\"code\":\"432\",\"code_en\":\"Panama\",\"name\":\"巴拿马\"},{\"code\":\"433\",\"code_en\":\"Paraguay\",\"name\":\"巴拉圭\"},{\"code\":\"434\",\"code_en\":\"Peru\",\"name\":\"秘鲁\"},{\"code\":\"435\",\"code_en\":\"Puerto Rico\",\"name\":\"波多黎各\"},{\"code\":\"436\",\"code_en\":\"Saba\",\"name\":\"萨巴\"},{\"code\":\"437\",\"code_en\":\"Saint Lucia\",\"name\":\"圣卢西亚\"},{\"code\":\"438\",\"code_en\":\"Saint Martin Is\",\"name\":\"圣马丁岛\"},{\"code\":\"439\",\"code_en\":\"Saint Vincent & Grenadines\",\"name\":\"圣文森特和格林纳丁斯\"},{\"code\":\"440\",\"code_en\":\"El Salvador\",\"name\":\"萨尔瓦多\"},{\"code\":\"441\",\"code_en\":\"Suriname\",\"name\":\"苏里南\"},{\"code\":\"442\",\"code_en\":\"Trinidad & Tobago\",\"name\":\"特立尼达和多巴哥\"},{\"code\":\"443\",\"code_en\":\"Turks & Caicos Is\",\"name\":\"特克斯和凯科斯群岛\"},{\"code\":\"444\",\"code_en\":\"Uruguay\",\"name\":\"乌拉圭\"},{\"code\":\"445\",\"code_en\":\"Venezuela\",\"name\":\"委内瑞拉\"},{\"code\":\"446\",\"code_en\":\"Br. Virgin Is\",\"name\":\"英属维尔京群岛\"},{\"code\":\"447\",\"code_en\":\"St. Kitts-Nevis\",\"name\":\"圣其茨-尼维斯\"},{\"code\":\"448\",\"code_en\":\"St.Pierre and Miquelon\",\"name\":\"圣皮埃尔和密克隆\"},{\"code\":\"449\",\"code_en\":\"the Netherlands Antilles\",\"name\":\"荷属安地列斯群岛\"},{\"code\":\"499\",\"code_en\":\"Oth. L.Amer. nes\",\"name\":\"拉丁美洲其他国家(地区)\"},{\"code\":\"500\",\"code_en\":\"North America\",\"name\":\"北美洲\"},{\"code\":\"501\",\"code_en\":\"Canada\",\"name\":\"加拿大\"},{\"code\":\"502\",\"code_en\":\"United States\",\"name\":\"美国\"},{\"code\":\"503\",\"code_en\":\"Greenland\",\"name\":\"格陵兰\"},{\"code\":\"504\",\"code_en\":\"Bermuda\",\"name\":\"百慕大\"},{\"code\":\"599\",\"code_en\":\"Oth. N.Amer. nes\",\"name\":\"北美洲其他国家(地区)\"},{\"code\":\"600\",\"code_en\":\"Oceania\",\"name\":\"大洋洲\"},{\"code\":\"601\",\"code_en\":\"Australia\",\"name\":\"澳大利亚\"},{\"code\":\"602\",\"code_en\":\"Cook Is\",\"name\":\"库克群岛\"},{\"code\":\"603\",\"code_en\":\"Fiji\",\"name\":\"斐济\"},{\"code\":\"604\",\"code_en\":\"Gambier Is\",\"name\":\"盖比群岛\"},{\"code\":\"605\",\"code_en\":\"Marquesas Is\",\"name\":\"马克萨斯群岛\"},{\"code\":\"606\",\"code_en\":\"Nauru\",\"name\":\"瑙鲁\"},{\"code\":\"607\",\"code_en\":\"New Caledonia\",\"name\":\"新喀里多尼亚\"},{\"code\":\"608\",\"code_en\":\"Vanuatu\",\"name\":\"瓦努阿图\"},{\"code\":\"609\",\"code_en\":\"New Zealand\",\"name\":\"新西兰\"},{\"code\":\"610\",\"code_en\":\"Norfolk Is\",\"name\":\"诺福克岛\"},{\"code\":\"611\",\"code_en\":\"Papua New Guinea\",\"name\":\"巴布亚新几内亚\"},{\"code\":\"612\",\"code_en\":\"Society Is\",\"name\":\"社会群岛\"},{\"code\":\"613\",\"code_en\":\"Solomon Is\",\"name\":\"所罗门群岛\"},{\"code\":\"614\",\"code_en\":\"Tonga\",\"name\":\"汤加\"},{\"code\":\"615\",\"code_en\":\"Tuamotu Is\",\"name\":\"土阿莫土群岛\"},{\"code\":\"616\",\"code_en\":\"Tubai Is\",\"name\":\"土布艾群岛\"},{\"code\":\"617\",\"code_en\":\"Samoa\",\"name\":\"萨摩亚\"},{\"code\":\"618\",\"code_en\":\"Kiribati\",\"name\":\"基里巴斯\"},{\"code\":\"619\",\"code_en\":\"Tuvalu\",\"name\":\"图瓦卢\"},{\"code\":\"620\",\"code_en\":\"Micronesia Fs\",\"name\":\"密克罗尼西亚联邦\"},{\"code\":\"621\",\"code_en\":\"Marshall Is Rep\",\"name\":\"马绍尔群岛\"},{\"code\":\"622\",\"code_en\":\"Palau\",\"name\":\"帕劳共和国\"},{\"code\":\"623\",\"code_en\":\"French Polynesia\",\"name\":\"法属波利尼西亚\"},{\"code\":\"625\",\"code_en\":\"Wallis and Futuna\",\"name\":\"瓦利斯和浮图纳\"},{\"code\":\"699\",\"code_en\":\"Oth. Ocean. nes\",\"name\":\"大洋洲其他国家(地区)\"},{\"code\":\"701\",\"code_en\":\"Countries(reg.) unknown\",\"name\":\"国(地)别不详的\"},{\"code\":\"702\",\"code_en\":\"UN and other interational\",\"name\":\"联合国及机构和国际组织\"},{\"code\":\"999\",\"code_en\":\"\",\"name\":\"中性包装原产国别\"}]");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_content_form__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../components/content/form */ "./resources/vue/js/modules/components/content/form.vue");
+/* harmony import */ var _mixins_content_drawer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../mixins/content-drawer */ "./resources/vue/js/modules/mixins/content-drawer.js");
+/* harmony import */ var _goods__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./goods */ "./resources/vue/js/modules/views/product/lists/goods.js");
+/* harmony import */ var _components_form_select_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../components/form/select-json */ "./resources/vue/js/modules/components/form/select-json.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "update",
+  components: {
+    SelectJson: _components_form_select_json__WEBPACK_IMPORTED_MODULE_3__["default"],
+    IForm: _components_content_form__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  mixins: [_mixins_content_drawer__WEBPACK_IMPORTED_MODULE_1__["default"], _goods__WEBPACK_IMPORTED_MODULE_2__["default"]],
+  mounted: function mounted() {
+    var _this = this;
+
+    this.$http.get("product/".concat(this.$route.query.id, "/edit")).then(function (res) {
+      _this.data = res.row;
+      _this.loading = false;
+    })["finally"](function () {
+      _this.loading = false;
+    });
+  },
+  methods: {
+    submit: function submit(name) {
+      var _this2 = this;
+
+      this.validate(name).then(function () {
+        _this2.loading = true;
+
+        _this2.$http.put("product/".concat(_this2.$route.query.id), _this2.data).then(function () {
+          _this2.$Message.success('更新成功');
+        })["finally"](function () {
+          _this2.loading = false;
+        });
+      });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/vue/js/modules/views/product/lists/update.vue?vue&type=template&id=c60b5c3e&scoped=true&":
+/*!******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/vue/js/modules/views/product/lists/update.vue?vue&type=template&id=c60b5c3e&scoped=true& ***!
+  \******************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "i-form",
+    { attrs: { "spin-show": _vm.loading, width: 980 } },
+    [
+      _c(
+        "Form",
+        {
+          ref: "formUpdate",
+          attrs: {
+            model: _vm.data,
+            "label-width": 100,
+            rules: _vm.ruleValidate
+          }
+        },
+        [
+          _c(
+            "Row",
+            [
+              _c(
+                "Col",
+                { attrs: { span: 24 } },
+                [
+                  _c(
+                    "FormItem",
+                    { attrs: { label: "产品名称", prop: "name" } },
+                    [
+                      _c("Input", {
+                        model: {
+                          value: _vm.data.name,
+                          callback: function($$v) {
+                            _vm.$set(_vm.data, "name", $$v)
+                          },
+                          expression: "data.name"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "Col",
+                { attrs: { span: 12 } },
+                [
+                  _c(
+                    "FormItem",
+                    { attrs: { label: "产品SKU", prop: "sku" } },
+                    [
+                      _c("Input", {
+                        model: {
+                          value: _vm.data.sku,
+                          callback: function($$v) {
+                            _vm.$set(_vm.data, "sku", $$v)
+                          },
+                          expression: "data.sku"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "Col",
+                { attrs: { span: 12 } },
+                [
+                  _c(
+                    "FormItem",
+                    { attrs: { label: "产品条码", prop: "barcode" } },
+                    [
+                      _c("Input", {
+                        model: {
+                          value: _vm.data.barcode,
+                          callback: function($$v) {
+                            _vm.$set(_vm.data, "barcode", $$v)
+                          },
+                          expression: "data.barcode"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "Col",
+                { attrs: { span: 8 } },
+                [
+                  _c(
+                    "FormItem",
+                    { attrs: { label: "品牌名称", prop: "brand" } },
+                    [
+                      _c("Input", {
+                        model: {
+                          value: _vm.data.brand,
+                          callback: function($$v) {
+                            _vm.$set(_vm.data, "brand", $$v)
+                          },
+                          expression: "data.brand"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "Col",
+                { attrs: { span: 8 } },
+                [
+                  _c(
+                    "FormItem",
+                    { attrs: { label: "毛重", prop: "weight" } },
+                    [
+                      _c("Input", {
+                        attrs: { number: "" },
+                        model: {
+                          value: _vm.data.weight,
+                          callback: function($$v) {
+                            _vm.$set(_vm.data, "weight", $$v)
+                          },
+                          expression: "data.weight"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "Col",
+                { attrs: { span: 8 } },
+                [
+                  _c(
+                    "FormItem",
+                    { attrs: { label: "净重", prop: "net_weight" } },
+                    [
+                      _c("Input", {
+                        attrs: { number: "" },
+                        model: {
+                          value: _vm.data.net_weight,
+                          callback: function($$v) {
+                            _vm.$set(_vm.data, "net_weight", $$v)
+                          },
+                          expression: "data.net_weight"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "Col",
+                { attrs: { span: 6 } },
+                [
+                  _c(
+                    "FormItem",
+                    {
+                      attrs: {
+                        label: "海关代码",
+                        prop: "product_customer.customer_code"
+                      }
+                    },
+                    [
+                      _c("Input", {
+                        on: {
+                          "on-enter": function($event) {
+                            return _vm.setHsCode(
+                              $event,
+                              _vm.data.product_customer.customer_code
+                            )
+                          },
+                          "on-blur": function($event) {
+                            return _vm.setHsCode(
+                              $event,
+                              _vm.data.product_customer.customer_code
+                            )
+                          }
+                        },
+                        model: {
+                          value: _vm.data.product_customer.customer_code,
+                          callback: function($$v) {
+                            _vm.$set(
+                              _vm.data.product_customer,
+                              "customer_code",
+                              $$v
+                            )
+                          },
+                          expression: "data.product_customer.customer_code"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "Col",
+                { attrs: { span: 6 } },
+                [
+                  _c(
+                    "FormItem",
+                    {
+                      attrs: {
+                        label: "海关品名",
+                        prop: "product_customer.customer_name"
+                      }
+                    },
+                    [
+                      _c("Input", {
+                        model: {
+                          value: _vm.data.product_customer.customer_name,
+                          callback: function($$v) {
+                            _vm.$set(
+                              _vm.data.product_customer,
+                              "customer_name",
+                              $$v
+                            )
+                          },
+                          expression: "data.product_customer.customer_name"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "Col",
+                { attrs: { span: 12 } },
+                [
+                  _c(
+                    "FormItem",
+                    {
+                      attrs: {
+                        label: "规格型号",
+                        prop: "product_customer.specs"
+                      }
+                    },
+                    [
+                      _c(
+                        "Input",
+                        {
+                          model: {
+                            value: _vm.data.product_customer.specs,
+                            callback: function($$v) {
+                              _vm.$set(_vm.data.product_customer, "specs", $$v)
+                            },
+                            expression: "data.product_customer.specs"
+                          }
+                        },
+                        [
+                          _c("Icon", {
+                            attrs: { slot: "suffix", type: "md-code-working" },
+                            on: {
+                              click: function($event) {
+                                return _vm.setSpecModal(true)
+                              }
+                            },
+                            slot: "suffix"
+                          })
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "Col",
+                { attrs: { span: 6 } },
+                [
+                  _c(
+                    "FormItem",
+                    { attrs: { label: "法1单位" } },
+                    [
+                      _c("SelectJson", {
+                        attrs: { disabled: "", type: "unit" },
+                        model: {
+                          value:
+                            _vm.data.product_customer.customs_hs_code.unit1,
+                          callback: function($$v) {
+                            _vm.$set(
+                              _vm.data.product_customer.customs_hs_code,
+                              "unit1",
+                              $$v
+                            )
+                          },
+                          expression:
+                            "data.product_customer.customs_hs_code.unit1"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "Col",
+                { attrs: { span: 6 } },
+                [
+                  _c(
+                    "FormItem",
+                    { attrs: { label: "法2单位" } },
+                    [
+                      _c("SelectJson", {
+                        attrs: { disabled: "", type: "unit" },
+                        model: {
+                          value:
+                            _vm.data.product_customer.customs_hs_code.unit2,
+                          callback: function($$v) {
+                            _vm.$set(
+                              _vm.data.product_customer.customs_hs_code,
+                              "unit2",
+                              $$v
+                            )
+                          },
+                          expression:
+                            "data.product_customer.customs_hs_code.unit2"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "Col",
+                { attrs: { span: 6 } },
+                [
+                  _c(
+                    "FormItem",
+                    {
+                      attrs: {
+                        label: "原产地",
+                        prop: "product_customer.origin_country_code"
+                      }
+                    },
+                    [
+                      _c("SelectJson", {
+                        attrs: { type: "country" },
+                        model: {
+                          value: _vm.data.product_customer.origin_country_code,
+                          callback: function($$v) {
+                            _vm.$set(
+                              _vm.data.product_customer,
+                              "origin_country_code",
+                              $$v
+                            )
+                          },
+                          expression:
+                            "data.product_customer.origin_country_code"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "Col",
+                { attrs: { span: 6 } },
+                [
+                  _c(
+                    "FormItem",
+                    {
+                      attrs: {
+                        label: "申报单位",
+                        prop: "product_customer.unit_code"
+                      }
+                    },
+                    [
+                      _c("SelectJson", {
+                        model: {
+                          value: _vm.data.product_customer.unit_code,
+                          callback: function($$v) {
+                            _vm.$set(
+                              _vm.data.product_customer,
+                              "unit_code",
+                              $$v
+                            )
+                          },
+                          expression: "data.product_customer.unit_code"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "Col",
+                { attrs: { span: 6 } },
+                [
+                  _c(
+                    "FormItem",
+                    {
+                      attrs: { label: "法1数量", prop: "product_customer.qty1" }
+                    },
+                    [
+                      _c("Input", {
+                        attrs: { number: "" },
+                        model: {
+                          value: _vm.data.product_customer.qty1,
+                          callback: function($$v) {
+                            _vm.$set(_vm.data.product_customer, "qty1", $$v)
+                          },
+                          expression: "data.product_customer.qty1"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "Col",
+                { attrs: { span: 6 } },
+                [
+                  _c(
+                    "FormItem",
+                    {
+                      attrs: { label: "法2数量", prop: "product_customer.qty2" }
+                    },
+                    [
+                      _c("Input", {
+                        attrs: { number: "" },
+                        model: {
+                          value: _vm.data.product_customer.qty2,
+                          callback: function($$v) {
+                            _vm.$set(_vm.data.product_customer, "qty2", $$v)
+                          },
+                          expression: "data.product_customer.qty2"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "Col",
+                { attrs: { span: 6 } },
+                [
+                  _c(
+                    "FormItem",
+                    {
+                      attrs: {
+                        label: "申报币种",
+                        prop: "product_customer.currency_code"
+                      }
+                    },
+                    [
+                      _c("SelectJson", {
+                        attrs: { type: "currency" },
+                        model: {
+                          value: _vm.data.product_customer.currency_code,
+                          callback: function($$v) {
+                            _vm.$set(
+                              _vm.data.product_customer,
+                              "currency_code",
+                              $$v
+                            )
+                          },
+                          expression: "data.product_customer.currency_code"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "Col",
+                { attrs: { span: 6 } },
+                [
+                  _c(
+                    "FormItem",
+                    {
+                      attrs: {
+                        label: "申报价格",
+                        prop: "product_customer.price"
+                      }
+                    },
+                    [
+                      _c("Input", {
+                        attrs: { number: "" },
+                        model: {
+                          value: _vm.data.product_customer.price,
+                          callback: function($$v) {
+                            _vm.$set(_vm.data.product_customer, "price", $$v)
+                          },
+                          expression: "data.product_customer.price"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "Modal",
+        {
+          attrs: { title: "规格型号" },
+          on: { "on-ok": _vm.specModalOk, "on-cancel": _vm.specModalCancel },
+          model: {
+            value: _vm.specModal,
+            callback: function($$v) {
+              _vm.specModal = $$v
+            },
+            expression: "specModal"
+          }
+        },
+        [
+          _c(
+            "Form",
+            { attrs: { "label-width": 100 } },
+            _vm._l(_vm.specElements, function(item, index) {
+              return _c(
+                "FormItem",
+                { key: index, attrs: { label: item } },
+                [
+                  _c("Input", {
+                    model: {
+                      value: _vm.specValues[index],
+                      callback: function($$v) {
+                        _vm.$set(_vm.specValues, index, $$v)
+                      },
+                      expression: "specValues[index]"
+                    }
+                  })
+                ],
+                1
+              )
+            }),
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { attrs: { slot: "footer" }, slot: "footer" },
+        [
+          _c(
+            "Button",
+            {
+              attrs: { type: "primary", icon: "ios-add" },
+              on: {
+                click: function($event) {
+                  return _vm.submit("formUpdate")
+                }
+              }
+            },
+            [_vm._v("提交")]
+          ),
+          _vm._v(" "),
+          _c(
+            "Button",
+            {
+              attrs: { type: "warning", icon: "md-log-out" },
+              on: {
+                click: function($event) {
+                  return _vm.$router.go(-1)
+                }
+              }
+            },
+            [_vm._v("返回")]
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./resources/vue/js/modules/views/product/lists/update.vue":
+/*!*****************************************************************!*\
+  !*** ./resources/vue/js/modules/views/product/lists/update.vue ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _update_vue_vue_type_template_id_c60b5c3e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./update.vue?vue&type=template&id=c60b5c3e&scoped=true& */ "./resources/vue/js/modules/views/product/lists/update.vue?vue&type=template&id=c60b5c3e&scoped=true&");
+/* harmony import */ var _update_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./update.vue?vue&type=script&lang=js& */ "./resources/vue/js/modules/views/product/lists/update.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _update_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _update_vue_vue_type_template_id_c60b5c3e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _update_vue_vue_type_template_id_c60b5c3e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "c60b5c3e",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/vue/js/modules/views/product/lists/update.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/vue/js/modules/views/product/lists/update.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************!*\
+  !*** ./resources/vue/js/modules/views/product/lists/update.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_update_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./update.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/vue/js/modules/views/product/lists/update.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_update_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/vue/js/modules/views/product/lists/update.vue?vue&type=template&id=c60b5c3e&scoped=true&":
+/*!************************************************************************************************************!*\
+  !*** ./resources/vue/js/modules/views/product/lists/update.vue?vue&type=template&id=c60b5c3e&scoped=true& ***!
+  \************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_update_vue_vue_type_template_id_c60b5c3e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./update.vue?vue&type=template&id=c60b5c3e&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/vue/js/modules/views/product/lists/update.vue?vue&type=template&id=c60b5c3e&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_update_vue_vue_type_template_id_c60b5c3e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_update_vue_vue_type_template_id_c60b5c3e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ })
 

@@ -3,7 +3,9 @@
 namespace App\Exceptions;
 
 use Exception;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class Handler extends ExceptionHandler
 {
@@ -29,7 +31,7 @@ class Handler extends ExceptionHandler
     /**
      * Report or log an exception.
      *
-     * @param  \Exception  $exception
+     * @param \Exception $exception
      * @return void
      */
     public function report(Exception $exception)
@@ -40,12 +42,31 @@ class Handler extends ExceptionHandler
     /**
      * Render an exception into an HTTP response.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Exception  $exception
-     * @return \Illuminate\Http\Response
+     * @param \Illuminate\Http\Request $request
+     * @param \Exception $exception
+     * @return \Illuminate\Http\Response|\Symfony\Component\HttpFoundation\Response
      */
     public function render($request, Exception $exception)
     {
-        return parent::render($request, $exception);
+        if ($exception instanceof ValidationException) {
+            return $request->expectsJson()
+                ? $this->myInvalidJson($request, $exception)
+                : $this->prepareResponse($request, $exception);
+        } else {
+            return parent::render($request, $exception);
+        }
+    }
+
+    /**
+     * @param Illuminate\Http\Request $request
+     * @param ValidationException $exception
+     * @return \Illuminate\Http\JsonResponse
+     * @author luffyzhao@vip.126.com
+     */
+    protected function myInvalidJson($request, ValidationException $exception)
+    {
+        return response()->json([
+            'message' => $exception->getMessage(),
+        ], $exception->getCode());
     }
 }

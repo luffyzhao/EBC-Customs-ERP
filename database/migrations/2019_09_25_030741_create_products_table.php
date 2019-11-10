@@ -39,8 +39,8 @@ class CreateProductsTable extends Migration
             $table->char('currency_code', 3)->comment('申报币种');
             $table->decimal('price', 9, 5)->comment('申报价格');
             $table->double('qty1', 19, 5)->comment('法1数量');
-            $table->double('qty2', 19, 5)->comment('法2数量');
-            $table->json('specs')->comment('规格型号');
+            $table->double('qty2', 19, 5)->nullable()->comment('法2数量');
+            $table->text('specs')->comment('规格型号');
             $table->timestamps();
         });
 

@@ -4,6 +4,7 @@
 namespace App\Repositories;
 
 
+use App\Exceptions\ValidationException;
 use Exception;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Model;
@@ -76,6 +77,15 @@ class Product extends RepositoryAbstract
     }
 
     /**
+     * @param $id
+     * @return \App\Models\Product|\App\Models\Product[]|\Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection|Model
+     * @author luffyzhao@vip.126.com
+     */
+    public function findWithShow($id){
+        return $this->model->with(['productCustomer', 'productCustomer.customsHsCode'])->findOrFail($id);
+    }
+
+    /**
      * 更新
      * @method update
      *
@@ -92,14 +102,38 @@ class Product extends RepositoryAbstract
         DB::beginTransaction();
 
         try{
-            /**
-             * @var $model \App\Models\Product
-             */
             $model = $this->find($id);
             $model->setUpdateWhere('status', 0);
-
-            if($model->fill($values)->updateWhere()){
+            if($model->fill($values)->updateWhere($id)){
                 $model->productCustomer->fill($values['product_customer'])->saveOrFail();
+            }else{
+                throw new ValidationException('产品不是草稿状态不能更改。');
+            }
+
+            DB::commit();
+        }catch (Exception $exception){
+            DB::rollBack();
+            throw $exception;
+        }
+
+        return true;
+    }
+
+    /**
+     * @param $id
+     * @return bool
+     * @throws Exception
+     * @author luffyzhao@vip.126.com
+     */
+    public function examine($id){
+        DB::beginTransaction();
+
+        try{
+            $model = $this->model;
+            $model->setUpdateWhere('status', 0);
+            $values['status'] = 1;
+            if($model->fill($values)->updateWhere($id) === 0){
+                throw new ValidationException('产品不是草稿状态不能更改。');
             }
 
             DB::commit();

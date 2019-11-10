@@ -10,7 +10,8 @@ export default {
             },
             table: {
                 columns: [],
-                data: []
+                data: [],
+                selections: []
             },
             component: {
                 is: '',
@@ -42,6 +43,19 @@ export default {
                 query
             });
         },
-        getLists(){}
+        getLists(){},
+        onSelectionChange(selection){
+            this.table.selections = selection;
+        },
+        batchCallback(callback){
+            if(this.table.selections.length === 0){
+                this.$Message.error('没有选择任何数据，请先选择数据！');
+            }else{
+                this.table.selections.forEach((row) => {
+                    this[callback](row);
+                });
+                this.getLists();
+            }
+        }
     }
 }

@@ -1,18 +1,20 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[27],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/vue/js/modules/views/product/lists/update.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/vue/js/modules/views/product/lists/update.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/vue/js/modules/views/authorities/role/index.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/vue/js/modules/views/authorities/role/index.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_content_form__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../components/content/form */ "./resources/vue/js/modules/components/content/form.vue");
-/* harmony import */ var _mixins_content_drawer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../mixins/content-drawer */ "./resources/vue/js/modules/mixins/content-drawer.js");
-/* harmony import */ var _goods__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./goods */ "./resources/vue/js/modules/views/product/lists/goods.js");
-/* harmony import */ var _components_form_select_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../components/form/select-json */ "./resources/vue/js/modules/components/form/select-json.vue");
+/* harmony import */ var _components_content_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../components/content/index */ "./resources/vue/js/modules/components/content/index.vue");
+/* harmony import */ var _components_content_search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../components/content/search */ "./resources/vue/js/modules/components/content/search.vue");
+/* harmony import */ var _components_content_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../components/content/table */ "./resources/vue/js/modules/components/content/table.vue");
+/* harmony import */ var _mixins_content_list_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../mixins/content-list-page */ "./resources/vue/js/modules/mixins/content-list-page.js");
+/* harmony import */ var _create__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./create */ "./resources/vue/js/modules/views/authorities/role/create.vue");
+/* harmony import */ var _update__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./update */ "./resources/vue/js/modules/views/authorities/role/update.vue");
 //
 //
 //
@@ -45,117 +47,64 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
+
 
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "update",
+  name: "index",
+  mixins: [_mixins_content_list_page__WEBPACK_IMPORTED_MODULE_3__["default"]],
   components: {
-    SelectJson: _components_form_select_json__WEBPACK_IMPORTED_MODULE_3__["default"],
-    IForm: _components_content_form__WEBPACK_IMPORTED_MODULE_0__["default"]
+    ITable: _components_content_table__WEBPACK_IMPORTED_MODULE_2__["default"],
+    ISearch: _components_content_search__WEBPACK_IMPORTED_MODULE_1__["default"],
+    IContent: _components_content_index__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Create: _create__WEBPACK_IMPORTED_MODULE_4__["default"],
+    Update: _update__WEBPACK_IMPORTED_MODULE_5__["default"]
   },
-  mixins: [_mixins_content_drawer__WEBPACK_IMPORTED_MODULE_1__["default"], _goods__WEBPACK_IMPORTED_MODULE_2__["default"]],
-  mounted: function mounted() {
-    var _this = this;
-
-    this.$http.get("product/".concat(this.$route.query.id, "/edit")).then(function (res) {
-      _this.data = res.row;
-      _this.loading = false;
-    })["finally"](function () {
-      _this.loading = false;
-    });
+  data: function data() {
+    return {
+      table: {
+        columns: [{
+          title: '部门',
+          slot: 'name'
+        }, {
+          title: '部门描述',
+          slot: 'description'
+        }, {
+          title: '操作',
+          slot: 'action'
+        }]
+      },
+      search: {},
+      loading: false
+    };
   },
   methods: {
-    submit: function submit(name) {
+    getLists: function getLists() {
+      var _this = this;
+
+      var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+      this.loading = true;
+      this.$http.get("authorities/role", {
+        params: Object.assign({}, this.search, {
+          page: page
+        })
+      }).then(function (data) {
+        _this.table.data = data.data;
+        _this.page.total = data.total;
+        _this.page.current = data.current_page;
+      })["finally"](function () {
+        _this.loading = false;
+      });
+    },
+    remove: function remove(data) {
       var _this2 = this;
 
-      this.validate(name).then(function () {
-        _this2.loading = true;
-
-        _this2.$http.put("product/".concat(_this2.$route.query.id), _this2.data).then(function () {
-          _this2.$Message.success('更新成功');
-        })["finally"](function () {
-          _this2.loading = false;
-        });
+      this.loading = true;
+      this.$http["delete"]("authorities/role/".concat(data.id)).then(function () {
+        _this2.getLists(_this2.page.current);
       });
     }
   }
@@ -163,10 +112,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/vue/js/modules/views/product/lists/update.vue?vue&type=template&id=c60b5c3e&scoped=true&":
-/*!******************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/vue/js/modules/views/product/lists/update.vue?vue&type=template&id=c60b5c3e&scoped=true& ***!
-  \******************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/vue/js/modules/views/authorities/role/index.vue?vue&type=template&id=1bf45336&scoped=true&":
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/vue/js/modules/views/authorities/role/index.vue?vue&type=template&id=1bf45336&scoped=true& ***!
+  \********************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -179,539 +128,67 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "i-form",
-    { attrs: { "spin-show": _vm.loading, width: 980 } },
+    "i-content",
+    { attrs: { "spin-show": _vm.loading } },
     [
       _c(
-        "Form",
+        "i-search",
         {
-          ref: "formUpdate",
-          attrs: {
-            model: _vm.data,
-            "label-width": 100,
-            rules: _vm.ruleValidate
+          model: {
+            value: _vm.search,
+            callback: function($$v) {
+              _vm.search = $$v
+            },
+            expression: "search"
           }
         },
         [
           _c(
-            "Row",
+            "FormItem",
+            { attrs: { label: "部门名称" } },
+            [
+              _c("Input", {
+                attrs: { placeholder: "部门名称", size: "small" },
+                model: {
+                  value: _vm.search.name,
+                  callback: function($$v) {
+                    _vm.$set(_vm.search, "name", $$v)
+                  },
+                  expression: "search.name"
+                }
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "FormItem",
+            { attrs: { "label-width": 1 } },
             [
               _c(
-                "Col",
-                { attrs: { span: 24 } },
-                [
-                  _c(
-                    "FormItem",
-                    { attrs: { label: "产品名称", prop: "name" } },
-                    [
-                      _c("Input", {
-                        model: {
-                          value: _vm.data.name,
-                          callback: function($$v) {
-                            _vm.$set(_vm.data, "name", $$v)
-                          },
-                          expression: "data.name"
-                        }
-                      })
-                    ],
-                    1
-                  )
-                ],
-                1
+                "Button",
+                {
+                  attrs: { type: "primary", icon: "ios-search", size: "small" },
+                  on: {
+                    click: function($event) {
+                      return _vm.getLists()
+                    }
+                  }
+                },
+                [_vm._v("搜索")]
               ),
               _vm._v(" "),
               _c(
-                "Col",
-                { attrs: { span: 12 } },
-                [
-                  _c(
-                    "FormItem",
-                    { attrs: { label: "产品SKU", prop: "sku" } },
-                    [
-                      _c("Input", {
-                        model: {
-                          value: _vm.data.sku,
-                          callback: function($$v) {
-                            _vm.$set(_vm.data, "sku", $$v)
-                          },
-                          expression: "data.sku"
-                        }
-                      })
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "Col",
-                { attrs: { span: 12 } },
-                [
-                  _c(
-                    "FormItem",
-                    { attrs: { label: "产品条码", prop: "barcode" } },
-                    [
-                      _c("Input", {
-                        model: {
-                          value: _vm.data.barcode,
-                          callback: function($$v) {
-                            _vm.$set(_vm.data, "barcode", $$v)
-                          },
-                          expression: "data.barcode"
-                        }
-                      })
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "Col",
-                { attrs: { span: 8 } },
-                [
-                  _c(
-                    "FormItem",
-                    { attrs: { label: "品牌名称", prop: "brand" } },
-                    [
-                      _c("Input", {
-                        model: {
-                          value: _vm.data.brand,
-                          callback: function($$v) {
-                            _vm.$set(_vm.data, "brand", $$v)
-                          },
-                          expression: "data.brand"
-                        }
-                      })
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "Col",
-                { attrs: { span: 8 } },
-                [
-                  _c(
-                    "FormItem",
-                    { attrs: { label: "毛重", prop: "weight" } },
-                    [
-                      _c("Input", {
-                        attrs: { number: "" },
-                        model: {
-                          value: _vm.data.weight,
-                          callback: function($$v) {
-                            _vm.$set(_vm.data, "weight", $$v)
-                          },
-                          expression: "data.weight"
-                        }
-                      })
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "Col",
-                { attrs: { span: 8 } },
-                [
-                  _c(
-                    "FormItem",
-                    { attrs: { label: "净重", prop: "net_weight" } },
-                    [
-                      _c("Input", {
-                        attrs: { number: "" },
-                        model: {
-                          value: _vm.data.net_weight,
-                          callback: function($$v) {
-                            _vm.$set(_vm.data, "net_weight", $$v)
-                          },
-                          expression: "data.net_weight"
-                        }
-                      })
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "Col",
-                { attrs: { span: 6 } },
-                [
-                  _c(
-                    "FormItem",
-                    {
-                      attrs: {
-                        label: "海关代码",
-                        prop: "product_customer.customer_code"
-                      }
-                    },
-                    [
-                      _c("Input", {
-                        on: {
-                          "on-enter": function($event) {
-                            return _vm.setHsCode(
-                              $event,
-                              _vm.data.product_customer.customer_code
-                            )
-                          },
-                          "on-blur": function($event) {
-                            return _vm.setHsCode(
-                              $event,
-                              _vm.data.product_customer.customer_code
-                            )
-                          }
-                        },
-                        model: {
-                          value: _vm.data.product_customer.customer_code,
-                          callback: function($$v) {
-                            _vm.$set(
-                              _vm.data.product_customer,
-                              "customer_code",
-                              $$v
-                            )
-                          },
-                          expression: "data.product_customer.customer_code"
-                        }
-                      })
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "Col",
-                { attrs: { span: 6 } },
-                [
-                  _c(
-                    "FormItem",
-                    {
-                      attrs: {
-                        label: "海关品名",
-                        prop: "product_customer.customer_name"
-                      }
-                    },
-                    [
-                      _c("Input", {
-                        model: {
-                          value: _vm.data.product_customer.customer_name,
-                          callback: function($$v) {
-                            _vm.$set(
-                              _vm.data.product_customer,
-                              "customer_name",
-                              $$v
-                            )
-                          },
-                          expression: "data.product_customer.customer_name"
-                        }
-                      })
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "Col",
-                { attrs: { span: 12 } },
-                [
-                  _c(
-                    "FormItem",
-                    {
-                      attrs: {
-                        label: "规格型号",
-                        prop: "product_customer.specs"
-                      }
-                    },
-                    [
-                      _c(
-                        "Input",
-                        {
-                          model: {
-                            value: _vm.data.product_customer.specs,
-                            callback: function($$v) {
-                              _vm.$set(_vm.data.product_customer, "specs", $$v)
-                            },
-                            expression: "data.product_customer.specs"
-                          }
-                        },
-                        [
-                          _c("Icon", {
-                            attrs: { slot: "suffix", type: "md-code-working" },
-                            on: {
-                              click: function($event) {
-                                return _vm.setSpecModal(true)
-                              }
-                            },
-                            slot: "suffix"
-                          })
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "Col",
-                { attrs: { span: 6 } },
-                [
-                  _c(
-                    "FormItem",
-                    { attrs: { label: "法1单位" } },
-                    [
-                      _c("SelectJson", {
-                        attrs: { disabled: "", type: "unit" },
-                        model: {
-                          value:
-                            _vm.data.product_customer.customs_hs_code.unit1,
-                          callback: function($$v) {
-                            _vm.$set(
-                              _vm.data.product_customer.customs_hs_code,
-                              "unit1",
-                              $$v
-                            )
-                          },
-                          expression:
-                            "data.product_customer.customs_hs_code.unit1"
-                        }
-                      })
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "Col",
-                { attrs: { span: 6 } },
-                [
-                  _c(
-                    "FormItem",
-                    { attrs: { label: "法2单位" } },
-                    [
-                      _c("SelectJson", {
-                        attrs: { disabled: "", type: "unit" },
-                        model: {
-                          value:
-                            _vm.data.product_customer.customs_hs_code.unit2,
-                          callback: function($$v) {
-                            _vm.$set(
-                              _vm.data.product_customer.customs_hs_code,
-                              "unit2",
-                              $$v
-                            )
-                          },
-                          expression:
-                            "data.product_customer.customs_hs_code.unit2"
-                        }
-                      })
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "Col",
-                { attrs: { span: 6 } },
-                [
-                  _c(
-                    "FormItem",
-                    {
-                      attrs: {
-                        label: "原产地",
-                        prop: "product_customer.origin_country_code"
-                      }
-                    },
-                    [
-                      _c("SelectJson", {
-                        attrs: { type: "country" },
-                        model: {
-                          value: _vm.data.product_customer.origin_country_code,
-                          callback: function($$v) {
-                            _vm.$set(
-                              _vm.data.product_customer,
-                              "origin_country_code",
-                              $$v
-                            )
-                          },
-                          expression:
-                            "data.product_customer.origin_country_code"
-                        }
-                      })
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "Col",
-                { attrs: { span: 6 } },
-                [
-                  _c(
-                    "FormItem",
-                    {
-                      attrs: {
-                        label: "申报单位",
-                        prop: "product_customer.unit_code"
-                      }
-                    },
-                    [
-                      _c("SelectJson", {
-                        model: {
-                          value: _vm.data.product_customer.unit_code,
-                          callback: function($$v) {
-                            _vm.$set(
-                              _vm.data.product_customer,
-                              "unit_code",
-                              $$v
-                            )
-                          },
-                          expression: "data.product_customer.unit_code"
-                        }
-                      })
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "Col",
-                { attrs: { span: 6 } },
-                [
-                  _c(
-                    "FormItem",
-                    {
-                      attrs: { label: "法1数量", prop: "product_customer.qty1" }
-                    },
-                    [
-                      _c("Input", {
-                        attrs: { number: "" },
-                        model: {
-                          value: _vm.data.product_customer.qty1,
-                          callback: function($$v) {
-                            _vm.$set(_vm.data.product_customer, "qty1", $$v)
-                          },
-                          expression: "data.product_customer.qty1"
-                        }
-                      })
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "Col",
-                { attrs: { span: 6 } },
-                [
-                  _c(
-                    "FormItem",
-                    {
-                      attrs: { label: "法2数量", prop: "product_customer.qty2" }
-                    },
-                    [
-                      _c("Input", {
-                        attrs: { number: "" },
-                        model: {
-                          value: _vm.data.product_customer.qty2,
-                          callback: function($$v) {
-                            _vm.$set(_vm.data.product_customer, "qty2", $$v)
-                          },
-                          expression: "data.product_customer.qty2"
-                        }
-                      })
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "Col",
-                { attrs: { span: 6 } },
-                [
-                  _c(
-                    "FormItem",
-                    {
-                      attrs: {
-                        label: "申报币种",
-                        prop: "product_customer.currency_code"
-                      }
-                    },
-                    [
-                      _c("SelectJson", {
-                        attrs: { type: "currency" },
-                        model: {
-                          value: _vm.data.product_customer.currency_code,
-                          callback: function($$v) {
-                            _vm.$set(
-                              _vm.data.product_customer,
-                              "currency_code",
-                              $$v
-                            )
-                          },
-                          expression: "data.product_customer.currency_code"
-                        }
-                      })
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "Col",
-                { attrs: { span: 6 } },
-                [
-                  _c(
-                    "FormItem",
-                    {
-                      attrs: {
-                        label: "申报价格",
-                        prop: "product_customer.price"
-                      }
-                    },
-                    [
-                      _c("Input", {
-                        attrs: { number: "" },
-                        model: {
-                          value: _vm.data.product_customer.price,
-                          callback: function($$v) {
-                            _vm.$set(_vm.data.product_customer, "price", $$v)
-                          },
-                          expression: "data.product_customer.price"
-                        }
-                      })
-                    ],
-                    1
-                  )
-                ],
-                1
+                "Button",
+                {
+                  attrs: { type: "success", icon: "ios-add", size: "small" },
+                  on: {
+                    click: function($event) {
+                      return _vm.routerPush("authorities.role.create")
+                    }
+                  }
+                },
+                [_vm._v("添加")]
               )
             ],
             1
@@ -720,79 +197,73 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c(
-        "Modal",
-        {
-          attrs: { title: "规格型号" },
-          on: { "on-ok": _vm.specModalOk, "on-cancel": _vm.specModalCancel },
-          model: {
-            value: _vm.specModal,
-            callback: function($$v) {
-              _vm.specModal = $$v
-            },
-            expression: "specModal"
-          }
+      _c("i-table", {
+        attrs: {
+          current: _vm.page.current,
+          table: _vm.table,
+          total: _vm.page.total
         },
-        [
-          _c(
-            "Form",
-            { attrs: { "label-width": 100 } },
-            _vm._l(_vm.specElements, function(item, index) {
-              return _c(
-                "FormItem",
-                { key: index, attrs: { label: item } },
-                [
-                  _c("Input", {
-                    model: {
-                      value: _vm.specValues[index],
-                      callback: function($$v) {
-                        _vm.$set(_vm.specValues, index, $$v)
-                      },
-                      expression: "specValues[index]"
+        on: { "on-page-change": _vm.pageChange },
+        scopedSlots: _vm._u([
+          {
+            key: "name",
+            fn: function(ref) {
+              var row = ref.row
+              var index = ref.index
+              return [_c("span", [_vm._v(_vm._s(row.name))])]
+            }
+          },
+          {
+            key: "description",
+            fn: function(ref) {
+              var row = ref.row
+              var index = ref.index
+              return [_c("span", [_vm._v(_vm._s(row.description))])]
+            }
+          },
+          {
+            key: "action",
+            fn: function(ref) {
+              var row = ref.row
+              var index = ref.index
+              return [
+                _c(
+                  "Button",
+                  {
+                    attrs: { type: "warning", size: "small" },
+                    on: {
+                      click: function($event) {
+                        return _vm.routerPush("authorities.role.update", {
+                          id: row.id
+                        })
+                      }
                     }
-                  })
-                ],
-                1
-              )
-            }),
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { attrs: { slot: "footer" }, slot: "footer" },
-        [
-          _c(
-            "Button",
-            {
-              attrs: { type: "primary", icon: "ios-add" },
-              on: {
-                click: function($event) {
-                  return _vm.submit("formUpdate")
-                }
-              }
-            },
-            [_vm._v("提交")]
-          ),
-          _vm._v(" "),
-          _c(
-            "Button",
-            {
-              attrs: { type: "warning", icon: "md-log-out" },
-              on: {
-                click: function($event) {
-                  return _vm.$router.go(-1)
-                }
-              }
-            },
-            [_vm._v("返回")]
-          )
-        ],
-        1
-      )
+                  },
+                  [_vm._v("编辑")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "Poptip",
+                  {
+                    attrs: { confirm: "", title: "你确定要删除这个部门吗？" },
+                    on: {
+                      "on-ok": function($event) {
+                        return _vm.remove(row)
+                      }
+                    }
+                  },
+                  [
+                    _c("Button", { attrs: { type: "error", size: "small" } }, [
+                      _vm._v("删除")
+                    ])
+                  ],
+                  1
+                )
+              ]
+            }
+          }
+        ])
+      })
     ],
     1
   )
@@ -804,17 +275,17 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./resources/vue/js/modules/views/product/lists/update.vue":
-/*!*****************************************************************!*\
-  !*** ./resources/vue/js/modules/views/product/lists/update.vue ***!
-  \*****************************************************************/
+/***/ "./resources/vue/js/modules/views/authorities/role/index.vue":
+/*!*******************************************************************!*\
+  !*** ./resources/vue/js/modules/views/authorities/role/index.vue ***!
+  \*******************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _update_vue_vue_type_template_id_c60b5c3e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./update.vue?vue&type=template&id=c60b5c3e&scoped=true& */ "./resources/vue/js/modules/views/product/lists/update.vue?vue&type=template&id=c60b5c3e&scoped=true&");
-/* harmony import */ var _update_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./update.vue?vue&type=script&lang=js& */ "./resources/vue/js/modules/views/product/lists/update.vue?vue&type=script&lang=js&");
+/* harmony import */ var _index_vue_vue_type_template_id_1bf45336_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=1bf45336&scoped=true& */ "./resources/vue/js/modules/views/authorities/role/index.vue?vue&type=template&id=1bf45336&scoped=true&");
+/* harmony import */ var _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue?vue&type=script&lang=js& */ "./resources/vue/js/modules/views/authorities/role/index.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -824,50 +295,50 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _update_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _update_vue_vue_type_template_id_c60b5c3e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _update_vue_vue_type_template_id_c60b5c3e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _index_vue_vue_type_template_id_1bf45336_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _index_vue_vue_type_template_id_1bf45336_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  "c60b5c3e",
+  "1bf45336",
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/vue/js/modules/views/product/lists/update.vue"
+component.options.__file = "resources/vue/js/modules/views/authorities/role/index.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/vue/js/modules/views/product/lists/update.vue?vue&type=script&lang=js&":
-/*!******************************************************************************************!*\
-  !*** ./resources/vue/js/modules/views/product/lists/update.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************/
+/***/ "./resources/vue/js/modules/views/authorities/role/index.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************!*\
+  !*** ./resources/vue/js/modules/views/authorities/role/index.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_update_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./update.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/vue/js/modules/views/product/lists/update.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_update_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./index.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/vue/js/modules/views/authorities/role/index.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/vue/js/modules/views/product/lists/update.vue?vue&type=template&id=c60b5c3e&scoped=true&":
-/*!************************************************************************************************************!*\
-  !*** ./resources/vue/js/modules/views/product/lists/update.vue?vue&type=template&id=c60b5c3e&scoped=true& ***!
-  \************************************************************************************************************/
+/***/ "./resources/vue/js/modules/views/authorities/role/index.vue?vue&type=template&id=1bf45336&scoped=true&":
+/*!**************************************************************************************************************!*\
+  !*** ./resources/vue/js/modules/views/authorities/role/index.vue?vue&type=template&id=1bf45336&scoped=true& ***!
+  \**************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_update_vue_vue_type_template_id_c60b5c3e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./update.vue?vue&type=template&id=c60b5c3e&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/vue/js/modules/views/product/lists/update.vue?vue&type=template&id=c60b5c3e&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_update_vue_vue_type_template_id_c60b5c3e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_1bf45336_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./index.vue?vue&type=template&id=1bf45336&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/vue/js/modules/views/authorities/role/index.vue?vue&type=template&id=1bf45336&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_1bf45336_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_update_vue_vue_type_template_id_c60b5c3e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_1bf45336_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
